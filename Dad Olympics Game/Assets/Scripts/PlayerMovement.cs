@@ -6,9 +6,7 @@ using UnityEngine;
 /// <summary>
 /// Class that deals with player movement and player input
 /// </summary>
-public class PlayerMovement : MonoBehaviour
-{
-    public CharacterController playerController;
+public class PlayerMovement : MonoBehaviour { 
 
     private float moveSpeed = 8f;
 
