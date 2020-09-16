@@ -28,6 +28,11 @@ public class PlayerMovement : MonoBehaviour
 
     Vector3 offset;
 
+    public float knockBackTime;
+
+    private float knockBackCounter;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,50 +42,58 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 movementVector = Vector3.zero;
 
-        //Handle z and x movements
-        movementVector.x = Input.GetAxis("Horizontal");
-        movementVector.z = Input.GetAxis("Vertical");
-
-        //Handle jump mechanic
-        if (Input.GetKeyDown("space") && IsGrounded())
-        {
-            if (hasGrabbed)
-            {
-                movementVector.y += jumpPowerGrab;
-            }
-            else
-            {
-                movementVector.y += jumpPower;
-            }
-
-        }
-        //vector that takes direction and speed
-        Vector3 moving = movementVector * moveSpeed;
         //Handle rotation
         transform.Rotate(new Vector3(0, Input.GetAxis("Mouse X") * 4f, 0));
-        //apply rotation to the movement so player will always go forward in the direction they are facing
-        moving = transform.rotation * moving;
-        GetComponent<Rigidbody>().AddForce(moving);
-
-        //Handle moving and rotating the object that has been grabbed
-        if (hasGrabbed)
+        if (knockBackCounter <= 0)
         {
-            offset = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * 4f, Vector3.up) * offset;
-            grabbedObject.transform.position = transform.position + offset;
-            gameObject.transform.rotation = transform.rotation;
-            grabbedObject.transform.LookAt(transform.position);
-            grabbedObject.transform.rotation *= Quaternion.Euler(0, -90, 0);
-            //If player released "e" then let go
-            if (Input.GetKeyUp("e"))
+            Vector3 movementVector = Vector3.zero;
+
+            //Handle z and x movements
+            movementVector.x = Input.GetAxis("Horizontal");
+            movementVector.z = Input.GetAxis("Vertical");
+
+            //Handle jump mechanic
+            if (Input.GetKeyDown("space") && IsGrounded())
             {
-                grabbedObject = null;
-                hasGrabbed = false;
-                moveSpeed = moveSpeedNormal;
+                if (hasGrabbed)
+                {
+                    movementVector.y += jumpPowerGrab;
+                }
+                else
+                {
+                    movementVector.y += jumpPower;
+                }
+
             }
+            //vector that takes direction and speed
+            Vector3 moving = movementVector * moveSpeed;
+            //apply rotation to the movement so player will always go forward in the direction they are facing
+            moving = transform.rotation * moving;
+            GetComponent<Rigidbody>().AddForce(moving);
+
+            //Handle moving and rotating the object that has been grabbed
+            if (hasGrabbed)
+            {
+                offset = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * 4f, Vector3.up) * offset;
+                grabbedObject.transform.position = transform.position + offset;
+                gameObject.transform.rotation = transform.rotation;
+                grabbedObject.transform.LookAt(transform.position);
+                grabbedObject.transform.rotation *= Quaternion.Euler(0, -90, 0);
+                //If player released "e" then let go
+                if (Input.GetKeyUp("e"))
+                {
+                    grabbedObject = null;
+                    hasGrabbed = false;
+                    moveSpeed = moveSpeedNormal;
+                }
 
 
+            }
+        }
+        else
+        {
+            knockBackCounter -= Time.deltaTime;
         }
     }
 
@@ -106,5 +119,10 @@ public class PlayerMovement : MonoBehaviour
         return Physics.Raycast(transform.position, Vector3.down, 1.5f);
     }
 
-
+    public void KnockBack(Vector3 direction)
+    {
+        Debug.Log("KBCalled");
+        knockBackCounter = knockBackTime;
+        GetComponent<Rigidbody>().AddForce(direction, ForceMode.Impulse);
+    }
 }
