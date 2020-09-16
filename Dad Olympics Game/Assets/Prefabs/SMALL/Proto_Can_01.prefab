@@ -11,9 +11,11 @@ GameObject:
   - component: {fileID: 6796492921378440586}
   - component: {fileID: 7637583628770675247}
   - component: {fileID: 5628042208141115109}
+  - component: {fileID: 1762421789724960837}
+  - component: {fileID: 2797942548425828688}
   m_Layer: 0
   m_Name: Proto_Can_01
-  m_TagString: Untagged
+  m_TagString: Grabbable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -80,3 +82,30 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &1762421789724960837
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6132265390338236208}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.073740505, y: 0.007339239, z: 0.073740505}
+  m_Center: {x: -0.00000017236678, y: -0.05015607, z: -4.681755e-10}
+--- !u!136 &2797942548425828688
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6132265390338236208}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.036870252
+  m_Height: 0.114109054
+  m_Direction: 1
+  m_Center: {x: -0.00000020903073, y: 0.0032288656, z: -0.0000019073188}
