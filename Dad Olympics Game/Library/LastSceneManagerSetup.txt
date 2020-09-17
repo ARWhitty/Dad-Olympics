@@ -1,9 +1,5 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/KieranScene.unity
-=======
 - path: Assets/Scenes/Prototype-Sandbox.unity
->>>>>>> ac453d8c7971bae0ce1a6e6eb92a5678c20639ee
   isLoaded: 1
   isActive: 1
   isSubScene: 0

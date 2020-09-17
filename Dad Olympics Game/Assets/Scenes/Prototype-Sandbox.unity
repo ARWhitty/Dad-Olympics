@@ -2929,7 +2929,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.8
+  m_Radius: 0.7
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &180649225
 MonoBehaviour:
@@ -6707,6 +6707,25 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 517897940}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &520909227 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2895259615195860205, guid: 50f00a1fbea611349857306b693aa088,
+    type: 3}
+  m_PrefabInstance: {fileID: 1909851551}
+  m_PrefabAsset: {fileID: 0}
+--- !u!135 &520909228
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 520909227}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 20
+  m_Center: {x: 0.5573975, y: 0, z: 0.0000004768373}
 --- !u!1 &526955714
 GameObject:
   m_ObjectHideFlags: 0
@@ -12289,6 +12308,25 @@ Transform:
   m_Father: {fileID: 246944063}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1009084822 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1076219785660808, guid: 01ec1b8372ee0974c947f448dca9059f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1719595505}
+  m_PrefabAsset: {fileID: 0}
+--- !u!135 &1009084828
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1009084822}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 20
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1021218171
 GameObject:
   m_ObjectHideFlags: 0
@@ -12741,6 +12779,7 @@ MonoBehaviour:
   turnTime: 0.1
   jumpPower: 50
   jumpPowerGrab: 100
+  throwForce: 0
   knockBackTime: 0
 --- !u!1001 &1043511743
 PrefabInstance:
@@ -20954,7 +20993,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.8
+  m_Radius: 0.7
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1677802438
 PrefabInstance:
@@ -27417,7 +27456,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.8
+  m_Radius: 0.7
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &2111968232
 PrefabInstance:
