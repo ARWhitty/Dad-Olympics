@@ -1,5 +1,13 @@
 sceneSetups:
+<<<<<<< Updated upstream
 - path: Assets/Scenes/Prototype-Sandbox.unity
+=======
+<<<<<<< Updated upstream
+- path: Assets/Scenes/AssetsScene.unity
+=======
+- path: Assets/Scenes/AddisonScene.unity
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
   isLoaded: 1
   isActive: 1
   isSubScene: 0

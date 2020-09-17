@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":false,"pivot":{"x":0.31665152311325076,"y":7.674664497375488,"z":-13.800829887390137},"rotation":{"x":0.2371591329574585,"y":-0.20054496824741364,"z":0.050143636763095859,"w":0.9493614435195923},"size":4.524744987487793,"orthographic":false}
 =======
@@ -7,3 +8,10 @@
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":false,"pivot":{"x":-7.370566368103027,"y":0.3183651566505432,"z":16.697948455810548},"rotation":{"x":0.01780090667307377,"y":-0.886309802532196,"z":0.4617663621902466,"w":0.03403792157769203},"size":12.084016799926758,"orthographic":false}
 >>>>>>> Stashed changes
 >>>>>>> ac453d8c7971bae0ce1a6e6eb92a5678c20639ee
+=======
+<<<<<<< Updated upstream
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":false,"pivot":{"x":11.303754806518555,"y":9.44745922088623,"z":37.85957336425781},"rotation":{"x":0.03667646646499634,"y":-0.946462094783783,"z":0.2993367612361908,"w":0.11616159975528717},"size":11.860264778137207,"orthographic":false}
+=======
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":false,"pivot":{"x":-51.654541015625,"y":32.01654815673828,"z":190.1859893798828},"rotation":{"x":-0.06384611129760742,"y":-0.09597428143024445,"z":-0.006228765472769737,"w":0.9933698773384094},"size":101.31475830078125,"orthographic":false}
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
