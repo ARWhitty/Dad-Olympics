@@ -10,21 +10,25 @@ public class PlayerMovement : MonoBehaviour
 {
     public CharacterController playerController;
 
-    private float moveSpeed = 8f;
+    private float moveSpeed;
 
-    public float moveSpeedGrab = 3f;
+    public float moveSpeedGrab;
 
-    public float moveSpeedNormal = 8f;
+    public float moveSpeedNormal;
 
     public float turnTime = 0.1f;
 
-    public float jumpPower = 50f;
+    public float jumpPower;
 
-    public float jumpPowerGrab = 100f;
+    public float jumpPowerGrab;
+
+    public float throwForce;
 
     private GameObject grabbedObject;
 
     private bool hasGrabbed = false;
+
+    private bool hasPickup = false;
 
     Vector3 offset;
 
@@ -32,11 +36,13 @@ public class PlayerMovement : MonoBehaviour
 
     private float knockBackCounter;
 
+    private RaycastHit hitInfo;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        moveSpeed = moveSpeedNormal;
     }
 
     // Update is called once per frame
@@ -45,6 +51,7 @@ public class PlayerMovement : MonoBehaviour
 
         //Handle rotation
         transform.Rotate(new Vector3(0, Input.GetAxis("Mouse X") * 4f, 0));
+
         if (knockBackCounter <= 0)
         {
             Vector3 movementVector = Vector3.zero;
@@ -77,19 +84,57 @@ public class PlayerMovement : MonoBehaviour
             {
                 offset = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * 4f, Vector3.up) * offset;
                 grabbedObject.transform.position = transform.position + offset;
-                gameObject.transform.rotation = transform.rotation;
-                grabbedObject.transform.LookAt(transform.position);
-                grabbedObject.transform.rotation *= Quaternion.Euler(0, -90, 0);
+                grabbedObject.transform.rotation = transform.rotation;
+                //grabbedObject.transform.LookAt(transform.position);
+
                 //If player released "e" then let go
                 if (Input.GetKeyUp("e"))
                 {
-                    grabbedObject = null;
-                    hasGrabbed = false;
-                    moveSpeed = moveSpeedNormal;
+                    DropGrabbedItem();
                 }
 
 
+            }else if (hasPickup)
+            {
+                offset = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * 4f, Vector3.up) * offset;
+                grabbedObject.transform.position = transform.position + offset;
+                grabbedObject.transform.rotation = transform.rotation;
+                if (Input.GetKeyUp("q"))
+                {
+
+                    performThrow();
+                }
             }
+
+            if (Input.GetKeyDown("e") && !hasGrabbed && !hasPickup)
+            {
+                if(Physics.Raycast(transform.position, transform.forward, out hitInfo, 1))
+                {
+                    if (hitInfo.collider.gameObject.tag == "Grabbable")
+                    {
+                        grabbedObject = hitInfo.collider.gameObject;
+                        offset = grabbedObject.transform.position - transform.position + (transform.rotation * new Vector3(0, 0, 0.5f));
+                        moveSpeed = moveSpeedGrab;
+                        hasGrabbed = true;
+                    }
+                }
+            }
+            else if (Input.GetKeyDown("q") && !hasGrabbed && !hasPickup)
+            {
+                if (Physics.Raycast(transform.position, transform.forward, out hitInfo, 1))
+                {
+                    if (hitInfo.collider.gameObject.tag == "Pickup")
+                    {
+                        grabbedObject = hitInfo.collider.gameObject;
+                        grabbedObject.GetComponent<Rigidbody>().isKinematic = true;
+                        grabbedObject.GetComponent<Rigidbody>().useGravity = false;
+                        offset = grabbedObject.transform.position - transform.position + (transform.rotation * new Vector3(0, 1f, 0.5f));
+                        moveSpeed = 0f;
+                        hasPickup = true;
+                    }
+                }
+            }
+
         }
         else
         {
@@ -97,21 +142,36 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+
+    //Commenting out the collision code as the RayCast way to detect pickups seems more responsive
+    /*
     void OnCollisionStay(Collision obj)
     {
         //Check if the player collided with a grabbable object
         if (obj.collider.tag.Equals("Grabbable"))
         {
             //If the player presses "e" then grab that object
-            if (Input.GetKeyDown("e"))
+            if (Input.GetKeyDown("e") && !hasGrabbed && !hasPickup)
             {
                 grabbedObject = obj.gameObject;
                 offset = grabbedObject.transform.position - transform.position + (transform.rotation * new Vector3(0,0,0.5f));
                 moveSpeed = moveSpeedGrab;
                 hasGrabbed = true;
             }
+        }else if (obj.collider.tag.Equals("Pickup"))
+        {
+            if (Input.GetKeyDown("q") && !hasGrabbed && !hasPickup)
+            {
+                Debug.Log("Grabbed pickup obj");
+                grabbedObject = obj.gameObject;
+                grabbedObject.GetComponent<Rigidbody>().isKinematic = true;
+                grabbedObject.GetComponent<Rigidbody>().useGravity = false;
+                offset = grabbedObject.transform.position - transform.position + (transform.rotation * new Vector3(0, 1f, 0.5f));
+                moveSpeed = 0f;
+                hasPickup = true;
+            }
         }
-    }
+    }*/
 
     //Simple method that checks if the player is grounded using raycast
     private bool IsGrounded()
@@ -123,6 +183,29 @@ public class PlayerMovement : MonoBehaviour
     {
         Debug.Log("KBCalled");
         knockBackCounter = knockBackTime;
+        DropGrabbedItem();
         GetComponent<Rigidbody>().AddForce(direction, ForceMode.Impulse);
+    }
+
+    private void DropGrabbedItem()
+    {
+        grabbedObject = null;
+        hasGrabbed = false;
+        moveSpeed = moveSpeedNormal;
+    }
+
+    private void performThrow()
+    {
+        Vector3 forward = transform.forward;
+        grabbedObject.transform.forward = forward;
+        forward.y = 1.5f;
+        Vector3 throwingForce = forward * throwForce; //transform.rotation.normalized * new Vector3(0, throwForce*2000, throwForce*300);
+        Debug.Log("Threw with Vector force: " + throwingForce);
+        grabbedObject.GetComponent<Rigidbody>().isKinematic = false;
+        grabbedObject.GetComponent<Rigidbody>().useGravity = true;
+        grabbedObject.GetComponent<Rigidbody>().AddForce(throwingForce);
+        hasPickup = false;
+        moveSpeed = moveSpeedNormal;
+        grabbedObject = null;
     }
 }
