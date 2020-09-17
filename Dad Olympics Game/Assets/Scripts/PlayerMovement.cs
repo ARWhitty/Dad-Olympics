@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 
 /// <summary>
 /// Class that deals with player movement and player input
@@ -37,6 +37,8 @@ public class PlayerMovement : MonoBehaviour
     private float knockBackCounter;
 
     private RaycastHit hitInfo;
+
+    public Text GrabText;
 
 
     // Start is called before the first frame update
@@ -85,6 +87,7 @@ public class PlayerMovement : MonoBehaviour
                 offset = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * 4f, Vector3.up) * offset;
                 grabbedObject.transform.position = transform.position + offset;
                 grabbedObject.transform.rotation = transform.rotation;
+                grabbedObject.transform.rotation *= Quaternion.Euler(0,90,0);
                 //grabbedObject.transform.LookAt(transform.position);
 
                 //If player released "e" then let go
@@ -106,24 +109,43 @@ public class PlayerMovement : MonoBehaviour
                 }
             }
 
-            if (Input.GetKeyDown("e") && !hasGrabbed && !hasPickup)
+            Vector3 forward = transform.forward;
+            forward.y = -1;
+            if (Physics.Raycast(transform.position, forward, out hitInfo, 1))
             {
-                if(Physics.Raycast(transform.position, transform.forward, out hitInfo, 1))
+                if (hitInfo.collider.gameObject.tag == "Grabbable")
                 {
-                    if (hitInfo.collider.gameObject.tag == "Grabbable")
+                    if (hasGrabbed)
                     {
+                        GrabText.text = "";
+                    }
+                    else
+                    {
+                        GrabText.text = "Press e and hold to grab this object";
+                    }
+
+                    if (Input.GetKeyDown("e") && !hasGrabbed && !hasPickup)
+                    {
+
                         grabbedObject = hitInfo.collider.gameObject;
+                        grabbedObject.GetComponent<Rigidbody>().isKinematic = true;
+                        grabbedObject.GetComponent<Rigidbody>().useGravity = false;
                         offset = grabbedObject.transform.position - transform.position + (transform.rotation * new Vector3(0, 0, 0.5f));
                         moveSpeed = moveSpeedGrab;
                         hasGrabbed = true;
                     }
                 }
-            }
-            else if (Input.GetKeyDown("q") && !hasGrabbed && !hasPickup)
-            {
-                if (Physics.Raycast(transform.position, transform.forward, out hitInfo, 1))
+                else if (hitInfo.collider.gameObject.tag == "Pickup")
                 {
-                    if (hitInfo.collider.gameObject.tag == "Pickup")
+                    if (hasGrabbed)
+                    {
+                        GrabText.text = "";
+                    }
+                    else
+                    {
+                        GrabText.text = "Press q and hold to throw this object";
+                    }
+                    if (Input.GetKeyDown("q") && !hasGrabbed && !hasPickup)
                     {
                         grabbedObject = hitInfo.collider.gameObject;
                         grabbedObject.GetComponent<Rigidbody>().isKinematic = true;
@@ -132,7 +154,13 @@ public class PlayerMovement : MonoBehaviour
                         moveSpeed = 0f;
                         hasPickup = true;
                     }
+
                 }
+
+            }
+            else
+            {
+                GrabText.text = "";
             }
 
         }
@@ -189,6 +217,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void DropGrabbedItem()
     {
+        grabbedObject.GetComponent<Rigidbody>().isKinematic = false;
+        grabbedObject.GetComponent<Rigidbody>().useGravity = true;
         grabbedObject = null;
         hasGrabbed = false;
         moveSpeed = moveSpeedNormal;
