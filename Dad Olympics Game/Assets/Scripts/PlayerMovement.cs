@@ -160,7 +160,8 @@ public class PlayerMovement : MonoBehaviour
             }
             else
             {
-                GrabText.text = "";
+                if(GrabText)
+                    GrabText.text = "";
             }
 
         }
@@ -217,11 +218,14 @@ public class PlayerMovement : MonoBehaviour
 
     private void DropGrabbedItem()
     {
-        grabbedObject.GetComponent<Rigidbody>().isKinematic = false;
-        grabbedObject.GetComponent<Rigidbody>().useGravity = true;
-        grabbedObject = null;
-        hasGrabbed = false;
-        moveSpeed = moveSpeedNormal;
+        if (grabbedObject)
+        {
+            grabbedObject.GetComponent<Rigidbody>().isKinematic = false;
+            grabbedObject.GetComponent<Rigidbody>().useGravity = true;
+            grabbedObject = null;
+            hasGrabbed = false;
+            moveSpeed = moveSpeedNormal;
+        }
     }
 
     private void performThrow()

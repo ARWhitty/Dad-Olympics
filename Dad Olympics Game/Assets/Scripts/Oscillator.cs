@@ -4,46 +4,38 @@ using UnityEngine;
 
 public class Oscillator : MonoBehaviour
 {
-    public Vector3 lesserXPoint, greaterXPoint;
-    public short xMin, xMax;
+    public Vector3 pointANucleus, pointBNucleus;
     public short speed;
+    public float pointRadius = 5;
     public bool toPointA;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (toPointA) {
-            if (gameObject.transform.position.x < lesserXPoint.x)
+        var myBody = gameObject.GetComponent<Rigidbody>();
+        if (toPointA)
+        {
+            if (Vector3.Distance(myBody.position, pointANucleus) <= pointRadius)
             {
                 toPointA = false;
             }
-            if (gameObject.transform.position.x < xMin)
-            {
-                gameObject.GetComponent<Rigidbody>().velocity = new Vector3(-gameObject.GetComponent<Rigidbody>().velocity.x, 0, 0);
-            }
-            else
-            {
-                gameObject.GetComponent<Rigidbody>().velocity = Vector3.MoveTowards(transform.position, lesserXPoint, 500).normalized * speed;
-            }
-        } else
+            myBody.velocity = (Vector3.MoveTowards(transform.position, pointANucleus, 500) - transform.position).normalized * speed;
+
+        }
+        else
         {
-            if (gameObject.transform.position.x > greaterXPoint.x)
+            if (Vector3.Distance(myBody.position, pointBNucleus) <= pointRadius)
             {
                 toPointA = true;
             }
-            if (gameObject.transform.position.x > xMax)
-            {
-                gameObject.GetComponent<Rigidbody>().velocity = new Vector3(-gameObject.GetComponent<Rigidbody>().velocity.x, 0, 0);
-            } else
-            {
-                gameObject.GetComponent<Rigidbody>().velocity = Vector3.MoveTowards(transform.position, greaterXPoint, 500).normalized * speed;
-            }
+            myBody.velocity = (Vector3.MoveTowards(transform.position, pointBNucleus, 500) - transform.position).normalized * speed;
+
         }
     }
 }
