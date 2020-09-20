@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/AddisonScene.unity
+=======
+- path: Assets/Scenes/AssetsScene.unity
+>>>>>>> master
   isLoaded: 1
   isActive: 1
   isSubScene: 0
