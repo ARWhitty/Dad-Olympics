@@ -1,9 +1,5 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/AddisonScene.unity
-=======
-- path: Assets/Scenes/AssetsScene.unity
->>>>>>> master
+- path: Assets/Scenes/MarceloScene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
