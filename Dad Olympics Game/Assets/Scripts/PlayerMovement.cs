@@ -8,7 +8,6 @@ using UnityEngine.UI;
 /// </summary>
 public class PlayerMovement : MonoBehaviour
 {
-    public CharacterController playerController;
 
     private float moveSpeed;
 
@@ -16,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
 
     public float moveSpeedNormal;
 
-    public float turnTime = 0.1f;
+    public float turnTime;
 
     public float jumpPower;
 
@@ -27,8 +26,6 @@ public class PlayerMovement : MonoBehaviour
     private GameObject grabbedObject;
 
     private bool hasGrabbed = false;
-
-    private bool hasPickup = false;
 
     Vector3 offset;
 
@@ -44,6 +41,13 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        moveSpeedNormal = 115 * moveSpeedNormal;
+        moveSpeedGrab = 100 * moveSpeedGrab;
+        turnTime = 0.1f * turnTime;
+        jumpPower = 80 * jumpPower;
+        jumpPowerGrab = 90 * jumpPowerGrab;
+        throwForce = 300 * throwForce;
+        GetComponent<Rigidbody>().mass = 20 * GetComponent<Rigidbody>().mass;
         moveSpeed = moveSpeedNormal;
     }
 
@@ -61,6 +65,8 @@ public class PlayerMovement : MonoBehaviour
             //Handle z and x movements
             movementVector.x = Input.GetAxis("Horizontal");
             movementVector.z = Input.GetAxis("Vertical");
+
+            movementVector = movementVector.normalized;
 
             //Handle jump mechanic
             if (Input.GetKeyDown("space") && IsGrounded())
@@ -91,22 +97,15 @@ public class PlayerMovement : MonoBehaviour
                 //grabbedObject.transform.LookAt(transform.position);
 
                 //If player released "e" then let go
-                if (Input.GetKeyUp("e"))
+                if (Input.GetKeyDown("e"))
                 {
                     DropGrabbedItem();
-                }
-
-
-            }else if (hasPickup)
-            {
-                offset = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * 4f, Vector3.up) * offset;
-                grabbedObject.transform.position = transform.position + offset;
-                grabbedObject.transform.rotation = transform.rotation;
-                if (Input.GetKeyUp("q"))
+                }else if (Input.GetKeyDown("q"))
                 {
-
                     performThrow();
                 }
+
+
             }
 
             Vector3 forward = transform.forward;
@@ -121,10 +120,10 @@ public class PlayerMovement : MonoBehaviour
                     }
                     else
                     {
-                        GrabText.text = "Press e and hold to grab this object";
+                        GrabText.text = "Press e to grab this object";
                     }
 
-                    if (Input.GetKeyDown("e") && !hasGrabbed && !hasPickup)
+                    if (Input.GetKeyDown("e") && !hasGrabbed)
                     {
 
                         grabbedObject = hitInfo.collider.gameObject;
@@ -135,27 +134,7 @@ public class PlayerMovement : MonoBehaviour
                         hasGrabbed = true;
                     }
                 }
-                else if (hitInfo.collider.gameObject.tag == "Pickup")
-                {
-                    if (hasGrabbed)
-                    {
-                        GrabText.text = "";
-                    }
-                    else
-                    {
-                        GrabText.text = "Press q and hold to throw this object";
-                    }
-                    if (Input.GetKeyDown("q") && !hasGrabbed && !hasPickup)
-                    {
-                        grabbedObject = hitInfo.collider.gameObject;
-                        grabbedObject.GetComponent<Rigidbody>().isKinematic = true;
-                        grabbedObject.GetComponent<Rigidbody>().useGravity = false;
-                        offset = grabbedObject.transform.position - transform.position + (transform.rotation * new Vector3(0, 1f, 0.5f));
-                        moveSpeed = 0f;
-                        hasPickup = true;
-                    }
-
-                }
+                
 
             }
             else
@@ -238,7 +217,7 @@ public class PlayerMovement : MonoBehaviour
         grabbedObject.GetComponent<Rigidbody>().isKinematic = false;
         grabbedObject.GetComponent<Rigidbody>().useGravity = true;
         grabbedObject.GetComponent<Rigidbody>().AddForce(throwingForce);
-        hasPickup = false;
+        hasGrabbed = false;
         moveSpeed = moveSpeedNormal;
         grabbedObject = null;
     }
