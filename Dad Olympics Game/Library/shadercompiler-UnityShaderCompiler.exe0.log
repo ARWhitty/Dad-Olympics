@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 Base path: 'S:/New folder/Editor/Data', plugins path 'S:/New folder/Editor/Data/PlaybackEngines'
 =======
 Base path: 'C:/Program Files/Unity/Editor/Data', plugins path 'C:/Program Files/Unity/Editor/Data/PlaybackEngines'
 >>>>>>> Stashed changes
+=======
+Base path: 'E:/Unity/2019.4.4f1/Editor/Data', plugins path 'E:/Unity/2019.4.4f1/Editor/Data/PlaybackEngines'
+>>>>>>> master
 Cmd: initializeCompiler

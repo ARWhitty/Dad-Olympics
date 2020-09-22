@@ -568,13 +568,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59d79d31b8d944a4090b148bb68ccf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerController: {fileID: 0}
-  moveSpeedGrab: 90
-  moveSpeedNormal: 100
-  turnTime: 0.1
-  jumpPower: 80
-  jumpPowerGrab: 90
-  throwForce: 300
+  moveSpeedGrab: 1
+  moveSpeedNormal: 1
+  turnTime: 1
+  jumpPower: 1
+  jumpPowerGrab: 1
+  throwForce: 1
   knockBackTime: 1
   GrabText: {fileID: 1689372135}
 --- !u!54 &244343708
@@ -585,7 +584,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 244343702}
   serializedVersion: 2
-  m_Mass: 20
+  m_Mass: 1
   m_Drag: 1
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -757,8 +756,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b869112acda1b2941b0321135939add3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTimerCountDown: 1
-  startTime: 10
+  isTimerCountDown: 0
+  startTime: 0
   currentTime: 0
   player: {fileID: 244343702}
   gameTimerText: {fileID: 1193327094}
@@ -1078,7 +1077,7 @@ GameObject:
   - component: {fileID: 723396364}
   m_Layer: 0
   m_Name: ThowCubeTest
-  m_TagString: Pickup
+  m_TagString: Grabbable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2086,13 +2085,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1461132152}
-  m_LocalRotation: {x: -0, y: -0, z: 0.3259666, w: 0.9453813}
-  m_LocalPosition: {x: 28.09, y: 10.34, z: -36.66}
+  m_LocalRotation: {x: -0, y: -0, z: 0.14522208, w: 0.98939914}
+  m_LocalPosition: {x: 28.09, y: 4.89, z: -36.66}
   m_LocalScale: {x: 33.06129, y: 0.34971, z: 9.6783}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 20
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 38.048}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 16.7}
 --- !u!1001 &1491217522
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2373,7 +2372,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: a6028ebfb4a92a745b0a0fd522b0b971, type: 3}
       propertyPath: m_TagString
-      value: Pickup
+      value: Grabbable
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a6028ebfb4a92a745b0a0fd522b0b971, type: 3}
       propertyPath: m_LocalPosition.x
