@@ -216,6 +216,7 @@ GameObject:
   - component: {fileID: 7291206011820866078}
   - component: {fileID: 3484173285164443989}
   - component: {fileID: 5137974774348587735}
+  - component: {fileID: 6556302069642382646}
   m_Layer: 0
   m_Name: Cardboard
   m_TagString: Untagged
@@ -285,3 +286,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &6556302069642382646
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5742084520023905223}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.85789526, y: 1.6744877, z: 0.03782294}
+  m_Center: {x: 0.000000014901161, y: 0.88752526, z: -0.0599217}
