@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/KieranScene.unity
+=======
+- path: Assets/Scenes/ScottScene.unity
+>>>>>>> 28c5426f3a5e859853422e97d70df3ff61495ce5
   isLoaded: 1
   isActive: 1
   isSubScene: 0
