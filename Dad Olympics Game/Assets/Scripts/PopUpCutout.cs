@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms;
 
 public class PopUpCutout : MonoBehaviour
 {
@@ -23,7 +24,7 @@ public class PopUpCutout : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        print(countdown);
+        //print(countdown);
          countdown -= Time.deltaTime;
         if (countdown < 0) {
             Standing = !Standing;
@@ -34,7 +35,8 @@ public class PopUpCutout : MonoBehaviour
         {
             this.GetComponent<KnockBack>().kBForce = 0;
             this.GetComponent<BoxCollider>().enabled = false;
-            transform.rotation = Quaternion.Slerp(transform.rotation, rotationAngle, Time.deltaTime * speed);
+            Quaternion wantedRotation = transform.rotation * Quaternion.AngleAxis(10, Vector3.left);
+            transform.rotation = Quaternion.Slerp(transform.rotation, wantedRotation, Time.deltaTime*speed);
         }
         else
         {
