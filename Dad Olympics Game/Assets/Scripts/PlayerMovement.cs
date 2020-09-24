@@ -37,6 +37,10 @@ public class PlayerMovement : MonoBehaviour
 
     public Text GrabText;
 
+    public AudioSource grabSound;
+
+    public AudioSource throwSound;
+
 
     // Start is called before the first frame update
     void Start()
@@ -99,9 +103,11 @@ public class PlayerMovement : MonoBehaviour
                 //If player released "e" then let go
                 if (Input.GetKeyDown("e"))
                 {
+                    grabSound.Play();
                     DropGrabbedItem();
                 }else if (Input.GetKeyDown("q"))
                 {
+                    throwSound.Play();
                     performThrow();
                 }
 
@@ -235,7 +241,6 @@ public class PlayerMovement : MonoBehaviour
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, 1);
         foreach(Collider collider in hitColliders)
         {
-            Debug.Log("Found something!");
             if (collider.tag == "Grabbable")
             {
                 foundGrabbable = true;
@@ -250,7 +255,7 @@ public class PlayerMovement : MonoBehaviour
 
                 if (Input.GetKeyDown("e") && !hasGrabbed)
                 {
-
+                    grabSound.Play();
                     grabbedObject = collider.gameObject;
                     grabbedObject.GetComponent<Rigidbody>().isKinematic = true;
                     grabbedObject.GetComponent<Rigidbody>().useGravity = false;
