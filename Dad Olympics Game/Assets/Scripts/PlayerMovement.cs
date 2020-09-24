@@ -85,7 +85,7 @@ public class PlayerMovement : MonoBehaviour
                     DropGrabbedItem();
                 }else if (Input.GetKeyDown("q"))
                 {
-                    throwSound.Play();
+                    //throwSound.Play();
                     performThrow();
                 }
 
@@ -213,6 +213,8 @@ public class PlayerMovement : MonoBehaviour
         }
     }*/
 
+    //Unfinished
+    /*
     public void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Ground" && collision.impulse.magnitude > 300) //If you hit the ground with more than 300 force.
@@ -221,6 +223,7 @@ public class PlayerMovement : MonoBehaviour
             StartCoroutine(KnockDown(new Vector3(-Mathf.Cos(yRot), -1, -Mathf.Sin(yRot))));
         }
     }
+    */
 
     //Simple method that checks if the player is grounded using raycast
     private bool IsGrounded()

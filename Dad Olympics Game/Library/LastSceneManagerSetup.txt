@@ -1,13 +1,5 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/AddisonScene.unity
-=======
-<<<<<<< Updated upstream
-- path: Assets/Scenes/Prototype-Sandbox.unity
-=======
-- path: Assets/Scenes/ScottScene2.unity
->>>>>>> Stashed changes
->>>>>>> master
+- path: Assets/Scenes/Prototype_StrollerRace.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
