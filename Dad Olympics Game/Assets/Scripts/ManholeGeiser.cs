@@ -9,6 +9,7 @@ public class ManholeGeiser : MonoBehaviour
     public float speed;
     public float delay;
     public float length;
+    private float timer;
 
     public GameObject water;
     public GameObject cover;
@@ -24,33 +25,36 @@ public class ManholeGeiser : MonoBehaviour
     {
         waterBaseT = water.transform;
         coverBaseT = cover.transform.position;
-
-        //SprayUp();
+        timer = delay;
     }
 
     // Update is called once per frame
     void Update()
     {
+        delay -= Time.deltaTime;
+        if (delay < 0)
+        {
+            up = !up;
+            delay = timer;
+        }
+
         if (up)
         {
+            water.GetComponent<KnockBack>().kBForce = 5;
+            cover.GetComponent<KnockBack>().kBForce = 2;
             water.transform.localScale = Vector3.Lerp(water.transform.localScale, new Vector3(1, size, 1), Time.deltaTime * speed);
             cover.transform.position = Vector3.Lerp(cover.transform.position, coverTargetOffset,Time.deltaTime * speed);
         }
         else
         {
+            
             water.transform.localScale = Vector3.Lerp(water.transform.localScale, new Vector3(1, 1, 1), Time.deltaTime * speed); 
             cover.transform.position = Vector3.Lerp(cover.transform.position, coverBaseT, Time.deltaTime * speed);
-            print(coverBaseT);
+            water.GetComponent<KnockBack>().kBForce = 0;
+            cover.GetComponent<KnockBack>().kBForce = 0;
         }
+
+
     }
 
-    void SprayUp()
-    { float timer = 0;
-        while(timer < length)
-        {
-            timer += Time.deltaTime;
-
-            water.transform.localScale = Vector3.Lerp(water.transform.localScale, new Vector3(0, size, 0), Time.deltaTime * speed);
-        }
-    }
 }
