@@ -42,55 +42,32 @@ public class PlayerMovement : MonoBehaviour
 
     public AudioSource throwSound;
 
+    private bool isJumping;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        moveSpeedNormal = 115 * moveSpeedNormal;
-        moveSpeedGrab = 100 * moveSpeedGrab;
-        turnTime = 0.1f * turnTime;
-        jumpPower = 80 * jumpPower;
-        jumpPowerGrab = 90 * jumpPowerGrab;
-        throwForce = 300 * throwForce;
-        GetComponent<Rigidbody>().mass = 20 * GetComponent<Rigidbody>().mass;
         moveSpeed = moveSpeedNormal;
+        isJumping = false;
     }
 
     // Update is called once per frame
     void Update()
     {
 
+        if (Input.GetKeyDown("space") && IsGrounded())
+        {
+            isJumping = true;
+
+        }
+
         //Handle rotation
         transform.Rotate(new Vector3(0, Input.GetAxis("Mouse X") * 4f, 0));
 
         if (knockBackCounter <= 0)
         {
-            Vector3 movementVector = Vector3.zero;
 
-            //Handle z and x movements
-            movementVector.x = Input.GetAxis("Horizontal");
-            movementVector.z = Input.GetAxis("Vertical");
-
-            movementVector = movementVector.normalized;
-
-            //Handle jump mechanic
-            if (Input.GetKeyDown("space") && IsGrounded())
-            {
-                if (hasGrabbed)
-                {
-                    movementVector.y += jumpPowerGrab;
-                }
-                else
-                {
-                    movementVector.y += jumpPower;
-                }
-
-            }
-            //vector that takes direction and speed
-            Vector3 moving = movementVector * moveSpeed;
-            //apply rotation to the movement so player will always go forward in the direction they are facing
-            moving = transform.rotation * moving;
-            GetComponent<Rigidbody>().AddForce(moving);
 
             //Handle moving and rotating the object that has been grabbed
             if (hasGrabbed)
@@ -162,10 +139,44 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    void FixedUpdate()
+    {
+        Vector3 movementVector = Vector3.zero;
+
+        //Handle z and x movements
+        movementVector.x = Input.GetAxis("Horizontal");
+        movementVector.z = Input.GetAxis("Vertical");
+
+        movementVector = movementVector.normalized;
+
+        //Handle jump mechanic
+        if (isJumping)
+        {
+            if (hasGrabbed)
+            {
+                movementVector.y += jumpPowerGrab;
+            }
+            else
+            {
+                movementVector.y += jumpPower;
+            }
+            isJumping = false;
+
+        }
+        //vector that takes direction and speed
+        Vector3 moving = movementVector * moveSpeed;
+        //apply rotation to the movement so player will always go forward in the direction they are facing
+        moving = transform.rotation * moving;
+        Debug.Log("Add new force: " + moving);
+        GetComponent<Rigidbody>().AddForce(moving);
+    }
+
     void OnCollisionEnter(Collision obj)
     {
-        if (obj.collider.tag.Equals("WarpSandBox"))
+        Debug.Log("Collided");
+        if (obj.collider.tag.Equals("WarpSandbox"))
         {
+            Debug.Log("Last Scene");
             SceneManager.LoadScene("Prototype-Sandbox");
         }
     }

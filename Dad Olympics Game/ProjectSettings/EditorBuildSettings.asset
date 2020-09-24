@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TitleScreen.unity
     guid: b2971459f54234c4fbd75072895aef24
+  - enabled: 1
+    path: Assets/Scenes/Prototype_StrollerRace.unity
+    guid: 2ae8e6fda54a69a478367abf6357aeb8
+  - enabled: 1
+    path: Assets/Scenes/Prototype-Sandbox.unity
+    guid: 651d8b7a7bb509b458fa9b9311acd8e4
   m_configObjects: {}
