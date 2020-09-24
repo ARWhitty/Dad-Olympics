@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/ChrisScene.unity
+=======
+- path: Assets/Scenes/KieranScene.unity
+>>>>>>> master
   isLoaded: 1
   isActive: 1
   isSubScene: 0
