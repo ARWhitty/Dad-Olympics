@@ -91,7 +91,7 @@ public class PlayerMovement : MonoBehaviour
             if (hasGrabbed)
             {
                 offset = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * 4f, Vector3.up) * offset;
-                grabbedObject.transform.position = transform.position + offset;
+                grabbedObject.transform.position = transform.position + transform.forward * 1.5f;
                 grabbedObject.transform.rotation = transform.rotation;
                 grabbedObject.transform.rotation *= Quaternion.Euler(0,90,0);
                 //grabbedObject.transform.LookAt(transform.position);
@@ -107,10 +107,15 @@ public class PlayerMovement : MonoBehaviour
 
 
             }
+            else
+            {
+                HandleGrabObject();
+            }
 
+            /*
             Vector3 forward = transform.forward;
             forward.y = -1;
-            if (Physics.Raycast(transform.position, forward, out hitInfo, 1))
+            if (Physics.SphereCast(transform.position, 1f, forward, out hitInfo, 1))
             {
                 if (hitInfo.collider.gameObject.tag == "Grabbable")
                 {
@@ -141,7 +146,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 if(GrabText)
                     GrabText.text = "";
-            }
+            }*/
 
         }
         else
@@ -153,31 +158,33 @@ public class PlayerMovement : MonoBehaviour
 
     //Commenting out the collision code as the RayCast way to detect pickups seems more responsive
     /*
-    void OnCollisionStay(Collision obj)
+    void OnTriggerStay(Collider obj)
     {
-        //Check if the player collided with a grabbable object
-        if (obj.collider.tag.Equals("Grabbable"))
+        if (obj.tag == "Grabbable")
         {
-            //If the player presses "e" then grab that object
-            if (Input.GetKeyDown("e") && !hasGrabbed && !hasPickup)
+            if (hasGrabbed)
             {
-                grabbedObject = obj.gameObject;
-                offset = grabbedObject.transform.position - transform.position + (transform.rotation * new Vector3(0,0,0.5f));
-                moveSpeed = moveSpeedGrab;
-                hasGrabbed = true;
+                GrabText.text = "";
             }
-        }else if (obj.collider.tag.Equals("Pickup"))
-        {
-            if (Input.GetKeyDown("q") && !hasGrabbed && !hasPickup)
+            else
             {
-                Debug.Log("Grabbed pickup obj");
+                GrabText.text = "Press e to grab this object";
+            }
+
+            if (Input.GetKeyDown("e") && !hasGrabbed)
+            {
+
                 grabbedObject = obj.gameObject;
                 grabbedObject.GetComponent<Rigidbody>().isKinematic = true;
                 grabbedObject.GetComponent<Rigidbody>().useGravity = false;
-                offset = grabbedObject.transform.position - transform.position + (transform.rotation * new Vector3(0, 1f, 0.5f));
-                moveSpeed = 0f;
-                hasPickup = true;
+                offset = grabbedObject.transform.position - transform.position + (transform.rotation * new Vector3(0, 0, 0.5f));
+                moveSpeed = moveSpeedGrab;
+                hasGrabbed = true;
             }
+        }
+        else
+        {
+            GrabText.text = "";
         }
     }*/
 
@@ -220,5 +227,41 @@ public class PlayerMovement : MonoBehaviour
         hasGrabbed = false;
         moveSpeed = moveSpeedNormal;
         grabbedObject = null;
+    }
+
+    private void HandleGrabObject()
+    {
+        bool foundGrabbable = false;
+        Collider[] hitColliders = Physics.OverlapSphere(transform.position, 1);
+        foreach(Collider collider in hitColliders)
+        {
+            Debug.Log("Found something!");
+            if (collider.tag == "Grabbable")
+            {
+                foundGrabbable = true;
+                if (hasGrabbed)
+                {
+                    GrabText.text = "";
+                }
+                else
+                {
+                    GrabText.text = "Press e to grab this object";
+                }
+
+                if (Input.GetKeyDown("e") && !hasGrabbed)
+                {
+
+                    grabbedObject = collider.gameObject;
+                    grabbedObject.GetComponent<Rigidbody>().isKinematic = true;
+                    grabbedObject.GetComponent<Rigidbody>().useGravity = false;
+                    moveSpeed = moveSpeedGrab;
+                    hasGrabbed = true;
+                }
+            }
+        }
+        if (!foundGrabbable)
+        {
+            GrabText.text = "";
+        }
     }
 }
