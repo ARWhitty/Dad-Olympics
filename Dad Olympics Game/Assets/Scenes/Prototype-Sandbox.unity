@@ -27801,7 +27801,7 @@ PrefabInstance:
     - target: {fileID: 9038403705695292137, guid: 41762653686dd2f49a6b7ca5a0f63035,
         type: 3}
       propertyPath: m_Mass
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9038403705695292142, guid: 41762653686dd2f49a6b7ca5a0f63035,
         type: 3}
@@ -27811,12 +27811,12 @@ PrefabInstance:
     - target: {fileID: 9038403705695292142, guid: 41762653686dd2f49a6b7ca5a0f63035,
         type: 3}
       propertyPath: moveSpeedGrab
-      value: 130
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 9038403705695292142, guid: 41762653686dd2f49a6b7ca5a0f63035,
         type: 3}
       propertyPath: moveSpeedNormal
-      value: 138
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 9038403705695292142, guid: 41762653686dd2f49a6b7ca5a0f63035,
         type: 3}
@@ -27826,12 +27826,12 @@ PrefabInstance:
     - target: {fileID: 9038403705695292142, guid: 41762653686dd2f49a6b7ca5a0f63035,
         type: 3}
       propertyPath: jumpPower
-      value: 56
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 9038403705695292142, guid: 41762653686dd2f49a6b7ca5a0f63035,
         type: 3}
       propertyPath: jumpPowerGrab
-      value: 36
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 9038403705695292142, guid: 41762653686dd2f49a6b7ca5a0f63035,
         type: 3}
