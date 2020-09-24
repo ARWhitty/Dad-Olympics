@@ -24,6 +24,7 @@ public class Oscillator : MonoBehaviour
             if (Vector3.Distance(myBody.position, pointANucleus) <= pointRadius)
             {
                 toPointA = false;
+                transform.Rotate(0, 180, 0);
             }
             myBody.velocity = (Vector3.MoveTowards(transform.position, pointANucleus, 500) - transform.position).normalized * speed;
 
@@ -33,6 +34,7 @@ public class Oscillator : MonoBehaviour
             if (Vector3.Distance(myBody.position, pointBNucleus) <= pointRadius)
             {
                 toPointA = true;
+                transform.Rotate(0, -180, 0);
             }
             myBody.velocity = (Vector3.MoveTowards(transform.position, pointBNucleus, 500) - transform.position).normalized * speed;
 

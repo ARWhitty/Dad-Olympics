@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 /// <summary>
@@ -161,6 +162,13 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    void OnCollisionEnter(Collision obj)
+    {
+        if (obj.collider.tag.Equals("WarpSandBox"))
+        {
+            SceneManager.LoadScene("Prototype-Sandbox");
+        }
+    }
 
     //Commenting out the collision code as the RayCast way to detect pickups seems more responsive
     /*
@@ -268,5 +276,10 @@ public class PlayerMovement : MonoBehaviour
         {
             GrabText.text = "";
         }
+    }
+
+    public bool GetHasGrabbed()
+    {
+        return hasGrabbed;
     }
 }

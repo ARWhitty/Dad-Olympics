@@ -19,12 +19,17 @@ public class ManageGame : MonoBehaviour
 
     private bool gameRunning;
 
+    public GameObject stroller;
+
+    private Vector3 strollerPos;
+
     // Start is called before the first frame update
     void Start()
     {
         currentTime = startTime;
         startPos = player.transform.position;
         gameRunning = true;
+        strollerPos = stroller.transform.position;
     }
 
     // Update is called once per frame
@@ -50,24 +55,30 @@ public class ManageGame : MonoBehaviour
 
 
 
-            if (Input.GetKeyDown("r"))
-            {
-                ResetGame();
-            }
+        }
+        if (Input.GetKeyDown("r"))
+        {
+            ResetGame();
         }
 
     }
 
     private void ResetGame()
     {
+        gameRunning = true;
         currentTime = startTime;
         player.transform.position = startPos;
+        stroller.transform.position = strollerPos;
     }
 
     void OnCollisionEnter(Collision obj)
     {
-        Debug.Log("Trigger end");
-        gameRunning = false;
+        if (player.GetComponent<PlayerMovement>().GetHasGrabbed())
+        {
+            Debug.Log("Trigger end");
+            gameRunning = false;
+        }
+
 
     }
 }
