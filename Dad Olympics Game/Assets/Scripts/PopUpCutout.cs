@@ -23,7 +23,7 @@ public class PopUpCutout : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        print(countdown);
+        //print(countdown);
          countdown -= Time.deltaTime;
         if (countdown < 0) {
             Standing = !Standing;

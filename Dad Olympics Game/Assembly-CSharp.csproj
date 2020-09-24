@@ -58,6 +58,7 @@
      <Compile Include="Assets\Scripts\KnockBack.cs" />
      <Compile Include="Assets\Scripts\MainMenu.cs" />
      <Compile Include="Assets\Scripts\ManageGame.cs" />
+     <Compile Include="Assets\Scripts\ManholeGeiser.cs" />
      <Compile Include="Assets\Scripts\Oscillator.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\PopUpCutout.cs" />
