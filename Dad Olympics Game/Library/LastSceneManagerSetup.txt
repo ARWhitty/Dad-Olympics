@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/ScottScene.unity
+- path: Assets/Scenes/AddisonScene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

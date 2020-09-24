@@ -181,10 +181,32 @@ public class PlayerMovement : MonoBehaviour
         }
     }*/
 
+    public void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Ground" && collision.impulse.magnitude > 300) //If you hit the ground with more than 300 force.
+        {
+            float yRot = GetComponent<Rigidbody>().rotation.y % 360;
+            StartCoroutine(KnockDown(new Vector3(-Mathf.Cos(yRot), -1, -Mathf.Sin(yRot))));
+        }
+    }
+
     //Simple method that checks if the player is grounded using raycast
     private bool IsGrounded()
     {
         return Physics.Raycast(transform.position, Vector3.down, 1.5f);
+    }
+
+    public IEnumerator KnockDown(Vector3 fallDirection)
+    {
+        Rigidbody body = GetComponent<Rigidbody>();
+        body.freezeRotation = false;
+        body.AddForce(fallDirection * 200, ForceMode.Impulse);
+        knockBackCounter = 60;
+        yield return new WaitForSeconds(1);
+        body.position += new Vector3(0, 3, 0);
+        body.rotation = Quaternion.identity;
+        body.freezeRotation = true;
+
     }
 
     public void KnockBack(Vector3 direction)
