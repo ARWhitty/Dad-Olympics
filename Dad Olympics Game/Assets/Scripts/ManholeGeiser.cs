@@ -42,13 +42,13 @@ public class ManholeGeiser : MonoBehaviour
         {
             water.GetComponent<KnockBack>().kBForce = 100;
             water.transform.localScale = Vector3.Lerp(water.transform.localScale, new Vector3(1, size, 1), Time.deltaTime * speed);
-            cover.transform.position = Vector3.Lerp(cover.transform.position, coverTargetOffset,Time.deltaTime * speed);
+           // cover.transform.position = Vector3.Lerp(cover.transform.position, coverTargetOffset,Time.deltaTime * speed);
         }
         else
         {
             
             water.transform.localScale = Vector3.Lerp(water.transform.localScale, new Vector3(1, 1, 1), Time.deltaTime * speed); 
-            cover.transform.position = Vector3.Lerp(cover.transform.position, coverBaseT, Time.deltaTime * speed);
+            //cover.transform.position = Vector3.Lerp(cover.transform.position, coverBaseT, Time.deltaTime * speed);
             water.GetComponent<KnockBack>().kBForce = 0;
         }
 
