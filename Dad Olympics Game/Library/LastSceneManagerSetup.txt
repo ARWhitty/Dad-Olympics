@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/StevenTest.unity
+- path: Assets/Scenes/Prototype-Sandbox.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
