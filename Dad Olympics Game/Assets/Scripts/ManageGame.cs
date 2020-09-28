@@ -71,7 +71,7 @@ public class ManageGame : MonoBehaviour
         stroller.transform.position = strollerPos;
     }
 
-    void OnCollisionEnter(Collision obj)
+    void OnTriggerEnter(Collider obj)
     {
         if (player.GetComponent<PlayerMovement>().GetHasGrabbed())
         {
