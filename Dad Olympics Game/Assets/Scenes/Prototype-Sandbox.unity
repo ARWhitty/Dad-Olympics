@@ -291,8 +291,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de8d1b1ea244f9d458682cec57a990dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointANucleus: {x: -15.67, y: 0.3308561, z: 12}
-  pointBNucleus: {x: -15.67, y: 0.3308561, z: 20.72}
+  pointANucleus: {x: -15.67, y: 0.3308561, z: 7.5}
+  pointBNucleus: {x: -15.67, y: 0.3308561, z: 14.5}
   speed: 3
   pointRadius: 2
   toPointA: 0
@@ -309,7 +309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   directionVector: {x: 0, y: 0, z: 0}
-  kBForce: 25
+  kBForce: 80
 --- !u!1 &18277538
 GameObject:
   m_ObjectHideFlags: 0
@@ -1572,8 +1572,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de8d1b1ea244f9d458682cec57a990dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointANucleus: {x: -9.494, y: 0.3308561, z: 12}
-  pointBNucleus: {x: -9.494, y: 0.3308561, z: 20.72}
+  pointANucleus: {x: -9.494, y: 0.3308561, z: 7.5}
+  pointBNucleus: {x: -9.494, y: 0.3308561, z: 14}
   speed: 4
   pointRadius: 2
   toPointA: 0
@@ -1590,7 +1590,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   directionVector: {x: 0, y: 0, z: 0}
-  kBForce: 25
+  kBForce: 80
 --- !u!1001 &84843885
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8581,8 +8581,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de8d1b1ea244f9d458682cec57a990dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointANucleus: {x: -11.84, y: 0.3308561, z: 20.72}
-  pointBNucleus: {x: -11.84, y: 0.3308561, z: 12}
+  pointANucleus: {x: -11.84, y: 0.3308561, z: 7.5}
+  pointBNucleus: {x: -11.84, y: 0.3308561, z: 14}
   speed: 2
   pointRadius: 2
   toPointA: 0
@@ -8599,7 +8599,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   directionVector: {x: 0, y: 0, z: 0}
-  kBForce: 25
+  kBForce: 80
 --- !u!1001 &588392309
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10905,7 +10905,7 @@ PrefabInstance:
     - target: {fileID: 332074455829466553, guid: 5b440866b88b0fc4084139173a3a1113,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 8.213001
+      value: 7.73
       objectReference: {fileID: 0}
     - target: {fileID: 332074455829466553, guid: 5b440866b88b0fc4084139173a3a1113,
         type: 3}
@@ -11201,8 +11201,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de8d1b1ea244f9d458682cec57a990dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointANucleus: {x: -18.569, y: 0.3308561, z: 20.72}
-  pointBNucleus: {x: -18.569, y: 0.3308561, z: 12}
+  pointANucleus: {x: -18.569, y: 0.3308561, z: 7.5}
+  pointBNucleus: {x: -18.569, y: 0.3308561, z: 14}
   speed: 3
   pointRadius: 2
   toPointA: 0
@@ -11219,7 +11219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   directionVector: {x: 0, y: 0, z: 0}
-  kBForce: 25
+  kBForce: 80
 --- !u!1001 &807678250
 PrefabInstance:
   m_ObjectHideFlags: 0
