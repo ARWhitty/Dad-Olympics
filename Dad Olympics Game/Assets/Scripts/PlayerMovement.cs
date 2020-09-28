@@ -44,6 +44,8 @@ public class PlayerMovement : MonoBehaviour
 
     private bool isJumping;
 
+    private float maxSpeed;
+
 
     // Start is called before the first frame update
     void Start()
@@ -137,6 +139,15 @@ public class PlayerMovement : MonoBehaviour
         {
             knockBackCounter -= Time.deltaTime;
         }
+
+        if (Input.GetKeyDown("o"))
+        {
+            SceneManager.LoadScene("Prototype_StrollerRace");
+
+        }else if (Input.GetKeyDown("p"))
+        {
+            SceneManager.LoadScene("Prototype-Sandbox");
+        }
     }
 
     void FixedUpdate()
@@ -167,8 +178,15 @@ public class PlayerMovement : MonoBehaviour
         Vector3 moving = movementVector * moveSpeed;
         //apply rotation to the movement so player will always go forward in the direction they are facing
         moving = transform.rotation * moving;
-        Debug.Log("Add new force: " + moving);
         GetComponent<Rigidbody>().AddForce(moving);
+        if (!IsGrounded())
+        {
+            GetComponent<Rigidbody>().AddForce(new Vector3(0,-200f,0));
+        }
+        else
+        {
+            GetComponent<Rigidbody>().AddForce(new Vector3(0, -130f, 0));
+        }
     }
 
     void OnCollisionEnter(Collision obj)
@@ -228,7 +246,7 @@ public class PlayerMovement : MonoBehaviour
     //Simple method that checks if the player is grounded using raycast
     private bool IsGrounded()
     {
-        return Physics.Raycast(transform.position, Vector3.down, 1.5f);
+        return Physics.Raycast(transform.position, Vector3.down, 1f);
     }
 
     public IEnumerator KnockDown(Vector3 fallDirection)

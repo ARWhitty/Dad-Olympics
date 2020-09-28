@@ -70,6 +70,7 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
+<<<<<<< HEAD
       Script: {instanceID: 11178}
     - Class: 114
       Script: {instanceID: 11290}
@@ -89,6 +90,27 @@ ScriptsOnlyBuild:
       Script: {instanceID: 12844}
     - Class: 114
       Script: {instanceID: 12882}
+=======
+      Script: {instanceID: 12430}
+    - Class: 114
+      Script: {instanceID: 12448}
+    - Class: 114
+      Script: {instanceID: 12560}
+    - Class: 114
+      Script: {instanceID: 12608}
+    - Class: 114
+      Script: {instanceID: 12800}
+    - Class: 114
+      Script: {instanceID: 13636}
+    - Class: 114
+      Script: {instanceID: 13828}
+    - Class: 114
+      Script: {instanceID: 13898}
+    - Class: 114
+      Script: {instanceID: 14108}
+    - Class: 114
+      Script: {instanceID: 14146}
+>>>>>>> master
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -143,6 +165,7 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
+<<<<<<< HEAD
       Script: {instanceID: 11178}
     - Class: 114
       Script: {instanceID: 11290}
@@ -170,6 +193,35 @@ ScriptsOnlyBuild:
       Script: {instanceID: 12982}
     - Class: 114
       Script: {instanceID: 12988}
+=======
+      Script: {instanceID: 12430}
+    - Class: 114
+      Script: {instanceID: 12448}
+    - Class: 114
+      Script: {instanceID: 12560}
+    - Class: 114
+      Script: {instanceID: 12608}
+    - Class: 114
+      Script: {instanceID: 12800}
+    - Class: 114
+      Script: {instanceID: 13036}
+    - Class: 114
+      Script: {instanceID: 13618}
+    - Class: 114
+      Script: {instanceID: 13636}
+    - Class: 114
+      Script: {instanceID: 13828}
+    - Class: 114
+      Script: {instanceID: 13898}
+    - Class: 114
+      Script: {instanceID: 14108}
+    - Class: 114
+      Script: {instanceID: 14146}
+    - Class: 114
+      Script: {instanceID: 14246}
+    - Class: 114
+      Script: {instanceID: 14252}
+>>>>>>> master
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -181,6 +233,10 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
       Script: {instanceID: 0}
     - Class: 222
       Script: {instanceID: 0}
@@ -212,6 +268,7 @@ ScriptsOnlyBuild:
     - Class: 109
       Script: {instanceID: 0}
     - Class: 114
+<<<<<<< HEAD
       Script: {instanceID: 11178}
     - Class: 114
       Script: {instanceID: 11378}
@@ -237,6 +294,33 @@ ScriptsOnlyBuild:
       Script: {instanceID: 12890}
     - Class: 114
       Script: {instanceID: 12988}
+=======
+      Script: {instanceID: 12448}
+    - Class: 114
+      Script: {instanceID: 12648}
+    - Class: 114
+      Script: {instanceID: 12794}
+    - Class: 114
+      Script: {instanceID: 13036}
+    - Class: 114
+      Script: {instanceID: 13060}
+    - Class: 114
+      Script: {instanceID: 13414}
+    - Class: 114
+      Script: {instanceID: 13636}
+    - Class: 114
+      Script: {instanceID: 13650}
+    - Class: 114
+      Script: {instanceID: 13834}
+    - Class: 114
+      Script: {instanceID: 13898}
+    - Class: 114
+      Script: {instanceID: 14046}
+    - Class: 114
+      Script: {instanceID: 14154}
+    - Class: 114
+      Script: {instanceID: 14252}
+>>>>>>> master
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -256,6 +340,15 @@ ScriptsOnlyBuild:
   scriptHashData:
   - hash:
       serializedVersion: 2
+<<<<<<< HEAD
+=======
+      Hash: 48db91298d1cde455bdf8b326c34a9ae
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ManholeGeiser
+  - hash:
+      serializedVersion: 2
+>>>>>>> master
       Hash: 4bc4346a71a8df53a6b106f68ef3a190
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -382,10 +475,16 @@ ScriptsOnlyBuild:
     className: PhysicsRaycaster
   - hash:
       serializedVersion: 2
-      Hash: 48db91298d1cde455bdf8b326c34a9ae
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: ManholeGeiser
+    className: MainMenu
+  - hash:
+      serializedVersion: 2
+      Hash: c8225b6dd083aeb05c16fcbf1231baa9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SimpleFollow
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -739,4 +838,5 @@ ScriptsOnlyBuild:
   - Assets/Scenes/TitleScreen.unity
   - Assets/Scenes/Prototype_StrollerRace.unity
   - Assets/Scenes/Prototype-Sandbox.unity
-  playerPath: C:/Users/addys/GameProjects/Unity/Builds/Dad Olympics Game.exe
+  playerPath: D:/University/Fall2020/Senior Project I/Dad Olympics/Builds/Dad Olympics
+    Game.exe
