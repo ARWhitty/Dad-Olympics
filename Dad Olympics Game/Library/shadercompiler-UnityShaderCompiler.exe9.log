@@ -1,9 +1,86 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 Base path: 'C:/Program Files/Unity/Hub/Editor/Editor/Data', plugins path 'C:/Program Files/Unity/Hub/Editor/Editor/Data/PlaybackEngines'
 Cmd: initializeCompiler
 =======
 Base path: 'D:/Program Files (x86)/2019.2.0f1/Editor/Data', plugins path 'D:/Program Files (x86)/2019.2.0f1/Editor/Data/PlaybackEngines'
 Cmd: initializeCompiler
+
+Quitting shader compiler process
+>>>>>>> master
+=======
+Base path: 'D:/Program Files (x86)/2019.2.0f1/Editor/Data', plugins path 'D:/Program Files (x86)/2019.2.0f1/Editor/Data/PlaybackEngines'
+Cmd: initializeCompiler
+Cmd: compileSnippet
+  api=4 type=1 insize=19154 outsize=1670 kw=UNITY_PASS_FORWARDADD POINT pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: disassembleShader
+  api=4 insize=1894 outsize=3310 ok=1
+Cmd: disassembleShader
+  api=4 insize=1746 outsize=3138 ok=1
+Cmd: disassembleShader
+  api=4 insize=1638 outsize=2982 ok=1
+Cmd: disassembleShader
+  api=4 insize=1746 outsize=3138 ok=1
+Cmd: disassembleShader
+  api=4 insize=1638 outsize=2982 ok=1
+Cmd: disassembleShader
+  api=4 insize=6882 outsize=9688 ok=1
+Cmd: disassembleShader
+  api=4 insize=5678 outsize=8002 ok=1
+Cmd: disassembleShader
+  api=4 insize=1690 outsize=3080 ok=1
+Cmd: disassembleShader
+  api=4 insize=1918 outsize=3415 ok=1
+Cmd: disassembleShader
+  api=4 insize=2054 outsize=3594 ok=1
+Cmd: disassembleShader
+  api=4 insize=1918 outsize=3410 ok=1
+Cmd: disassembleShader
+  api=4 insize=1918 outsize=3410 ok=1
+Cmd: disassembleShader
+  api=4 insize=3926 outsize=5772 ok=1
+Cmd: disassembleShader
+  api=4 insize=3714 outsize=5468 ok=1
+Cmd: disassembleShader
+  api=4 insize=3942 outsize=5766 ok=1
+Cmd: disassembleShader
+  api=4 insize=5134 outsize=7348 ok=1
+Cmd: disassembleShader
+  api=4 insize=1534 outsize=2485 ok=1
+Cmd: disassembleShader
+  api=4 insize=1806 outsize=3163 ok=1
+Cmd: disassembleShader
+  api=4 insize=1806 outsize=3163 ok=1
+Cmd: disassembleShader
+  api=4 insize=1162 outsize=2446 ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1554 outsize=1258 kw=UNITY_PASS_DEFERRED _EMISSION _ALPHAPREMULTIPLY_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: disassembleShader
+  api=4 insize=1258 outsize=2631 ok=1
+Cmd: disassembleShader
+  api=4 insize=2334 outsize=3950 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1406 outsize=1714 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL _EMISSION VERTEXLIGHT_ON _ALPHAPREMULTIPLY_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: disassembleShader
+  api=4 insize=1714 outsize=3071 ok=1
+Cmd: disassembleShader
+  api=4 insize=2890 outsize=4828 ok=1
+Cmd: disassembleShader
+  api=4 insize=7278 outsize=10282 ok=1
+Cmd: disassembleShader
+  api=4 insize=2070 outsize=3593 ok=1
+Cmd: disassembleShader
+  api=4 insize=2070 outsize=3593 ok=1
+Cmd: disassembleShader
+  api=4 insize=2070 outsize=3588 ok=1
+Cmd: disassembleShader
+  api=4 insize=2530 outsize=4339 ok=1
+Cmd: disassembleShader
+  api=4 insize=2254 outsize=3915 ok=1
+Cmd: disassembleShader
+  api=4 insize=2134 outsize=3659 ok=1
+Cmd: disassembleShader
+  api=4 insize=1418 outsize=2358 ok=1
 
 Quitting shader compiler process
 >>>>>>> master
