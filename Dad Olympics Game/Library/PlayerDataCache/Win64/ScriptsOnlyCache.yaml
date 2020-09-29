@@ -10,6 +10,7 @@ ScriptsOnlyBuild:
     - PlayerMovement
     - PopUpCutout
     - SimpleFollow
+    - SpawnAward
     - StrollerController
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
@@ -249,6 +250,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 12638}
     - Class: 114
       Script: {instanceID: 12886}
+    - Class: 114
+      Script: {instanceID: 12966}
+    - Class: 114
+      Script: {instanceID: 34674}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -627,7 +632,7 @@ ScriptsOnlyBuild:
     className: SignalReceiver
   - hash:
       serializedVersion: 2
-      Hash: b6b6b821b789c1db1bbb9da3a02058dc
+      Hash: 037b4e467586e4979b4d9756021f5a52
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ManageGame
@@ -823,6 +828,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 0a9ffd22bce7491bb78a3a7503f31b0a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SpawnAward
   platform: 19
   scenePathNames:
   - Assets/Scenes/TitleScreen.unity

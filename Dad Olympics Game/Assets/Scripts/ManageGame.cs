@@ -23,6 +23,18 @@ public class ManageGame : MonoBehaviour
 
     private Vector3 strollerPos;
 
+    public GameObject goldStroller;
+
+    public GameObject silverStroller;
+
+    public GameObject bronzeStroller;
+
+    public GameObject prizeSpawnPoint;
+
+    private GameObject prize;
+
+    private bool spawned = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -69,6 +81,8 @@ public class ManageGame : MonoBehaviour
         currentTime = startTime;
         player.transform.position = startPos;
         stroller.transform.position = strollerPos;
+        Destroy(prize);
+        spawned = false;
     }
 
     void OnTriggerEnter(Collider obj)
@@ -77,6 +91,22 @@ public class ManageGame : MonoBehaviour
         {
             Debug.Log("Trigger end");
             gameRunning = false;
+            if (!spawned)
+            {
+                if(currentTime < 15)
+                {
+                    prize = Instantiate(goldStroller, prizeSpawnPoint.transform.position, prizeSpawnPoint.transform.rotation) as GameObject;
+                }else if(currentTime < 25)
+                {
+                    prize = Instantiate(silverStroller, prizeSpawnPoint.transform.position, prizeSpawnPoint.transform.rotation) as GameObject;
+                }
+                else
+                {
+                    prize = Instantiate(bronzeStroller, prizeSpawnPoint.transform.position, prizeSpawnPoint.transform.rotation) as GameObject;
+                }
+                spawned = true;
+            }
+           
         }
 
 

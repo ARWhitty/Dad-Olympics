@@ -64,6 +64,7 @@
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\PopUpCutout.cs" />
      <Compile Include="Assets\Scripts\SimpleFollow.cs" />
+     <Compile Include="Assets\Scripts\SpawnAward.cs" />
      <Compile Include="Assets\Scripts\StrollerController.cs" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
