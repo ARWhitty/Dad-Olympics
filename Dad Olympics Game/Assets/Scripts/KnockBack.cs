@@ -6,6 +6,7 @@ public class KnockBack : MonoBehaviour
 {
     public Vector3 directionVector;
     public short kBForce;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +26,11 @@ public class KnockBack : MonoBehaviour
             Vector3 direction = other.transform.position - transform.position;
             direction = direction.normalized + directionVector;
             other.gameObject.GetComponent<PlayerMovement>().KnockBack(direction * kBForce);
+        } else if (other.tag == "Grabbable" && kBForce >= 50)
+        {
+            Vector3 direction = other.transform.position - transform.position;
+            direction = direction.normalized;
+            other.gameObject.GetComponent<StrollerController>().KnockBack(direction * (kBForce));
         }
     }
 }

@@ -264,13 +264,13 @@ public class PlayerMovement : MonoBehaviour
 
     public void KnockBack(Vector3 direction)
     {
-        Debug.Log("KBCalled");
+        //Debug.Log("KBCalled");
         knockBackCounter = knockBackTime;
         DropGrabbedItem();
         GetComponent<Rigidbody>().AddForce(direction, ForceMode.Impulse);
     }
 
-    private void DropGrabbedItem()
+    public void DropGrabbedItem()
     {
         if (grabbedObject)
         {
