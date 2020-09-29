@@ -10,11 +10,15 @@ public class SpawnAward : MonoBehaviour
 
     public GameObject BronzeTrash;
 
+    public GameObject RegularTrike;
+
     public GameObject spawnPoint1;
 
     public GameObject spawnPoint2;
 
     public GameObject spawnPoint3;
+
+    public GameObject spawnPoint4;
 
     private int spawnCount = 0;
 
@@ -42,6 +46,11 @@ public class SpawnAward : MonoBehaviour
             else if (spawnCount == 2)
             {
                 GameObject prize = Instantiate(SilverGrill, spawnPoint3.transform.position, spawnPoint3.transform.rotation) as GameObject;
+                spawnCount++;
+            }
+            else if (spawnCount == 3)
+            {
+                GameObject prize = Instantiate(RegularTrike, spawnPoint4.transform.position, spawnPoint4.transform.rotation) as GameObject;
                 spawnCount++;
             }
 

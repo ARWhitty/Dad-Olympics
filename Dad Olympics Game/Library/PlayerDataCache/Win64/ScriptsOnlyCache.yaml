@@ -89,11 +89,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12638}
     - Class: 114
-      Script: {instanceID: 12848}
+      Script: {instanceID: 12850}
     - Class: 114
-      Script: {instanceID: 12886}
+      Script: {instanceID: 12888}
     - Class: 114
-      Script: {instanceID: 12966}
+      Script: {instanceID: 12968}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -168,15 +168,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12638}
     - Class: 114
-      Script: {instanceID: 12848}
+      Script: {instanceID: 12850}
     - Class: 114
-      Script: {instanceID: 12886}
+      Script: {instanceID: 12888}
     - Class: 114
-      Script: {instanceID: 12966}
+      Script: {instanceID: 12968}
     - Class: 114
-      Script: {instanceID: 12988}
+      Script: {instanceID: 12990}
     - Class: 114
-      Script: {instanceID: 12994}
+      Script: {instanceID: 12996}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -249,11 +249,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12638}
     - Class: 114
-      Script: {instanceID: 12886}
+      Script: {instanceID: 12758}
     - Class: 114
-      Script: {instanceID: 12966}
+      Script: {instanceID: 12888}
     - Class: 114
-      Script: {instanceID: 34674}
+      Script: {instanceID: 12968}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -320,11 +320,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12638}
     - Class: 114
-      Script: {instanceID: 12786}
+      Script: {instanceID: 12788}
     - Class: 114
-      Script: {instanceID: 12894}
+      Script: {instanceID: 12896}
     - Class: 114
-      Script: {instanceID: 12994}
+      Script: {instanceID: 12996}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -704,6 +704,12 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
+      Hash: 5dc2e244c0504b156480d98e8233898c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SpawnAward
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -828,12 +834,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 0a9ffd22bce7491bb78a3a7503f31b0a
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: SpawnAward
   platform: 19
   scenePathNames:
   - Assets/Scenes/TitleScreen.unity
