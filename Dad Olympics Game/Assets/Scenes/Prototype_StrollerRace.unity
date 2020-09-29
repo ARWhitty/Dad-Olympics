@@ -8374,17 +8374,17 @@ PrefabInstance:
     - target: {fileID: 8242363635639636143, guid: c871c752d9b95ce449d3af8c8182df76,
         type: 3}
       propertyPath: coverTargetOffset.x
-      value: -46.26
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8242363635639636143, guid: c871c752d9b95ce449d3af8c8182df76,
         type: 3}
       propertyPath: coverTargetOffset.y
-      value: -4.021
+      value: 2.786
       objectReference: {fileID: 0}
     - target: {fileID: 8242363635639636143, guid: c871c752d9b95ce449d3af8c8182df76,
         type: 3}
       propertyPath: coverTargetOffset.z
-      value: -7.203686
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7413126821603685883, guid: c871c752d9b95ce449d3af8c8182df76, type: 3}
@@ -32421,17 +32421,17 @@ PrefabInstance:
     - target: {fileID: 8242363635639636143, guid: c871c752d9b95ce449d3af8c8182df76,
         type: 3}
       propertyPath: coverTargetOffset.x
-      value: -46.26
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8242363635639636143, guid: c871c752d9b95ce449d3af8c8182df76,
         type: 3}
       propertyPath: coverTargetOffset.y
-      value: -4.021
+      value: 2.786
       objectReference: {fileID: 0}
     - target: {fileID: 8242363635639636143, guid: c871c752d9b95ce449d3af8c8182df76,
         type: 3}
       propertyPath: coverTargetOffset.z
-      value: -7.203686
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7413126821603685883, guid: c871c752d9b95ce449d3af8c8182df76, type: 3}
