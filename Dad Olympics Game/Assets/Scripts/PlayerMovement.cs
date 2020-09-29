@@ -147,6 +147,9 @@ public class PlayerMovement : MonoBehaviour
         }else if (Input.GetKeyDown("p"))
         {
             SceneManager.LoadScene("Prototype-Sandbox");
+        }else if (Input.GetKeyDown("i"))
+        {
+            SceneManager.LoadScene("ScottScene2");
         }
     }
 
@@ -195,7 +198,7 @@ public class PlayerMovement : MonoBehaviour
         if (obj.collider.tag.Equals("WarpSandbox"))
         {
             Debug.Log("Last Scene");
-            SceneManager.LoadScene("Prototype-Sandbox");
+            SceneManager.LoadScene("ScottScene2");
         }
     }
 

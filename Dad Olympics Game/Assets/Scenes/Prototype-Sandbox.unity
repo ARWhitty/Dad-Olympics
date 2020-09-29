@@ -4642,22 +4642,22 @@ PrefabInstance:
     - target: {fileID: 8242363635639636143, guid: c871c752d9b95ce449d3af8c8182df76,
         type: 3}
       propertyPath: delay
-      value: 120
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8242363635639636143, guid: c871c752d9b95ce449d3af8c8182df76,
         type: 3}
       propertyPath: coverTargetOffset.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8242363635639636143, guid: c871c752d9b95ce449d3af8c8182df76,
         type: 3}
       propertyPath: coverTargetOffset.y
-      value: 3.36
+      value: 2.8
       objectReference: {fileID: 0}
     - target: {fileID: 8242363635639636143, guid: c871c752d9b95ce449d3af8c8182df76,
         type: 3}
       propertyPath: coverTargetOffset.z
-      value: -24.34
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8242363635639636143, guid: c871c752d9b95ce449d3af8c8182df76,
         type: 3}
@@ -27713,17 +27713,17 @@ PrefabInstance:
     - target: {fileID: 8242363635639636143, guid: c871c752d9b95ce449d3af8c8182df76,
         type: 3}
       propertyPath: coverTargetOffset.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8242363635639636143, guid: c871c752d9b95ce449d3af8c8182df76,
         type: 3}
       propertyPath: coverTargetOffset.y
-      value: 3.36
+      value: 2.8
       objectReference: {fileID: 0}
     - target: {fileID: 8242363635639636143, guid: c871c752d9b95ce449d3af8c8182df76,
         type: 3}
       propertyPath: coverTargetOffset.z
-      value: -21.38
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8242363635639636143, guid: c871c752d9b95ce449d3af8c8182df76,
         type: 3}
@@ -27903,6 +27903,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mass
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9038403705695292137, guid: 41762653686dd2f49a6b7ca5a0f63035,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9038403705695292142, guid: 41762653686dd2f49a6b7ca5a0f63035,
         type: 3}
