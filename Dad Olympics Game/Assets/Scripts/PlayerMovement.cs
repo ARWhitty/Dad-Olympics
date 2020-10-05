@@ -200,6 +200,11 @@ public class PlayerMovement : MonoBehaviour
             Debug.Log("Last Scene");
             SceneManager.LoadScene("ScottScene2");
         }
+        if (obj.gameObject.tag == "Ground" && obj.impulse.magnitude > 150) //If you hit the ground with more than 300 force.
+        {
+            float yRot = GetComponent<Rigidbody>().rotation.y % 360;
+            StartCoroutine(KnockDown(new Vector3(-Mathf.Cos(yRot), -1, -Mathf.Sin(yRot))));
+        }
     }
 
     //Commenting out the collision code as the RayCast way to detect pickups seems more responsive
@@ -234,17 +239,6 @@ public class PlayerMovement : MonoBehaviour
         }
     }*/
 
-    //Unfinished
-    /*
-    public void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Ground" && collision.impulse.magnitude > 300) //If you hit the ground with more than 300 force.
-        {
-            float yRot = GetComponent<Rigidbody>().rotation.y % 360;
-            StartCoroutine(KnockDown(new Vector3(-Mathf.Cos(yRot), -1, -Mathf.Sin(yRot))));
-        }
-    }
-    */
 
     //Simple method that checks if the player is grounded using raycast
     private bool IsGrounded()
@@ -259,6 +253,7 @@ public class PlayerMovement : MonoBehaviour
         body.AddForce(fallDirection * 200, ForceMode.Impulse);
         knockBackCounter = 60;
         yield return new WaitForSeconds(1);
+        knockBackCounter = 30;
         body.position += new Vector3(0, 3, 0);
         body.rotation = Quaternion.identity;
         body.freezeRotation = true;
