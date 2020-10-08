@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 875, y: 300}
+  m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -46,7 +46,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 997
-  m_MinSize: {x: 875, y: 300}
+  m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -115,7 +115,11 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
+<<<<<<< HEAD
   controlID: 33
+=======
+  controlID: 56
+>>>>>>> master
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -140,7 +144,11 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
+<<<<<<< HEAD
   controlID: 34
+=======
+  controlID: 15
+>>>>>>> master
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -165,7 +173,11 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
+<<<<<<< HEAD
   controlID: 35
+=======
+  controlID: 16
+>>>>>>> master
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -202,7 +214,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: GameView
+  m_Name: SceneView
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -213,13 +225,17 @@ MonoBehaviour:
     height: 676
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
+<<<<<<< HEAD
   m_ActualView: {fileID: 12}
+=======
+  m_ActualView: {fileID: 14}
+>>>>>>> master
   m_Panes:
   - {fileID: 14}
   - {fileID: 12}
   - {fileID: 15}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -396,7 +412,11 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
+<<<<<<< HEAD
       m_ExpandedIDs: 70fbffff
+=======
+      m_ExpandedIDs: 4063ffff4463ffff9870fffff089ffff32a9ffffac680000968700007e880000
+>>>>>>> master
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -456,9 +476,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -21.926191, y: 19.49161, z: 4.942769}
+    m_Target: {x: -38.09937, y: 20.209702, z: 59.299908}
     speed: 2
-    m_Value: {x: -21.926191, y: 19.49161, z: 4.942769}
+    m_Value: {x: -38.047726, y: 20.194105, z: 59.41806}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -504,13 +524,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.42307603, y: -0.006538876, z: 0.0031665636, w: 0.90616506}
+    m_Target: {x: -0.085333936, y: 0.87244004, z: -0.1644257, w: -0.45247078}
     speed: 2
-    m_Value: {x: 0.4230377, y: -0.0065382835, z: 0.0031662767, w: 0.906083}
+    m_Value: {x: -0.08507873, y: 0.87303084, z: -0.16453715, w: -0.4511167}
   m_Size:
-    m_Target: 1.3446839
+    m_Target: -2.0436933
     speed: 2
-    m_Value: 1.3446839
+    m_Value: -1.7436934
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -600,21 +620,28 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Scenes/Not Used
   m_ViewMode: 1
   m_StartGridSize: 96
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Scenes/Not Used
   m_LastFoldersGridSize: 96
-  m_LastProjectPath: C:\Users\addys\GameProjects\Unity\Dad-Olympics\Dad Olympics
+  m_LastProjectPath: C:\Users\foodw\Documents\Dad-Olympics\Dad-Olympics\Dad Olympics
     Game
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
+<<<<<<< HEAD
     scrollPos: {x: 0, y: 174}
     m_SelectedIDs: 723c0000
     m_LastClickedID: 15474
     m_ExpandedIDs: 00000000fa330000e63b000000ca9a3b
+=======
+    scrollPos: {x: 0, y: 126}
+    m_SelectedIDs: d0630000
+    m_LastClickedID: 25552
+    m_ExpandedIDs: 00000000a05d000090610000d8630000
+>>>>>>> master
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -642,7 +669,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000fa330000e63b0000
+=======
+    m_ExpandedIDs: 00000000a05d0000d8630000
+>>>>>>> master
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
