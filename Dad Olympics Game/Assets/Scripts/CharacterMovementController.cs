@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class CharacterMovementController : MonoBehaviour
 {
-
     private CharacterController controller;
     public Transform camPos;
 
@@ -158,7 +157,7 @@ public class CharacterMovementController : MonoBehaviour
 
     public void KnockBack(Vector3 direction)
     {
-        //Debug.Log("KBCalled");
+        Debug.Log("KBCalled");
         knockBackCounter = knockBackTime;
         DropGrabbedItem();
         GetComponent<Rigidbody>().AddForce(direction, ForceMode.Impulse);
