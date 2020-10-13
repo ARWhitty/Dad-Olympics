@@ -16,10 +16,20 @@ public class SimpleFollow : MonoBehaviour
 
     private Vector3 offset;
 
+    public Camera cameraComp;
+    private float startingFOV;
+
+    public float minFOV, maxFOV, zoomRate;
+
+    private float currentFieldOfView;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        cameraComp = GetComponent<Camera>();
+        startingFOV = cameraComp.fieldOfView;
+        Cursor.visible = false;
         if (UseOffset)
         {
             offset = transform.position - Player.transform.position;
@@ -29,6 +39,19 @@ public class SimpleFollow : MonoBehaviour
     // Call FixedUpdate so it stays synced with the physics engine
     void FixedUpdate()
     {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            Cursor.visible = true;
+        }
+
+        currentFieldOfView = cameraComp.fieldOfView;
+
+        float scroll = Input.GetAxis("Mouse ScrollWheel");
+        
+        currentFieldOfView += scroll * zoomRate;
+
+        currentFieldOfView = Mathf.Clamp(currentFieldOfView, minFOV, maxFOV);
+        cameraComp.fieldOfView = currentFieldOfView;
 
         transform.position = Vector3.Lerp(transform.position, Player.transform.position + offset, MoveSpeed);
 
@@ -39,6 +62,8 @@ public class SimpleFollow : MonoBehaviour
     {
         //Make sure the object faces towards the character and pivots around depending on the movements of the object being followed
         offset = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * 4f, Vector3.up) * offset;
+        //Does this work with the Y axis as well?
+        offset += Quaternion.AngleAxis(Input.GetAxis("Mouse Y") * 4f, Vector3.up) * offset;
         transform.LookAt(Player.transform.position);
     }
 }
