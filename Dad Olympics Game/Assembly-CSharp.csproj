@@ -57,6 +57,8 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\CameraMove.cs" />
      <Compile Include="Assets\Scripts\CameraMove2.cs" />
+     <Compile Include="Assets\Scripts\CameraMovementKieran.cs" />
+     <Compile Include="Assets\Scripts\CharacterMovementController.cs" />
      <Compile Include="Assets\Scripts\KnockBack.cs" />
      <Compile Include="Assets\Scripts\MainMenu.cs" />
      <Compile Include="Assets\Scripts\ManageGame.cs" />

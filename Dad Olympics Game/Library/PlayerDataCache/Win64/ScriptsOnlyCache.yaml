@@ -1,7 +1,8 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
-    - CameraMove
+    - CameraMove2
+    - CharacterMovementController
     - KnockBack
     - MainMenu
     - ManageGame
@@ -10,8 +11,8 @@ ScriptsOnlyBuild:
     - PlayerMovement
     - PopUpCutout
     - SimpleFollow
-    - SpawnAward
     - StrollerController
+    - WaypointMovement
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro.dll:
@@ -35,83 +36,6 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Image
     - UnityEngine.UI.Text
   sceneClasses:
-    Assets/Scenes/Prototype-Sandbox.unity:
-    - Class: 1
-      Script: {instanceID: 0}
-    - Class: 4
-      Script: {instanceID: 0}
-    - Class: 20
-      Script: {instanceID: 0}
-    - Class: 21
-      Script: {instanceID: 0}
-    - Class: 23
-      Script: {instanceID: 0}
-    - Class: 28
-      Script: {instanceID: 0}
-    - Class: 33
-      Script: {instanceID: 0}
-    - Class: 43
-      Script: {instanceID: 0}
-    - Class: 48
-      Script: {instanceID: 0}
-    - Class: 54
-      Script: {instanceID: 0}
-    - Class: 64
-      Script: {instanceID: 0}
-    - Class: 65
-      Script: {instanceID: 0}
-    - Class: 81
-      Script: {instanceID: 0}
-    - Class: 82
-      Script: {instanceID: 0}
-    - Class: 83
-      Script: {instanceID: 0}
-    - Class: 89
-      Script: {instanceID: 0}
-    - Class: 104
-      Script: {instanceID: 0}
-    - Class: 108
-      Script: {instanceID: 0}
-    - Class: 114
-      Script: {instanceID: 11182}
-    - Class: 114
-      Script: {instanceID: 11294}
-    - Class: 114
-      Script: {instanceID: 11342}
-    - Class: 114
-      Script: {instanceID: 11522}
-    - Class: 114
-      Script: {instanceID: 11536}
-    - Class: 114
-      Script: {instanceID: 12374}
-    - Class: 114
-      Script: {instanceID: 12568}
-    - Class: 114
-      Script: {instanceID: 12638}
-    - Class: 114
-      Script: {instanceID: 12850}
-    - Class: 114
-      Script: {instanceID: 12888}
-    - Class: 114
-      Script: {instanceID: 12968}
-    - Class: 115
-      Script: {instanceID: 0}
-    - Class: 128
-      Script: {instanceID: 0}
-    - Class: 136
-      Script: {instanceID: 0}
-    - Class: 157
-      Script: {instanceID: 0}
-    - Class: 196
-      Script: {instanceID: 0}
-    - Class: 222
-      Script: {instanceID: 0}
-    - Class: 223
-      Script: {instanceID: 0}
-    - Class: 224
-      Script: {instanceID: 0}
-    - Class: 258
-      Script: {instanceID: 0}
     Assets/Scenes/Prototype_StrollerRace.unity:
     - Class: 1
       Script: {instanceID: 0}
@@ -158,25 +82,31 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11536}
     - Class: 114
-      Script: {instanceID: 11772}
+      Script: {instanceID: 11582}
     - Class: 114
-      Script: {instanceID: 12356}
+      Script: {instanceID: 11778}
     - Class: 114
-      Script: {instanceID: 12374}
+      Script: {instanceID: 12364}
     - Class: 114
-      Script: {instanceID: 12568}
+      Script: {instanceID: 12382}
     - Class: 114
-      Script: {instanceID: 12638}
+      Script: {instanceID: 12576}
     - Class: 114
-      Script: {instanceID: 12850}
+      Script: {instanceID: 12646}
     - Class: 114
-      Script: {instanceID: 12888}
+      Script: {instanceID: 12858}
     - Class: 114
-      Script: {instanceID: 12968}
+      Script: {instanceID: 12896}
     - Class: 114
-      Script: {instanceID: 12990}
+      Script: {instanceID: 12900}
     - Class: 114
-      Script: {instanceID: 12996}
+      Script: {instanceID: 12978}
+    - Class: 114
+      Script: {instanceID: 13000}
+    - Class: 114
+      Script: {instanceID: 13006}
+    - Class: 114
+      Script: {instanceID: 16696}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -185,82 +115,7 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 136
       Script: {instanceID: 0}
-    - Class: 157
-      Script: {instanceID: 0}
-    - Class: 196
-      Script: {instanceID: 0}
-    - Class: 212
-      Script: {instanceID: 0}
-    - Class: 213
-      Script: {instanceID: 0}
-    - Class: 222
-      Script: {instanceID: 0}
-    - Class: 223
-      Script: {instanceID: 0}
-    - Class: 224
-      Script: {instanceID: 0}
-    Assets/Scenes/ScottScene2.unity:
-    - Class: 1
-      Script: {instanceID: 0}
-    - Class: 4
-      Script: {instanceID: 0}
-    - Class: 20
-      Script: {instanceID: 0}
-    - Class: 21
-      Script: {instanceID: 0}
-    - Class: 23
-      Script: {instanceID: 0}
-    - Class: 28
-      Script: {instanceID: 0}
-    - Class: 33
-      Script: {instanceID: 0}
-    - Class: 43
-      Script: {instanceID: 0}
-    - Class: 48
-      Script: {instanceID: 0}
-    - Class: 54
-      Script: {instanceID: 0}
-    - Class: 64
-      Script: {instanceID: 0}
-    - Class: 65
-      Script: {instanceID: 0}
-    - Class: 81
-      Script: {instanceID: 0}
-    - Class: 82
-      Script: {instanceID: 0}
-    - Class: 83
-      Script: {instanceID: 0}
-    - Class: 104
-      Script: {instanceID: 0}
-    - Class: 108
-      Script: {instanceID: 0}
-    - Class: 114
-      Script: {instanceID: 11182}
-    - Class: 114
-      Script: {instanceID: 11294}
-    - Class: 114
-      Script: {instanceID: 11342}
-    - Class: 114
-      Script: {instanceID: 11536}
-    - Class: 114
-      Script: {instanceID: 11576}
-    - Class: 114
-      Script: {instanceID: 12374}
-    - Class: 114
-      Script: {instanceID: 12638}
-    - Class: 114
-      Script: {instanceID: 12758}
-    - Class: 114
-      Script: {instanceID: 12888}
-    - Class: 114
-      Script: {instanceID: 12968}
-    - Class: 115
-      Script: {instanceID: 0}
-    - Class: 128
-      Script: {instanceID: 0}
-    - Class: 135
-      Script: {instanceID: 0}
-    - Class: 136
+    - Class: 143
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -306,25 +161,25 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11530}
     - Class: 114
-      Script: {instanceID: 11772}
+      Script: {instanceID: 11778}
     - Class: 114
-      Script: {instanceID: 11796}
+      Script: {instanceID: 11804}
     - Class: 114
-      Script: {instanceID: 12150}
+      Script: {instanceID: 12158}
     - Class: 114
-      Script: {instanceID: 12374}
+      Script: {instanceID: 12382}
     - Class: 114
-      Script: {instanceID: 12388}
+      Script: {instanceID: 12396}
     - Class: 114
-      Script: {instanceID: 12574}
+      Script: {instanceID: 12582}
     - Class: 114
-      Script: {instanceID: 12638}
+      Script: {instanceID: 12646}
     - Class: 114
-      Script: {instanceID: 12788}
+      Script: {instanceID: 12796}
     - Class: 114
-      Script: {instanceID: 12896}
+      Script: {instanceID: 12906}
     - Class: 114
-      Script: {instanceID: 12996}
+      Script: {instanceID: 13006}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -482,7 +337,7 @@ ScriptsOnlyBuild:
     className: MainMenu
   - hash:
       serializedVersion: 2
-      Hash: c8225b6dd083aeb05c16fcbf1231baa9
+      Hash: 731bf31ce5e19a13c91e152cc4af5a3e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SimpleFollow
@@ -504,6 +359,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CameraMove
+  - hash:
+      serializedVersion: 2
+      Hash: be59eea7374987c002626656cabb7282
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CameraMove2
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -536,6 +397,18 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
+      Hash: c8225b6dd083aeb05c16fcbf1231baa9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SimpleFollowOld
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: WaypointMarker
+  - hash:
+      serializedVersion: 2
       Hash: cc4274b586df3c02688bac01b88bd16c
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -546,6 +419,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: ControlPlayableAsset
+  - hash:
+      serializedVersion: 2
+      Hash: e3471e6c7eb5aae588c1836350f9c323
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerMovement2
   - hash:
       serializedVersion: 2
       Hash: b8a5e8091ab0b8861d2add371082c5e0
@@ -734,6 +613,12 @@ ScriptsOnlyBuild:
     className: TextMeshPro
   - hash:
       serializedVersion: 2
+      Hash: 1ada5ac344bf0c57018ba6000d9283c1
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: WaypointMovement
+  - hash:
+      serializedVersion: 2
       Hash: 3165968ba45c74472d279ba04455fccb
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -834,10 +719,20 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: caf4823afe8085ebd6fd0285dc32491e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CharacterMovementController
+  - hash:
+      serializedVersion: 2
+      Hash: 759a7558dd978c4ad981deafd8cd64ce
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CameraMovementKieran
   platform: 19
   scenePathNames:
   - Assets/Scenes/TitleScreen.unity
   - Assets/Scenes/Prototype_StrollerRace.unity
-  - Assets/Scenes/Prototype-Sandbox.unity
-  - Assets/Scenes/ScottScene2.unity
   playerPath: C:/Users/Kieran/Desktop/TestBuildTest/Dad Olympics Game.exe
