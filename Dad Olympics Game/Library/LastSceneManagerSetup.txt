@@ -1,9 +1,5 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/Not Used/AddisonScene.unity
-=======
-- path: Assets/Scenes/Not Used/StevenTest.unity
->>>>>>> master
+- path: Assets/Scenes/Not Used/KieranScene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
