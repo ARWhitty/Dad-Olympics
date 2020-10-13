@@ -1,2 +1,6 @@
+<<<<<<< HEAD
 Base path: 'C:/Program Files/Unity/Hub/Editor/Editor/Data', plugins path 'C:/Program Files/Unity/Hub/Editor/Editor/Data/PlaybackEngines'
+=======
+Base path: 'S:/New folder/Editor/Data', plugins path 'S:/New folder/Editor/Data/PlaybackEngines'
+>>>>>>> master
 Cmd: initializeCompiler
