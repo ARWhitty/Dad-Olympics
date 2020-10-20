@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\CameraMoveFG.cs" />
     <Compile Include="Assets\Scripts\CameraMovementKieran.cs" />
     <Compile Include="Assets\Scripts\CharacterMovementController.cs" />
+    <Compile Include="Assets\Scripts\FireHydrantKB.cs" />
     <Compile Include="Assets\Scripts\KnockBack.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\ManageGame.cs" />
