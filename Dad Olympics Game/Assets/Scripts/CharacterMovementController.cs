@@ -138,7 +138,7 @@ public class CharacterMovementController : MonoBehaviour
     //Simple method that checks if the player is grounded using raycast
     private bool IsGrounded()
     {
-        return Physics.Raycast(transform.position, Vector3.down, 1f);
+        return Physics.Raycast(transform.position, Vector3.down, 1.5f);
     }
 
     public IEnumerator KnockDown(Vector3 fallDirection)

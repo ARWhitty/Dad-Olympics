@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/Not Used/AddisonCinemachinePrototype.unity
+=======
+- path: Assets/Scenes/PlayerLoad.unity
+>>>>>>> master
   isLoaded: 1
   isActive: 1
   isSubScene: 0

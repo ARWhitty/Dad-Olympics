@@ -17,4 +17,6 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/ScottScene2.unity
     guid: 24f638528c41eaf4d8b6d65e7edd69c5
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: 4de97d674fb6a3f4287d14a2d1e492c5,
+      type: 2}
