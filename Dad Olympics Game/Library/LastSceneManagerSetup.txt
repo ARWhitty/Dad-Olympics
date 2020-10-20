@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Not Used/StevenTest.unity
+- path: Assets/Scenes/Not Used/AddisonCinemachinePrototype.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
