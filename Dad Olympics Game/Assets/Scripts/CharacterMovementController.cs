@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using static UnityEngine.InputSystem.InputAction;
 
 public class CharacterMovementController : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class CharacterMovementController : MonoBehaviour
     public float gravity;
     public float jumpHeight;
     Vector3 velocity;
+
+    private Vector2 direction;
 
     float turnSmoothVelocity;
 
@@ -40,43 +43,38 @@ public class CharacterMovementController : MonoBehaviour
 
     private float knockBackCounter;
 
+    private bool isJumping;
+
+    private bool pickupPressed;
+
+    private bool throwPressed;
+
+    private float pickupCooldown;
+
 
     // Start is called before the first frame update
     void Start()
     {
         moveSpeed = moveSpeedNormal;
+        direction = new Vector2();
         controller = GetComponent<CharacterController>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (IsGrounded() && velocity.y < 0)
+        /*if (IsGrounded() && velocity.y < 0)
         {
             velocity.y = -2f;
-        }
+        }*/
 
-        if (Input.GetKeyDown("space") && IsGrounded())
-        {
-            if (hasGrabbed)
-            {
-                velocity.y = Mathf.Sqrt(jumpHeightGrab * -2 * gravity);
-            }
-            else
-            {
-                velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity);
-            }
 
-        }
 
-        velocity.y += gravity * Time.deltaTime;
-        controller.Move(velocity * Time.deltaTime);
+        Move();
 
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        float vertical = Input.GetAxisRaw("Vertical");
-        Vector3 dirVector = new Vector3(horizontal, 0f, vertical).normalized;
+        Jump();
 
-        if (dirVector.magnitude >= 0.1f)
+        /*if (dirVector.magnitude >= 0.1f)
         {
             float targetAngle = Mathf.Atan2(dirVector.x, dirVector.z) * Mathf.Rad2Deg + camPos.eulerAngles.y;
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnTime);
@@ -84,11 +82,11 @@ public class CharacterMovementController : MonoBehaviour
 
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
             controller.Move(moveDir.normalized * moveSpeed * Time.deltaTime);
-        }
+        }*/
 
 
 
-        if (knockBackCounter <= 0)
+       if (knockBackCounter <= 0)
         {
 
 
@@ -101,12 +99,13 @@ public class CharacterMovementController : MonoBehaviour
                 //grabbedObject.transform.LookAt(transform.position);
 
                 //If player released "e" then let go
-                if (Input.GetKeyDown("e"))
+                if (pickupPressed)
                 {
                     grabSound.Play();
                     DropGrabbedItem();
+                    pickupPressed = false;
                 }
-                else if (Input.GetKeyDown("q"))
+                else if (throwPressed)
                 {
                     performThrow();
                 }
@@ -122,6 +121,89 @@ public class CharacterMovementController : MonoBehaviour
         else
         {
             knockBackCounter -= Time.deltaTime;
+        }
+       if(pickupCooldown > 0)
+        {
+            pickupCooldown -= 1;
+        }
+
+    }
+
+    private void Jump()
+    {
+        if (IsGrounded() && isJumping)
+        {
+            if (hasGrabbed)
+            {
+                velocity.y = Mathf.Sqrt(jumpHeightGrab * -2 * gravity);
+            }
+            else
+            {
+                velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity);
+            }
+
+        }
+
+        velocity.y += gravity * Time.deltaTime;
+        controller.Move(velocity * Time.deltaTime);
+    }
+
+    private void Move()
+    {
+        Vector3 dirVector = new Vector3(direction.x, 0f, direction.y).normalized;
+        //controller.Move(dirVector * moveSpeed * Time.deltaTime);
+
+        if (dirVector.magnitude >= 0.1f)
+        {
+            float targetAngle = Mathf.Atan2(dirVector.x, dirVector.z) * Mathf.Rad2Deg + camPos.eulerAngles.y;
+            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnTime);
+            transform.rotation = Quaternion.Euler(0f, angle, 0f);
+
+            Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
+            controller.Move(moveDir.normalized * moveSpeed * Time.deltaTime);
+        }
+    }
+
+    public void OnMove(CallbackContext context)
+    {
+        direction = context.ReadValue<Vector2>();
+    }
+
+    public void OnJump(CallbackContext context)
+    {
+        if (context.ReadValueAsButton())
+        {
+            isJumping = true;
+        }
+        else
+        {
+            isJumping = false;
+        }
+
+    }
+
+    public void OnPickup(CallbackContext context)
+    {
+        if (context.performed)
+        { 
+            pickupPressed = true;
+
+        }
+        else
+        {
+            pickupPressed = false;
+        }
+    }
+
+    public void OnThrow(CallbackContext context)
+    {
+        if (context.ReadValueAsButton())
+        {
+            throwPressed = true;
+        }
+        else
+        {
+            throwPressed = false;
         }
     }
 
@@ -208,7 +290,7 @@ public class CharacterMovementController : MonoBehaviour
                     GrabText.text = "Press e to grab this object";
                 }
 
-                if (Input.GetKeyDown("e") && !hasGrabbed)
+                if (pickupPressed && !hasGrabbed)
                 {
                     grabSound.Play();
                     grabbedObject = collider.gameObject;
@@ -216,6 +298,7 @@ public class CharacterMovementController : MonoBehaviour
                     grabbedObject.GetComponent<Rigidbody>().useGravity = false;
                     moveSpeed = moveSpeedGrab;
                     hasGrabbed = true;
+                    pickupPressed = false;
                 }
             }
         }
