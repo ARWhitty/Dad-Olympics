@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/TheBlock.unity
+- path: Assets/Scenes/Marcelo_Scene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
