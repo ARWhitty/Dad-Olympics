@@ -1,13 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using static UnityEngine.InputSystem.InputAction;
 
+/// <summary>
+/// CameraMove made more like Fall Guys
+/// </summary>
 public class CameraMoveFG : MonoBehaviour
 {
     public float rotationSpeedLateral, rotationSpeedVertical;
     public Transform target, player;
     float mouseX, mouseY;
     public float minY, maxY, playerRotation;
+    private Vector2 direction;
 
     void Start()
     {
@@ -17,7 +23,7 @@ public class CameraMoveFG : MonoBehaviour
 
     private void LateUpdate()
     {
-        float horizontalInput = Input.GetAxis("Horizontal");
+        float horizontalInput = direction.x;
         playerRotation += horizontalInput;
         Control(playerRotation);
         //For editor only!
@@ -30,12 +36,16 @@ public class CameraMoveFG : MonoBehaviour
 
     void Control(float horizontalInput)
     {
-        mouseX += Input.GetAxis("Mouse X") * rotationSpeedLateral;
-        mouseY -= Input.GetAxis("Mouse Y") * rotationSpeedVertical;
+        mouseX += direction.x * rotationSpeedLateral;
+        mouseY -= direction.y * rotationSpeedVertical;
         mouseY = Mathf.Clamp(mouseY, minY, maxY);
 
         transform.LookAt(target);
 
         target.rotation = Quaternion.Euler(mouseY, mouseX + horizontalInput, 0);
+    }
+    public void OnMove(CallbackContext context)
+    {
+        direction = context.ReadValue<Vector2>();
     }
 }

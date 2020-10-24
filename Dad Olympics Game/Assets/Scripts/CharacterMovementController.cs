@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -14,6 +15,7 @@ public class CharacterMovementController : MonoBehaviour
     public float gravity;
     public float jumpHeight;
     Vector3 velocity;
+    Vector3 externalVelocity;
 
     private Vector2 direction;
 
@@ -41,6 +43,8 @@ public class CharacterMovementController : MonoBehaviour
 
     public float knockBackTime;
 
+    public float groundFriction;
+
     private float knockBackCounter;
 
     private bool isJumping;
@@ -49,7 +53,11 @@ public class CharacterMovementController : MonoBehaviour
 
     private bool throwPressed;
 
+    private bool airborn; 
+
     private float pickupCooldown;
+
+    private Vector3 externalForce;
 
 
     // Start is called before the first frame update
@@ -73,6 +81,8 @@ public class CharacterMovementController : MonoBehaviour
         Move();
 
         Jump();
+
+        CollisionDetection();
 
         /*if (dirVector.magnitude >= 0.1f)
         {
@@ -121,12 +131,42 @@ public class CharacterMovementController : MonoBehaviour
         else
         {
             knockBackCounter -= Time.deltaTime;
+            //controller.Move(externalForce);
+            if (knockBackCounter <= 0)
+            {
+                externalForce = Vector3.zero;
+            }
         }
        if(pickupCooldown > 0)
         {
             pickupCooldown -= 1;
         }
 
+    }
+
+    private void CollisionDetection()
+    {
+        RaycastHit hit;
+        Ray ray = new Ray(transform.position, Vector3.down); 
+        if (airborn)
+        {
+            if (Physics.Raycast(ray, out hit, 1.0f))
+            {
+                if (hit.transform.tag == "Ground")
+                {
+                    velocity.x = 0;
+                    velocity.z = 0;
+                    airborn = false;
+                }
+            }
+        }
+        else
+        {
+            if (Physics.Raycast(ray, out hit, 1.0f) == false || hit.transform.tag != "Ground")
+            {
+                airborn = true;
+            }
+        }
     }
 
     private void Jump()
@@ -141,9 +181,7 @@ public class CharacterMovementController : MonoBehaviour
             {
                 velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity);
             }
-
         }
-
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
     }
@@ -160,7 +198,8 @@ public class CharacterMovementController : MonoBehaviour
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
 
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
-            controller.Move(moveDir.normalized * moveSpeed * Time.deltaTime);
+            controller.Move((moveDir.normalized * moveSpeed) * Time.deltaTime);
+            //velocity += (moveDir.normalized * moveSpeed) * Time.deltaTime;
         }
     }
 
@@ -209,10 +248,10 @@ public class CharacterMovementController : MonoBehaviour
 
     void OnCollisionEnter(Collision obj)
     {
-        if (obj.gameObject.tag == "Ground" && obj.impulse.magnitude > 150) //If you hit the ground with more than 300 force.
-        {
-            float yRot = GetComponent<Rigidbody>().rotation.y % 360;
-            StartCoroutine(KnockDown(new Vector3(-Mathf.Cos(yRot), -1, -Mathf.Sin(yRot))));
+        if (obj.gameObject.tag == "Ground")
+         {
+            velocity.x = 0;
+            velocity.z = 0;
         }
     }
 
@@ -242,7 +281,8 @@ public class CharacterMovementController : MonoBehaviour
         Debug.Log("KBCalled");
         knockBackCounter = knockBackTime;
         DropGrabbedItem();
-        GetComponent<Rigidbody>().AddForce(direction, ForceMode.Impulse);
+        velocity = direction;
+        
     }
 
     public void DropGrabbedItem()

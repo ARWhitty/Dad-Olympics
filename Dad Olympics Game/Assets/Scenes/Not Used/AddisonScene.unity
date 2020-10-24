@@ -230,8 +230,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e6c75dba9b09664d866479b179f9726, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  directionVector: {x: 0, y: 1, z: 0}
-  kBForce: 200
+  directionVector: {x: 0, y: 1, z: -1}
+  kBForce: 6
 --- !u!135 &19726666
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -308,6 +308,8 @@ MonoBehaviour:
   grabSound: {fileID: 416049957}
   throwSound: {fileID: 138590545}
   knockBackTime: 1
+  groundFriction: 0.1
+  airborn: 0
 --- !u!143 &72490178
 CharacterController:
   m_ObjectHideFlags: 0
@@ -326,6 +328,101 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &72490181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 72490176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: d9e89bf1ed4d7454c977ec5af3f30ea0,
+    type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 72490177}
+        m_MethodName: OnMove
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 31055e42-bffa-4e23-bf54-bb0a945d2d03
+    m_ActionName: PlayerMovement/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 72490177}
+        m_MethodName: OnJump
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 59f87efb-c033-428d-8a50-c605fc8f6548
+    m_ActionName: PlayerMovement/Jump[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 72490177}
+        m_MethodName: OnThrow
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 0145c1f7-08db-4927-b986-a14ea05875e8
+    m_ActionName: PlayerMovement/Throw[/Keyboard/q]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 72490177}
+        m_MethodName: OnPickup
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 7b31deb2-9495-40cb-85e3-a6691f89d0a5
+    m_ActionName: PlayerMovement/Pickup[/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: d16dc3d0-f9b7-4bb3-9d99-f2d19f8f1529
+    m_ActionName: CameraMovement/CameraMove
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: PlayerMovement
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!4 &72490185 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6480530210642295756, guid: 9c096b2b8d4f1694993d8107bc640896,
@@ -363,6 +460,68 @@ MonoBehaviour:
   minY: 10
   maxY: 70
   playerRotation: 0
+--- !u!114 &162746276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 162746271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: d9e89bf1ed4d7454c977ec5af3f30ea0,
+    type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 31055e42-bffa-4e23-bf54-bb0a945d2d03
+    m_ActionName: PlayerMovement/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 59f87efb-c033-428d-8a50-c605fc8f6548
+    m_ActionName: PlayerMovement/Jump[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0145c1f7-08db-4927-b986-a14ea05875e8
+    m_ActionName: PlayerMovement/Throw[/Keyboard/q]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7b31deb2-9495-40cb-85e3-a6691f89d0a5
+    m_ActionName: PlayerMovement/Pickup[/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 162746272}
+        m_MethodName: OnMove
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: d16dc3d0-f9b7-4bb3-9d99-f2d19f8f1529
+    m_ActionName: CameraMovement/CameraMove
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: CameraMovement
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!4 &162746277 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8649518086173551073, guid: 512bfa28f81729549b8fcd09a7483b98,
@@ -707,8 +866,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e6c75dba9b09664d866479b179f9726, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  directionVector: {x: 0, y: 1, z: 0}
-  kBForce: 200
+  directionVector: {x: 0, y: 1, z: -1}
+  kBForce: 6
 --- !u!135 &697149588
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -904,7 +1063,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6480530210642295602, guid: 9c096b2b8d4f1694993d8107bc640896, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9c096b2b8d4f1694993d8107bc640896, type: 3}
 --- !u!1 &1670588692
 GameObject:
@@ -1107,8 +1267,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e6c75dba9b09664d866479b179f9726, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  directionVector: {x: 0, y: 1, z: 0}
-  kBForce: 200
+  directionVector: {x: 0, y: 1, z: -1}
+  kBForce: 6
 --- !u!135 &1680136638
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1172,7 +1332,7 @@ GameObject:
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!65 &1704402449
 BoxCollider:
@@ -1357,8 +1517,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e6c75dba9b09664d866479b179f9726, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  directionVector: {x: 0, y: 1, z: 0}
-  kBForce: 200
+  directionVector: {x: 0, y: 1, z: -1}
+  kBForce: 6
 --- !u!135 &1873340923
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1514,8 +1674,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e6c75dba9b09664d866479b179f9726, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  directionVector: {x: 0, y: 1, z: 0}
-  kBForce: 200
+  directionVector: {x: 0, y: 1, z: -1}
+  kBForce: 6
 --- !u!135 &1926822489
 SphereCollider:
   m_ObjectHideFlags: 0
