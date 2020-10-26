@@ -103,6 +103,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2187600573721008817}
+  - component: {fileID: 247962423}
+  - component: {fileID: 247962421}
+  - component: {fileID: 247962422}
   m_Layer: 0
   m_Name: Proto_Cutout_01
   m_TagString: Untagged
@@ -119,13 +122,57 @@ Transform:
   m_GameObject: {fileID: 1517778552167366667}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 19.52}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.7149, y: 1.7149, z: 1.7149}
   m_Children:
   - {fileID: 2213266441357508447}
   - {fileID: 7291206011820866078}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &247962423
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1517778552167366667}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.7748792, z: 0.07496055}
+  m_Center: {x: 6.3408876e-16, y: 0.8788232, z: -0.047271144}
+--- !u!114 &247962421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1517778552167366667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a41863f8c9c524479540777c70d4862, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentPos: {x: 0, y: 0, z: 0, w: 0}
+  rotationAngle: {x: 1, y: 0, z: 0, w: 1}
+  speed: 3
+  Standing: 0
+  timer: 5
+--- !u!114 &247962422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1517778552167366667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e6c75dba9b09664d866479b179f9726, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  directionVector: {x: 0, y: 0, z: 0}
+  kBForce: 10
 --- !u!1 &5571727907872305494
 GameObject:
   m_ObjectHideFlags: 0
