@@ -44,8 +44,13 @@ public class CameraMove : MonoBehaviour
         target.rotation = Quaternion.Euler(mouseY, mouseX, 0);
     }
 
-    public void OnMove(CallbackContext context)
+    /*public void OnMove(CallbackContext context)
     {
         direction = context.ReadValue<Vector2>();
+    }*/
+
+    public void SetDirectionVector(Vector2 dir)
+    {
+        direction = dir;
     }
 }

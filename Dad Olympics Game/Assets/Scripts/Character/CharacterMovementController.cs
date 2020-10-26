@@ -11,6 +11,8 @@ public class CharacterMovementController : MonoBehaviour
     private CharacterController controller;
     public Transform camPos;
 
+    public GameObject playerCamera;
+
     private float moveSpeed;
     public float gravity;
     public float jumpHeight;
@@ -35,7 +37,7 @@ public class CharacterMovementController : MonoBehaviour
 
     private bool hasGrabbed = false;
 
-    public Text GrabText;
+    //public Text GrabText;
 
     public AudioSource grabSound;
 
@@ -208,6 +210,11 @@ public class CharacterMovementController : MonoBehaviour
         direction = context.ReadValue<Vector2>();
     }
 
+    public void OnCameraMove(CallbackContext context)
+    {
+        playerCamera.GetComponent<CameraMove>().SetDirectionVector(context.ReadValue<Vector2>());
+    }
+
     public void OnJump(CallbackContext context)
     {
         if (context.ReadValueAsButton())
@@ -323,11 +330,11 @@ public class CharacterMovementController : MonoBehaviour
                 foundGrabbable = true;
                 if (hasGrabbed)
                 {
-                    GrabText.text = "";
+                    //GrabText.text = "";
                 }
                 else
                 {
-                    GrabText.text = "Press e to grab this object";
+                    //GrabText.text = "Press e to grab this object";
                 }
 
                 if (pickupPressed && !hasGrabbed)
@@ -344,7 +351,7 @@ public class CharacterMovementController : MonoBehaviour
         }
         if (!foundGrabbable)
         {
-            GrabText.text = "";
+            //GrabText.text = "";
         }
     }
 

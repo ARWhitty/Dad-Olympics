@@ -44,6 +44,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "CameraMovement",
+                    "type": "Value",
+                    "id": "1cb4ff1b-8998-4c78-90a9-62207da28170",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -53,7 +61,7 @@
                     "path": "<Gamepad>/leftStick",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "PlayerScheme",
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -115,78 +123,45 @@
                 },
                 {
                     "name": "",
-                    "id": "ed9bda8d-7a50-4189-9211-82b74ede3399",
+                    "id": "297d17e3-b003-4e48-b13e-d2b8d4e1b6bf",
+                    "path": "<GamePad>/rightStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "PlayerScheme",
+                    "action": "CameraMovement",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4cab644f-a828-49dc-937b-e69d3587e9a9",
                     "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
-                    "groups": "New control scheme",
+                    "groups": "PlayerScheme",
                     "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "9d913765-0531-4b7f-b919-c065411a4dcb",
-                    "path": "<Keyboard>/space",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "New control scheme",
-                    "action": "Jump",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "69126844-17d9-4c06-8900-3ce4361e168f",
+                    "id": "31d9ca1d-7a01-4e31-bde3-df844f37dcde",
                     "path": "<Gamepad>/buttonNorth",
                     "interactions": "",
                     "processors": "",
-                    "groups": "New control scheme",
+                    "groups": "PlayerScheme",
                     "action": "Throw",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "96c14d68-9df5-471f-a4ac-fb3f20bed4a0",
-                    "path": "<Keyboard>/q",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "New control scheme",
-                    "action": "Throw",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "a25a6679-62b4-4f67-95b1-8770a95dafcb",
+                    "id": "9470d98a-1438-497f-bcdd-5b8438cd1197",
                     "path": "<Gamepad>/buttonWest",
                     "interactions": "",
                     "processors": "",
-                    "groups": "New control scheme",
+                    "groups": "PlayerScheme",
                     "action": "Pickup",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "b61de3ba-e7c1-4df5-a840-3012ec75e91b",
-                    "path": "<Keyboard>/e",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "New control scheme",
-                    "action": "Pickup",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "a9e24fbd-a9af-4f75-9148-60988824c1dd",
-                    "path": "<Gamepad>/buttonSouth",
-                    "interactions": "Press(behavior=2)",
-                    "processors": "",
-                    "groups": "New control scheme",
-                    "action": "Select",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -208,22 +183,11 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "f2750e73-b608-4f3f-8fc5-2e29869d0bea",
-                    "path": "<Gamepad>/rightStick",
+                    "id": "9a5876e1-952d-455d-a5f6-77b87c26980f",
+                    "path": "<GamePad>/rightStick",
                     "interactions": "",
                     "processors": "",
-                    "groups": "New control scheme",
-                    "action": "CameraMove",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "1a3a9d88-61d0-4fcd-bed2-6668a6cdba77",
-                    "path": "<Mouse>/position",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "New control scheme",
+                    "groups": "",
                     "action": "CameraMove",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -233,21 +197,11 @@
     ],
     "controlSchemes": [
         {
-            "name": "New control scheme",
-            "bindingGroup": "New control scheme",
+            "name": "PlayerScheme",
+            "bindingGroup": "PlayerScheme",
             "devices": [
                 {
                     "devicePath": "<Gamepad>",
-                    "isOptional": false,
-                    "isOR": false
-                },
-                {
-                    "devicePath": "<Keyboard>",
-                    "isOptional": false,
-                    "isOR": false
-                },
-                {
-                    "devicePath": "<Mouse>",
                     "isOptional": false,
                     "isOR": false
                 }

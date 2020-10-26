@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Archive/KieranMultiplayer.unity
+- path: Assets/Scenes/Levels/Stroller_Race/Segments/TheBlock.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
