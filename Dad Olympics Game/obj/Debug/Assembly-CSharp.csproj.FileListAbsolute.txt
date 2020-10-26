@@ -272,3 +272,9 @@ C:\Users\Kieran\source\repos\DadOlympics\Dad-Olympics\Dad Olympics Game\obj\Debu
 C:\Users\Kieran\source\repos\DadOlympics\Dad-Olympics\Dad Olympics Game\obj\Debug\Assembly-CSharp.csproj.CopyComplete
 C:\Users\Kieran\source\repos\DadOlympics\Dad-Olympics\Dad Olympics Game\obj\Debug\Assembly-CSharp.dll
 C:\Users\Kieran\source\repos\DadOlympics\Dad-Olympics\Dad Olympics Game\obj\Debug\Assembly-CSharp.pdb
+C:\Users\Kieran\source\repos\DadOlympics\Dad-Olympics\Dad Olympics Game\Temp\bin\Debug\Cinemachine.dll
+C:\Users\Kieran\source\repos\DadOlympics\Dad-Olympics\Dad Olympics Game\Temp\bin\Debug\com.unity.cinemachine.editor.dll
+C:\Users\Kieran\source\repos\DadOlympics\Dad-Olympics\Dad Olympics Game\Temp\bin\Debug\Unity.InputSystem.dll
+C:\Users\Kieran\source\repos\DadOlympics\Dad-Olympics\Dad Olympics Game\Temp\bin\Debug\Cinemachine.pdb
+C:\Users\Kieran\source\repos\DadOlympics\Dad-Olympics\Dad Olympics Game\Temp\bin\Debug\Unity.InputSystem.pdb
+C:\Users\Kieran\source\repos\DadOlympics\Dad-Olympics\Dad Olympics Game\Temp\bin\Debug\com.unity.cinemachine.editor.pdb

@@ -1114,6 +1114,7 @@ MonoBehaviour:
   grabSound: {fileID: 1155168909}
   throwSound: {fileID: 1731995799}
   knockBackTime: 1
+  groundFriction: 0
 --- !u!114 &692752492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1204,6 +1205,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 7b31deb2-9495-40cb-85e3-a6691f89d0a5
     m_ActionName: PlayerMovement/Pickup[/XInputControllerWindows/buttonWest]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ca4b8066-94bc-4e2f-b419-2014a6eebe5b
+    m_ActionName: PlayerMovement/Select[/XInputControllerWindows/buttonSouth,/XInputControllerWindows/buttonSouth]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: PlayerMovement
