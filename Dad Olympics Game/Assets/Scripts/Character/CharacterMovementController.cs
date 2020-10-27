@@ -10,6 +10,7 @@ public class CharacterMovementController : MonoBehaviour
 {
     private CharacterController controller;
     public Transform camPos;
+    public Animator animator;
 
     public GameObject playerCamera;
 
@@ -195,6 +196,7 @@ public class CharacterMovementController : MonoBehaviour
 
         if (dirVector.magnitude >= 0.1f)
         {
+            animator.SetBool("isRunning", true);
             float targetAngle = Mathf.Atan2(dirVector.x, dirVector.z) * Mathf.Rad2Deg + camPos.eulerAngles.y;
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnTime);
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
@@ -202,6 +204,10 @@ public class CharacterMovementController : MonoBehaviour
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
             controller.Move((moveDir.normalized * moveSpeed) * Time.deltaTime);
             //velocity += (moveDir.normalized * moveSpeed) * Time.deltaTime;
+        }
+        else
+        {
+            animator.SetBool("isRunning", false);
         }
     }
 

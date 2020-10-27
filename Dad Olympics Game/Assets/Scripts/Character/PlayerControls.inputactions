@@ -145,6 +145,17 @@
                 },
                 {
                     "name": "",
+                    "id": "42cca699-ce95-4524-86a3-02f8f2a1e5fe",
+                    "path": "Keyboard.spaceKey",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "PlayerScheme",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "31d9ca1d-7a01-4e31-bde3-df844f37dcde",
                     "path": "<Gamepad>/buttonNorth",
                     "interactions": "",

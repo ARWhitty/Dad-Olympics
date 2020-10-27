@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Levels/Stroller_Race/Segments/TheBlock.unity
+- path: Assets/Scenes/Archive/AddisonScene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
