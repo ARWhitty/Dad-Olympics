@@ -218,7 +218,7 @@ public class CharacterMovementController : MonoBehaviour
 
     public void OnCameraMove(CallbackContext context)
     {
-        playerCamera.GetComponent<CameraMove>().SetDirectionVector(context.ReadValue<Vector2>());
+        playerCamera.GetComponent<CameraMoveFG>().SetDirectionVector(context.ReadValue<Vector2>());
     }
 
     public void OnJump(CallbackContext context)
@@ -291,7 +291,7 @@ public class CharacterMovementController : MonoBehaviour
 
     public void KnockBack(Vector3 direction)
     {
-        Debug.Log("KBCalled");
+        Debug.Log("KBCalled with: " + direction.ToString());
         knockBackCounter = knockBackTime;
         DropGrabbedItem();
         velocity = direction;

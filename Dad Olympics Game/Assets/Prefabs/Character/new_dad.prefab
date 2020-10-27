@@ -720,6 +720,25 @@ Transform:
   m_Father: {fileID: 1335406693214252697}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7173893783841286366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1983704503518304744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc79be820e119134485e5d7a0f458151, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeedLateral: 3
+  rotationSpeedVertical: 0.5
+  target: {fileID: 7173893783656297226}
+  player: {fileID: 3928969403085862769}
+  minY: 10
+  maxY: 70
+  playerRotation: 0
 --- !u!1 &2285996933783467292
 GameObject:
   m_ObjectHideFlags: 0
@@ -1214,7 +1233,7 @@ GameObject:
   - component: {fileID: 7173893783143825911}
   m_Layer: 0
   m_Name: new_dad
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1227,7 +1246,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4453304081238191563}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.4533157, y: 9.340001, z: -25.43}
+  m_LocalPosition: {x: -30, y: 3.8, z: 64}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4537012590441825833}
@@ -1264,13 +1283,13 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 2.0000002
-  m_Radius: 0.50000006
+  m_Height: 2
+  m_Radius: 0.5
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.1, z: 0}
 --- !u!135 &7173893783143825909
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1297,7 +1316,7 @@ CapsuleCollider:
   m_Radius: 0.5
   m_Height: 2
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.1, z: 0}
 --- !u!95 &7173893783143825905
 Animator:
   serializedVersion: 3
@@ -1412,14 +1431,25 @@ MonoBehaviour:
     m_ActionId: ca4b8066-94bc-4e2f-b419-2014a6eebe5b
     m_ActionName: PlayerMovement/Select
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7173893783143825911}
+        m_MethodName: OnCameraMove
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 1cb4ff1b-8998-4c78-90a9-62207da28170
     m_ActionName: PlayerMovement/CameraMovement
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
+  m_DefaultControlScheme: PlayerScheme
   m_DefaultActionMap: PlayerMovement
   m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 1983704503518304750}
 --- !u!114 &7173893783143825911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1437,15 +1467,15 @@ MonoBehaviour:
   playerCamera: {fileID: 1983704503518304744}
   gravity: -16
   jumpHeight: 2
-  moveSpeedGrab: 4
-  moveSpeedNormal: 5
+  moveSpeedGrab: 6
+  moveSpeedNormal: 7
   turnTime: 0.1
   jumpHeightGrab: 1
   throwForce: 300
   grabSound: {fileID: 1983704502654917648}
   throwSound: {fileID: 1983704502574495243}
   knockBackTime: 1
-  groundFriction: 0.1
+  groundFriction: 0
 --- !u!1 &4470167029677952656
 GameObject:
   m_ObjectHideFlags: 0
@@ -2207,95 +2237,6 @@ Transform:
   m_Father: {fileID: 3928969403085862769}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7173893783841286366
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1983704503518304744}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc79be820e119134485e5d7a0f458151, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotationSpeedLateral: 3
-  rotationSpeedVertical: 0.5
-  target: {fileID: 7173893783656297226}
-  player: {fileID: 3928969403085862769}
-  minY: 10
-  maxY: 70
-  playerRotation: 0
---- !u!114 &7173893783841286362
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1983704503518304744}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: d9e89bf1ed4d7454c977ec5af3f30ea0,
-    type: 3}
-  m_NotificationBehavior: 2
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents:
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 31055e42-bffa-4e23-bf54-bb0a945d2d03
-    m_ActionName: PlayerMovement/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 59f87efb-c033-428d-8a50-c605fc8f6548
-    m_ActionName: PlayerMovement/Jump[/Keyboard/space]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 0145c1f7-08db-4927-b986-a14ea05875e8
-    m_ActionName: PlayerMovement/Throw[/Keyboard/q]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 7b31deb2-9495-40cb-85e3-a6691f89d0a5
-    m_ActionName: PlayerMovement/Pickup[/Keyboard/e]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7173893783841286366}
-        m_MethodName: OnMove
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: d16dc3d0-f9b7-4bb3-9d99-f2d19f8f1529
-    m_ActionName: CameraMovement/CameraMove
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: ca4b8066-94bc-4e2f-b419-2014a6eebe5b
-    m_ActionName: PlayerMovement/Select
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 1cb4ff1b-8998-4c78-90a9-62207da28170
-    m_ActionName: PlayerMovement/CameraMovement
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: CameraMovement
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
 --- !u!1 &7216736267914830865
 GameObject:
   m_ObjectHideFlags: 0
@@ -2699,10 +2640,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8649518086173551074, guid: 512bfa28f81729549b8fcd09a7483b98, type: 3}
+    - {fileID: 8649518086173551075, guid: 512bfa28f81729549b8fcd09a7483b98, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 512bfa28f81729549b8fcd09a7483b98, type: 3}
 --- !u!4 &1983704503518304751 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8649518086173551073, guid: 512bfa28f81729549b8fcd09a7483b98,
+    type: 3}
+  m_PrefabInstance: {fileID: 7173893783321178126}
+  m_PrefabAsset: {fileID: 0}
+--- !u!20 &1983704503518304750 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 8649518086173551072, guid: 512bfa28f81729549b8fcd09a7483b98,
     type: 3}
   m_PrefabInstance: {fileID: 7173893783321178126}
   m_PrefabAsset: {fileID: 0}

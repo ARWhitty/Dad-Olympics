@@ -1103,6 +1103,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camPos: {fileID: 784127778}
+  animator: {fileID: 0}
+  playerCamera: {fileID: 0}
   gravity: -16
   jumpHeight: 2
   moveSpeedGrab: 4
@@ -1110,7 +1112,6 @@ MonoBehaviour:
   turnTime: 0.1
   jumpHeightGrab: 1
   throwForce: 300
-  GrabText: {fileID: 1689372135}
   grabSound: {fileID: 1155168909}
   throwSound: {fileID: 1731995799}
   knockBackTime: 1
@@ -1209,6 +1210,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: ca4b8066-94bc-4e2f-b419-2014a6eebe5b
     m_ActionName: PlayerMovement/Select[/XInputControllerWindows/buttonSouth,/XInputControllerWindows/buttonSouth]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 1cb4ff1b-8998-4c78-90a9-62207da28170
+    m_ActionName: PlayerMovement/CameraMovement[/XInputControllerWindows/rightStick,/XInputControllerWindows/rightStick]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: PlayerMovement
