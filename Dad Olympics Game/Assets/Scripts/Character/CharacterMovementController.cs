@@ -46,8 +46,6 @@ public class CharacterMovementController : MonoBehaviour
 
     public float knockBackTime;
 
-    public float groundFriction;
-
     private float knockBackCounter;
 
     private bool isJumping;
@@ -59,8 +57,6 @@ public class CharacterMovementController : MonoBehaviour
     private bool airborn; 
 
     private float pickupCooldown;
-
-    private Vector3 externalForce;
 
 
     // Start is called before the first frame update
@@ -134,11 +130,6 @@ public class CharacterMovementController : MonoBehaviour
         else
         {
             knockBackCounter -= Time.deltaTime;
-            //controller.Move(externalForce);
-            if (knockBackCounter <= 0)
-            {
-                externalForce = Vector3.zero;
-            }
         }
        if(pickupCooldown > 0)
         {
@@ -203,7 +194,6 @@ public class CharacterMovementController : MonoBehaviour
 
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
             controller.Move((moveDir.normalized * moveSpeed) * Time.deltaTime);
-            //velocity += (moveDir.normalized * moveSpeed) * Time.deltaTime;
         }
         else
         {
