@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 5906946108061443708}
   - component: {fileID: 6507680385599733109}
   - component: {fileID: 4416057371851429781}
-  - component: {fileID: 3909938188671545040}
+  - component: {fileID: 1602221587614841977}
   m_Layer: 0
   m_Name: Manhole_geyser
   m_TagString: Untagged
@@ -229,7 +229,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.70000005, y: 0.014000003, z: 0.70000017}
   m_Center: {x: 0.000000029802322, y: 0.0070000016, z: -0.000000074505806}
---- !u!114 &3909938188671545040
+--- !u!114 &1602221587614841977
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -242,7 +242,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   directionVector: {x: 0, y: 0, z: 0}
-  kBForce: 10
+  kBForce: 10000
 --- !u!1 &7966845665395576689
 GameObject:
   m_ObjectHideFlags: 0

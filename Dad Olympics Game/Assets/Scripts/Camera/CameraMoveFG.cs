@@ -17,8 +17,8 @@ public class CameraMoveFG : MonoBehaviour
 
     void Start()
     {
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.visible = false;
+        //Cursor.lockState = CursorLockMode.Locked;
     }
 
     private void LateUpdate()
@@ -27,11 +27,11 @@ public class CameraMoveFG : MonoBehaviour
         playerRotation += horizontalInput;
         Control(playerRotation);
         //For editor only!
-        if (Input.GetKeyDown(KeyCode.Escape))
+        /*if (Input.GetKeyDown(KeyCode.Escape))
         {
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
-        }
+        }*/
     }
 
     void Control(float horizontalInput)
@@ -44,8 +44,8 @@ public class CameraMoveFG : MonoBehaviour
 
         target.rotation = Quaternion.Euler(mouseY, mouseX + horizontalInput, 0);
     }
-    public void OnMove(CallbackContext context)
+    public void SetDirectionVector(Vector2 dir)
     {
-        direction = context.ReadValue<Vector2>();
+        direction = dir;
     }
 }

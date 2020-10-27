@@ -13,6 +13,7 @@ public class KnockBack : MonoBehaviour
         {
             Vector3 direction = other.transform.position - transform.position;
             direction = direction.normalized + directionVector;
+            Debug.Log("direction: " + direction.ToString() + " Force " + kBForce);
             other.gameObject.GetComponent<CharacterMovementController>().KnockBack(direction * kBForce);
         } else if (other.tag == "Grabbable" && kBForce >= 50)
         {

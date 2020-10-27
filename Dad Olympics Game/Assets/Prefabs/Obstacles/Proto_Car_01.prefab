@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 33207194651840772}
   - component: {fileID: 23173300650609254}
   - component: {fileID: 1286646323}
+  - component: {fileID: 5026268957598137158}
   m_Layer: 0
   m_Name: Proto_Car_01
   m_TagString: Untagged
@@ -100,3 +101,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.5981028, y: 1.822282, z: 4.9424124}
   m_Center: {x: 0.0000019073486, y: -0.000000834465, z: -0.0000009536743}
+--- !u!114 &5026268957598137158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1876198466292960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e6c75dba9b09664d866479b179f9726, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  directionVector: {x: 0, y: 0, z: 0}
+  kBForce: 8
