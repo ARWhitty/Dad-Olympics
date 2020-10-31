@@ -83,7 +83,7 @@
                     "path": "<Keyboard>/W",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "PlayerScheme",
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -94,7 +94,7 @@
                     "path": "<Keyboard>/S",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "PlayerScheme",
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -105,7 +105,7 @@
                     "path": "<Keyboard>/A",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "PlayerScheme",
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -116,7 +116,7 @@
                     "path": "<Keyboard>/D",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "PlayerScheme",
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -127,6 +127,17 @@
                     "path": "<GamePad>/rightStick",
                     "interactions": "",
                     "processors": "",
+                    "groups": "PlayerScheme",
+                    "action": "CameraMovement",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0fe8431e-2c52-40c1-8837-938723cf9c3e",
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "ScaleVector2(x=0.1,y=0.1)",
                     "groups": "PlayerScheme",
                     "action": "CameraMovement",
                     "isComposite": false,
@@ -145,8 +156,8 @@
                 },
                 {
                     "name": "",
-                    "id": "42cca699-ce95-4524-86a3-02f8f2a1e5fe",
-                    "path": "Keyboard.spaceKey",
+                    "id": "a98108d5-e98d-4320-9be3-0a71e9b3e758",
+                    "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
                     "groups": "PlayerScheme",
@@ -167,8 +178,30 @@
                 },
                 {
                     "name": "",
+                    "id": "272dbf58-4b76-40e8-bc3d-4e1b9e9e32e2",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "PlayerScheme",
+                    "action": "Throw",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "9470d98a-1438-497f-bcdd-5b8438cd1197",
                     "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "PlayerScheme",
+                    "action": "Pickup",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0c1601f5-0630-4a71-8e85-fad86f8c5a17",
+                    "path": "<Keyboard>/q",
                     "interactions": "",
                     "processors": "",
                     "groups": "PlayerScheme",
@@ -213,6 +246,16 @@
             "devices": [
                 {
                     "devicePath": "<Gamepad>",
+                    "isOptional": false,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": false,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<Mouse>",
                     "isOptional": false,
                     "isOR": false
                 }
