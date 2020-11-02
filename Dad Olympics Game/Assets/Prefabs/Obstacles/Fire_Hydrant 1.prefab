@@ -40,7 +40,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 681637373272561812}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5
   m_Height: 4
@@ -175,7 +175,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 1.45
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -228,7 +228,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 8.23
+      scalar: 48.12
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -720,7 +720,7 @@ ParticleSystem:
     serializedVersion: 6
     enabled: 1
     type: 4
-    angle: 9.19
+    angle: 2.01
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
@@ -925,7 +925,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 150
+      scalar: 300
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -1042,9 +1042,9 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 0
+          value: 1
           inSlope: 0
-          outSlope: 1
+          outSlope: 0
           tangentMode: 0
           weightedMode: 0
           inWeight: 0.33333334
@@ -1053,7 +1053,7 @@ ParticleSystem:
           time: 1
           value: 1
           inSlope: 1
-          outSlope: 0
+          outSlope: 1
           tangentMode: 0
           weightedMode: 0
           inWeight: 0.33333334
@@ -1371,7 +1371,7 @@ ParticleSystem:
         key5: {r: 0, g: 0, b: 0, a: 0}
         key6: {r: 0, g: 0, b: 0, a: 0}
         key7: {r: 0, g: 0, b: 0, a: 0}
-        ctime0: 0
+        ctime0: 58789
         ctime1: 65535
         ctime2: 0
         ctime3: 0
@@ -1379,7 +1379,7 @@ ParticleSystem:
         ctime5: 0
         ctime6: 0
         ctime7: 0
-        atime0: 0
+        atime0: 44718
         atime1: 65535
         atime2: 0
         atime3: 0
@@ -2186,11 +2186,11 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
   ForceModule:
-    enabled: 0
+    enabled: 1
     x:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: -8.24
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -4843,7 +4843,7 @@ Transform:
   m_GameObject: {fileID: 6917543029956859576}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalScale: {x: 18, y: 18, z: 18}
   m_Children:
   - {fileID: 3438105407938653855}
   - {fileID: 7410934477523260081}
@@ -4926,6 +4926,5 @@ MonoBehaviour:
   delay: 5
   length: 5
   force: 15
-  size: 0
   waterKB: {fileID: 681637373272561812}
   WaterEffect: {fileID: 4649751030743062608}
