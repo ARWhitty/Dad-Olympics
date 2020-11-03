@@ -131,7 +131,7 @@ MonoBehaviour:
   length: 5
   water: {fileID: 7309903515798338132}
   cover: {fileID: 1477872956237729039}
-  size: 6
+  size: 150
   coverBaseT: {x: 0, y: 0, z: 0}
   coverTargetOffset: {x: 0, y: 0, z: 0}
   angle: {x: 0, y: 0, z: 0}
