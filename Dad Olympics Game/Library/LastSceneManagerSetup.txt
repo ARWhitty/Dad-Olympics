@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Levels/Stroller_Race/Segments/TheCul-De-Sac.unity
+- path: Assets/Scenes/Archive/TheBlock 1.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
