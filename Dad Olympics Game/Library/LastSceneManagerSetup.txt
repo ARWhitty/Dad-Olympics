@@ -1,9 +1,5 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/Levels/Stroller_Race/Segments/TheBlock.unity
-=======
 - path: Assets/Scenes/Sandboxes/TheBlock_Scott.unity
->>>>>>> master
   isLoaded: 1
   isActive: 1
   isSubScene: 0
