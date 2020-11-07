@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< Updated upstream
 - path: Assets/Scenes/Sandboxes/Hannah_Roundabout.unity
+=======
+- path: Assets/Scenes/Sandboxes/Marcelo_Scene.unity
+>>>>>>> Stashed changes
   isLoaded: 1
   isActive: 1
   isSubScene: 0
