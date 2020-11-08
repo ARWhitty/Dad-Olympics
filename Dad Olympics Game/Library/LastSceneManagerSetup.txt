@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< Updated upstream
 - path: Assets/Scenes/Sandboxes/StevenTest.unity
+=======
+- path: Assets/Scenes/Sandboxes/TheBlock_Scott.unity
+>>>>>>> Stashed changes
   isLoaded: 1
   isActive: 1
   isSubScene: 0
