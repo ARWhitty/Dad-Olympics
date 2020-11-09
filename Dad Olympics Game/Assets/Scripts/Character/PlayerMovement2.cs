@@ -5,6 +5,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+/// <summary>
+/// Player movement version 2
+/// </summary>
 public class PlayerMovement2 : MonoBehaviour
 {
     private float moveSpeed;
