@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2528493728930000309}
   - component: {fileID: 1493180990693302800}
   - component: {fileID: 3700885198275286746}
+  - component: {fileID: -8259135211079740516}
   m_Layer: 0
   m_Name: Low_FireHydrant
   m_TagString: Untagged
@@ -79,3 +80,21 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &-8259135211079740516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2908431503490594575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 918f60021525d0d4899864a0cd0c9a68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Spraying: 0
+  delay: 0
+  length: 0
+  force: 0
+  waterKB: {fileID: 0}
+  WaterEffect: {fileID: 0}
