@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using static UnityEngine.InputSystem.InputAction;
 
@@ -57,6 +58,10 @@ public class CharacterMovementController : MonoBehaviour
     private bool airborn; 
 
     private float pickupCooldown;
+
+    private int playerID;
+
+    private int completedCheckpoints;
 
 
     // Start is called before the first frame update
@@ -354,5 +359,25 @@ public class CharacterMovementController : MonoBehaviour
     public bool GetHasGrabbed()
     {
         return hasGrabbed;
+    }
+
+    public void SetPlayerID(PlayerInput pi)
+    {
+        playerID = pi.playerIndex;
+    }
+
+    public int getPlayerID()
+    {
+        return playerID;
+    }
+
+    public void SetCheckpointCount(int count)
+    {
+        completedCheckpoints = count;
+    }
+
+    public int getCheckpointCount()
+    {
+        return completedCheckpoints;
     }
 }

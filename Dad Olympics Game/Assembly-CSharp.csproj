@@ -68,9 +68,11 @@
      <Compile Include="Assets\Scripts\Character\PlayerControls.cs" />
      <Compile Include="Assets\Scripts\Character\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\Character\PlayerMovement2.cs" />
+     <Compile Include="Assets\Scripts\Checkpoint.cs" />
      <Compile Include="Assets\Scripts\KnockBack.cs" />
      <Compile Include="Assets\Scripts\LevelStart.cs" />
      <Compile Include="Assets\Scripts\ManageGame.cs" />
+     <Compile Include="Assets\Scripts\ManageGameTimePrizeSpawn.cs" />
      <Compile Include="Assets\Scripts\Menu\MainMenu.cs" />
      <Compile Include="Assets\Scripts\Menu\PlayerMenuSetupController.cs" />
      <Compile Include="Assets\Scripts\Obstacles\FireHydrantKB.cs" />

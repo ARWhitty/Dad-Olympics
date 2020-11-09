@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
+/*** currently not using this system
 public class PlayerConfigurationManager : MonoBehaviour
 {
     private List<PlayerConfiguration> PlayerConfigs;
@@ -68,4 +69,4 @@ public class PlayerConfiguration
     public bool IsReady { get; set; }
 
     public Material PlayerMaterial { get; set; }
-}
+}**/
