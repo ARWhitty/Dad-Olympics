@@ -115,3 +115,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   directionVector: {x: 0, y: 0, z: 0}
   kBForce: 8
+  makePlayerDrop: 1

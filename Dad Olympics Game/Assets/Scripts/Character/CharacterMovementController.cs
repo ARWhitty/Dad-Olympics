@@ -100,7 +100,7 @@ public class CharacterMovementController : MonoBehaviour
 
 
 
-       if (knockBackCounter <= 0)
+        if (knockBackCounter <= 0)
         {
 
 
@@ -135,8 +135,14 @@ public class CharacterMovementController : MonoBehaviour
         else
         {
             knockBackCounter -= Time.deltaTime;
+            if (hasGrabbed)
+            {
+                grabbedObject.transform.position = transform.position + transform.forward * 1.5f;
+                grabbedObject.transform.rotation = transform.rotation;
+                grabbedObject.transform.rotation *= Quaternion.Euler(0, 90, 0);
+            }
         }
-       if(pickupCooldown > 0)
+        if(pickupCooldown > 0)
         {
             pickupCooldown -= 1;
         }
@@ -149,7 +155,7 @@ public class CharacterMovementController : MonoBehaviour
         Ray ray = new Ray(transform.position, Vector3.down); 
         if (airborn)
         {
-            if (Physics.Raycast(ray, out hit, 1.0f))
+            if (Physics.Raycast(ray, out hit, 1.2f))
             {
                 if (hit.transform.tag == "Ground")
                 {
@@ -161,7 +167,7 @@ public class CharacterMovementController : MonoBehaviour
         }
         else
         {
-            if (Physics.Raycast(ray, out hit, 1.0f) == false || hit.transform.tag != "Ground")
+            if (Physics.Raycast(ray, out hit, 1.2f) == false || hit.transform.tag != "Ground")
             {
                 airborn = true;
             }
@@ -284,11 +290,12 @@ public class CharacterMovementController : MonoBehaviour
 
     }
 
-    public void KnockBack(Vector3 direction)
+    public void KnockBack(Vector3 direction, bool drop)
     {
-        Debug.Log("KBCalled with: " + direction.ToString());
+        //Debug.Log("KBCalled with: " + direction.ToString());
         knockBackCounter = knockBackTime;
-        DropGrabbedItem();
+        if(drop)
+            DropGrabbedItem();
         velocity = direction;
         
     }

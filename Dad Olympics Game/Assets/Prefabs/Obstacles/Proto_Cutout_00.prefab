@@ -113,6 +113,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   directionVector: {x: 0, y: 0, z: 0}
   kBForce: 5
+  makePlayerDrop: 1
 --- !u!114 &197553919
 MonoBehaviour:
   m_ObjectHideFlags: 0
