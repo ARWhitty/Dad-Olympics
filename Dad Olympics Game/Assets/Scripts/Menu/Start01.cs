@@ -8,6 +8,7 @@ using System.Threading;
 //using System.Runtime.Hosting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Start01 : MonoBehaviour
@@ -137,7 +138,8 @@ public class Start01 : MonoBehaviour
             PauseMenuUI.SetActive(false);
             gameisPaused = false;
             Time.timeScale = 1f;
-            Application.Quit();
+            SceneManager.LoadScene("TheBlock_Scott");
+
         }
         else if (menutracker == 1)
         {
@@ -149,8 +151,8 @@ public class Start01 : MonoBehaviour
         }
         else if (menutracker == 3)
         {
-            
-           
+
+            Application.Quit();
         }
     }
 

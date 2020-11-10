@@ -8,6 +8,7 @@ using System.Threading;
 //using System.Runtime.Hosting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Pause01 : MonoBehaviour
@@ -137,7 +138,6 @@ public class Pause01 : MonoBehaviour
             PauseMenuUI.SetActive(false);
             gameisPaused = false;
             Time.timeScale = 1f;
-            Application.Quit();
         }
         else if (menutracker == 1)
         {
@@ -149,8 +149,8 @@ public class Pause01 : MonoBehaviour
         }
         else if (menutracker == 3)
         {
-            
-           
+            SceneManager.LoadScene("TitleScreen");
+
         }
     }
 
