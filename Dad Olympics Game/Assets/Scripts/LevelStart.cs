@@ -14,6 +14,7 @@ public class LevelStart : MonoBehaviour
     private List<PlayerConfiguration> PlayerConfigs;
 
     //public GameObject GameManager;
+    private int playerIDCount = 0;
 
     public void HandleGameStart(PlayerInput pi)
     {
@@ -22,7 +23,9 @@ public class LevelStart : MonoBehaviour
             Destroy(startCam);
             startText.text = "";
         }
-        Debug.Log("Player Joined: " + pi.playerIndex);
+        //Debug.Log("Player Joined: " + pi.playerIndex);
+        pi.gameObject.GetComponent<CharacterMovementController>().SetPlayerID(playerIDCount);
+        playerIDCount++;
         /**if (!PlayerConfigs.Any(p => p.PlayerIndex == pi.playerIndex))
         {
             pi.transform.SetParent(transform);
