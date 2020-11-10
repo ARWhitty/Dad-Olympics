@@ -55,7 +55,9 @@ public class CharacterMovementController : MonoBehaviour
 
     private bool throwPressed;
 
-    public bool airborn; 
+    public bool airborn;
+
+    public bool beingKnockedBack;
 
     private float pickupCooldown;
 
@@ -118,13 +120,13 @@ public class CharacterMovementController : MonoBehaviour
                     grabSound.Play();
                     DropGrabbedItem();
                     pickupPressed = false;
+                    animator.SetBool("isHoldingSomething", false);
                 }
                 else if (throwPressed)
                 {
                     performThrow();
+                    animator.SetBool("isHoldingSomething", false);
                 }
-
-
             }
             else
             {
@@ -155,16 +157,26 @@ public class CharacterMovementController : MonoBehaviour
         Ray ray = new Ray(transform.position, Vector3.down); 
         if (airborn)
         {
-            if (Physics.Raycast(ray, out hit, 0.1f))
+            if (Physics.Raycast(ray, out hit, 0.1f) && beingKnockedBack)
             {
                 if (hit.transform.tag == "Ground")
                 {
                     animator.ResetTrigger("Jump");
                     animator.SetTrigger("Land");
+                    animator.SetTrigger("FallDown");
+                    beingKnockedBack = false;
                     velocity.x = 0;
                     velocity.z = 0;
                     airborn = false;
                 }
+            } else if(Physics.Raycast(ray, out hit, 0.1f))
+            {
+
+                animator.ResetTrigger("Jump");
+                animator.SetTrigger("Land");
+                velocity.x = 0;
+                velocity.z = 0;
+                airborn = false;
             }
         }
         else
@@ -230,10 +242,9 @@ public class CharacterMovementController : MonoBehaviour
     {
         if (context.ReadValueAsButton())
         {
-
+            isJumping = true;
             animator.ResetTrigger("Land");
             animator.SetTrigger("Jump");
-            isJumping = true;
         }
         else
         {
@@ -260,6 +271,7 @@ public class CharacterMovementController : MonoBehaviour
         if (context.ReadValueAsButton())
         {
             throwPressed = true;
+            animator.SetTrigger("Throw");
         }
         else
         {
@@ -283,23 +295,10 @@ public class CharacterMovementController : MonoBehaviour
         return Physics.Raycast(transform.position, Vector3.down, 0.1f);
     }
 
-    public IEnumerator KnockDown(Vector3 fallDirection)
-    {
-        Rigidbody body = GetComponent<Rigidbody>();
-        body.freezeRotation = false;
-        body.AddForce(fallDirection * 200, ForceMode.Impulse);
-        knockBackCounter = 60;
-        yield return new WaitForSeconds(1);
-        knockBackCounter = 30;
-        body.position += new Vector3(0, 3, 0);
-        body.rotation = Quaternion.identity;
-        body.freezeRotation = true;
-
-    }
-
     public void KnockBack(Vector3 direction, bool drop)
     {
         //Debug.Log("KBCalled with: " + direction.ToString());
+        beingKnockedBack = true;
         knockBackCounter = knockBackTime;
         if(drop)
             DropGrabbedItem();
@@ -354,6 +353,7 @@ public class CharacterMovementController : MonoBehaviour
 
                 if (pickupPressed && !hasGrabbed)
                 {
+                    animator.SetBool("isHoldingSomething", true);
                     grabSound.Play();
                     grabbedObject = collider.gameObject;
                     grabbedObject.GetComponent<Rigidbody>().isKinematic = true;
