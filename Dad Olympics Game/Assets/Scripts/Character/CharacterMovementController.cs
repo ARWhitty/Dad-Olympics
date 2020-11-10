@@ -107,7 +107,7 @@ public class CharacterMovementController : MonoBehaviour
             //Handle moving and rotating the object that has been grabbed
             if (hasGrabbed)
             {
-                grabbedObject.transform.position = transform.position + transform.forward * 1.5f;
+                grabbedObject.transform.position = transform.position + (transform.forward * 1.6f) + (transform.up * 1.0f);
                 grabbedObject.transform.rotation = transform.rotation;
                 grabbedObject.transform.rotation *= Quaternion.Euler(0, 90, 0);
                 //grabbedObject.transform.LookAt(transform.position);
@@ -137,7 +137,7 @@ public class CharacterMovementController : MonoBehaviour
             knockBackCounter -= Time.deltaTime;
             if (hasGrabbed)
             {
-                grabbedObject.transform.position = transform.position + transform.forward * 1.5f;
+                grabbedObject.transform.position = transform.position + (transform.forward * 1.6f) + (transform.up * 1.0f); // Added transform.up because stroller is in the ground with new dad model.
                 grabbedObject.transform.rotation = transform.rotation;
                 grabbedObject.transform.rotation *= Quaternion.Euler(0, 90, 0);
             }
@@ -155,10 +155,12 @@ public class CharacterMovementController : MonoBehaviour
         Ray ray = new Ray(transform.position, Vector3.down); 
         if (airborn)
         {
-            if (Physics.Raycast(ray, out hit, 1.2f))
+            if (Physics.Raycast(ray, out hit, 0.1f))
             {
                 if (hit.transform.tag == "Ground")
                 {
+                    animator.ResetTrigger("Jump");
+                    animator.SetTrigger("Land");
                     velocity.x = 0;
                     velocity.z = 0;
                     airborn = false;
@@ -167,7 +169,7 @@ public class CharacterMovementController : MonoBehaviour
         }
         else
         {
-            if (Physics.Raycast(ray, out hit, 1.2f) == false || hit.transform.tag != "Ground")
+            if (Physics.Raycast(ray, out hit, 0.1f) == false || hit.transform.tag != "Ground")
             {
                 airborn = true;
             }
@@ -226,6 +228,9 @@ public class CharacterMovementController : MonoBehaviour
     {
         if (context.ReadValueAsButton())
         {
+
+            animator.ResetTrigger("Land");
+            animator.SetTrigger("Jump");
             isJumping = true;
         }
         else
