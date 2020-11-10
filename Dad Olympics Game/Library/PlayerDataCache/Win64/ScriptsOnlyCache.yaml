@@ -12,6 +12,7 @@ ScriptsOnlyBuild:
     - ManholeGeiser
     - Pause01
     - PopUpCutout
+    - SceneSwitcher
     - Start01
     - StrollerController
     - TrikeCircle
@@ -53,7 +54,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Shadow
     - UnityEngine.UI.Text
   sceneClasses:
-    Assets/Scenes/Other/TitleScreen.unity:
+    Assets/Scenes/Other/TitleScreen-Scott.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -62,13 +63,37 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 21
       Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
     - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
     - Class: 49
       Script: {instanceID: 0}
+    - Class: 54
+      Script: {instanceID: 0}
+    - Class: 64
+      Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
+    - Class: 90
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -77,38 +102,54 @@ ScriptsOnlyBuild:
     - Class: 109
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11188}
+      Script: {instanceID: 14544}
     - Class: 114
-      Script: {instanceID: 11424}
+      Script: {instanceID: 14780}
     - Class: 114
-      Script: {instanceID: 11486}
+      Script: {instanceID: 14842}
     - Class: 114
-      Script: {instanceID: 11932}
+      Script: {instanceID: 14976}
     - Class: 114
-      Script: {instanceID: 11960}
+      Script: {instanceID: 15288}
     - Class: 114
-      Script: {instanceID: 12064}
+      Script: {instanceID: 15316}
     - Class: 114
-      Script: {instanceID: 12104}
+      Script: {instanceID: 15420}
     - Class: 114
-      Script: {instanceID: 12698}
+      Script: {instanceID: 15460}
     - Class: 114
-      Script: {instanceID: 12892}
+      Script: {instanceID: 15544}
     - Class: 114
-      Script: {instanceID: 12978}
+      Script: {instanceID: 16054}
     - Class: 114
-      Script: {instanceID: 13034}
+      Script: {instanceID: 16214}
     - Class: 114
-      Script: {instanceID: 13052}
+      Script: {instanceID: 16246}
     - Class: 114
-      Script: {instanceID: 13298}
+      Script: {instanceID: 16332}
     - Class: 114
-      Script: {instanceID: 13430}
+      Script: {instanceID: 16388}
     - Class: 114
-      Script: {instanceID: 13644}
+      Script: {instanceID: 16406}
+    - Class: 114
+      Script: {instanceID: 16650}
+    - Class: 114
+      Script: {instanceID: 16782}
+    - Class: 114
+      Script: {instanceID: 16996}
+    - Class: 114
+      Script: {instanceID: 251326}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
+      Script: {instanceID: 0}
+    - Class: 135
+      Script: {instanceID: 0}
+    - Class: 136
+      Script: {instanceID: 0}
+    - Class: 137
+      Script: {instanceID: 0}
+    - Class: 143
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -166,63 +207,63 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11188}
+      Script: {instanceID: 14544}
     - Class: 114
-      Script: {instanceID: 11424}
+      Script: {instanceID: 14780}
     - Class: 114
-      Script: {instanceID: 11428}
+      Script: {instanceID: 14784}
     - Class: 114
-      Script: {instanceID: 11486}
+      Script: {instanceID: 14842}
     - Class: 114
-      Script: {instanceID: 11506}
+      Script: {instanceID: 14862}
     - Class: 114
-      Script: {instanceID: 11574}
+      Script: {instanceID: 14930}
     - Class: 114
-      Script: {instanceID: 11620}
+      Script: {instanceID: 14976}
     - Class: 114
-      Script: {instanceID: 11696}
+      Script: {instanceID: 15052}
     - Class: 114
-      Script: {instanceID: 11932}
+      Script: {instanceID: 15288}
     - Class: 114
-      Script: {instanceID: 11960}
+      Script: {instanceID: 15316}
     - Class: 114
-      Script: {instanceID: 12058}
+      Script: {instanceID: 15414}
     - Class: 114
-      Script: {instanceID: 12064}
+      Script: {instanceID: 15420}
     - Class: 114
-      Script: {instanceID: 12136}
+      Script: {instanceID: 15492}
     - Class: 114
-      Script: {instanceID: 12188}
+      Script: {instanceID: 15544}
     - Class: 114
-      Script: {instanceID: 12396}
+      Script: {instanceID: 15752}
     - Class: 114
-      Script: {instanceID: 12698}
+      Script: {instanceID: 16054}
     - Class: 114
-      Script: {instanceID: 12860}
+      Script: {instanceID: 16214}
     - Class: 114
-      Script: {instanceID: 12892}
+      Script: {instanceID: 16246}
     - Class: 114
-      Script: {instanceID: 12958}
+      Script: {instanceID: 16312}
     - Class: 114
-      Script: {instanceID: 13034}
+      Script: {instanceID: 16388}
     - Class: 114
-      Script: {instanceID: 13162}
+      Script: {instanceID: 16516}
     - Class: 114
-      Script: {instanceID: 13298}
+      Script: {instanceID: 16650}
     - Class: 114
-      Script: {instanceID: 13334}
+      Script: {instanceID: 16686}
     - Class: 114
-      Script: {instanceID: 13372}
+      Script: {instanceID: 16724}
     - Class: 114
-      Script: {instanceID: 13430}
+      Script: {instanceID: 16782}
     - Class: 114
-      Script: {instanceID: 13770}
+      Script: {instanceID: 17122}
     - Class: 114
-      Script: {instanceID: 13774}
+      Script: {instanceID: 17126}
     - Class: 114
-      Script: {instanceID: 13876}
+      Script: {instanceID: 17228}
     - Class: 114
-      Script: {instanceID: 13906}
+      Script: {instanceID: 17258}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1302,8 +1343,15 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SceneSwitcher
   platform: 19
   scenePathNames:
-  - Assets/Scenes/Other/TitleScreen.unity
+  - Assets/Scenes/Other/TitleScreen-Scott.unity
   - Assets/Scenes/Sandboxes/TheBlock_Scott.unity
-  playerPath: C:/Users/Kieran/Desktop/Capstone/DadOlympicsBuild/Dad Olympics Game.exe
+  playerPath: D:/University/Fall2020/Senior Project I/Dad Olympics/Builds/STUDS_Nov9_001/Dad
+    Olympics Game.exe

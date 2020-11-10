@@ -94,7 +94,7 @@ Transform:
   m_GameObject: {fileID: 932691824398563431}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 115.74, y: 1.6, z: -229.7}
-  m_LocalScale: {x: 35, y: 35, z: 35}
+  m_LocalScale: {x: 30, y: 30, z: 30}
   m_Children:
   - {fileID: 1137848144580744069}
   - {fileID: 5470206850556346953}
@@ -313,11 +313,11 @@ MonoBehaviour:
   animator: {fileID: 406437671202242167}
   playerCamera: {fileID: 3450374694476005406}
   gravity: -16
-  jumpHeight: 2
-  moveSpeedGrab: 12
-  moveSpeedNormal: 12.2
+  jumpHeight: 1.5
+  moveSpeedGrab: 11
+  moveSpeedNormal: 12
   turnTime: 0.1
-  jumpHeightGrab: 1.5
+  jumpHeightGrab: 1
   throwForce: 300
   grabSound: {fileID: 3450374692587079142}
   throwSound: {fileID: 3450374692743671805}
@@ -1283,7 +1283,7 @@ PrefabInstance:
     - target: {fileID: 8649518086173551073, guid: 512bfa28f81729549b8fcd09a7483b98,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -8.5
+      value: -11.73
       objectReference: {fileID: 0}
     - target: {fileID: 8649518086173551073, guid: 512bfa28f81729549b8fcd09a7483b98,
         type: 3}
