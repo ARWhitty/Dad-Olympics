@@ -60,6 +60,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   directionVector: {x: 0, y: 0, z: 0}
   kBForce: 7
+  makePlayerDrop: 1
 --- !u!1 &1403140043066412978
 GameObject:
   m_ObjectHideFlags: 0

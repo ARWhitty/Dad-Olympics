@@ -55,7 +55,7 @@ public class CharacterMovementController : MonoBehaviour
 
     private bool throwPressed;
 
-    private bool airborn; 
+    public bool airborn; 
 
     private float pickupCooldown;
 
@@ -172,7 +172,7 @@ public class CharacterMovementController : MonoBehaviour
             if (Physics.Raycast(ray, out hit, 0.1f) == false || hit.transform.tag != "Ground")
             {
                 airborn = true;
-            }
+            } //else if 
         }
     }
 
@@ -211,6 +211,8 @@ public class CharacterMovementController : MonoBehaviour
         else
         {
             animator.SetBool("isRunning", false);
+            velocity.x = 0;
+            velocity.z = 0;
         }
     }
 

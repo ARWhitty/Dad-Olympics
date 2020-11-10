@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Archive/AddisonBlock.unity
+- path: Assets/Scenes/Sandboxes/TheBlock_Scott.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
