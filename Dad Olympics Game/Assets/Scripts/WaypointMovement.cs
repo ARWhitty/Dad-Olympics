@@ -65,7 +65,8 @@ public class WaypointMovement : MonoBehaviour
     void setPoints()
     {
         pointFrom = Waypoints[waypointIndex];
-        pointTo = Waypoints[waypointIndex + 1];
+        if(waypointIndex+1 < Waypoints.Length)
+            pointTo = Waypoints[waypointIndex + 1];
         startTime = Time.time;
         distance = Vector3.Distance(pointFrom.position, pointTo.position);
     }
