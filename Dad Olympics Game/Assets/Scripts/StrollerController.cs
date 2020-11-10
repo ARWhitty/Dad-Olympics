@@ -22,7 +22,7 @@ public class StrollerController : MonoBehaviour
     {
         Debug.Log("KBCalled");
         if(dropStroller)
-            player.GetComponent<PlayerMovement>().DropGrabbedItem();
+            player.GetComponent<CharacterMovementController>().DropGrabbedItem();
         GetComponent<Rigidbody>().AddForce(direction, ForceMode.Impulse);
     }
 }
