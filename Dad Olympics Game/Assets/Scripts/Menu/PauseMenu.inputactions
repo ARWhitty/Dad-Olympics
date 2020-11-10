@@ -1,0 +1,115 @@
+{
+    "name": "PauseMenu",
+    "maps": [
+        {
+            "name": "Menu",
+            "id": "f6654966-0b5e-40f5-be63-29de9e10f9e8",
+            "actions": [
+                {
+                    "name": "Pause",
+                    "type": "Button",
+                    "id": "4541a51e-a657-460f-b07d-ea2007986da3",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Return",
+                    "type": "Button",
+                    "id": "3c70abd5-c3f3-46f7-9ea6-246083f9832a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "ScrollDown",
+                    "type": "Button",
+                    "id": "b6cac9a0-018c-4485-a4df-256226a52ac8",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "ScrollUp",
+                    "type": "Button",
+                    "id": "55c5bc84-5cbb-424f-bc24-24a764eb4662",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Go",
+                    "type": "Button",
+                    "id": "91337847-6b90-4713-96d1-77cdf1aa2606",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "d9632991-24ad-4fcb-b2d2-ab20d4b52ca0",
+                    "path": "<XInputController>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "56a53842-87bc-4338-b5dc-df5f02d183e7",
+                    "path": "<XInputController>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Return",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2eb6da55-8fa1-4bbe-bc8b-fe32c34be650",
+                    "path": "<XInputController>/dpad/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ScrollDown",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "762a7405-d2a7-4363-8134-a70e55f35aa6",
+                    "path": "<XInputController>/dpad/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ScrollUp",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ce60e699-cd90-4493-bbe4-e2c85b5c1f89",
+                    "path": "<XInputController>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Go",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "Testing",
+            "bindingGroup": "Testing",
+            "devices": []
+        }
+    ]
+}

@@ -1,11 +1,2 @@
-Base path: 'C:/Program Files/Unity/Hub/Editor/Editor/Data', plugins path 'C:/Program Files/Unity/Hub/Editor/Editor/Data/PlaybackEngines'
+Base path: 'S:/New folder/Editor/Data', plugins path 'S:/New folder/Editor/Data/PlaybackEngines'
 Cmd: initializeCompiler
-<<<<<<< HEAD
-
-Quitting shader compiler process
-=======
-Cmd: preprocess
-  insize=912 outsize=356 ok=1
-Cmd: preprocess
-  insize=4591 outsize=1121 ok=1
->>>>>>> master
