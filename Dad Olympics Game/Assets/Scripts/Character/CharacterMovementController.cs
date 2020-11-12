@@ -59,6 +59,10 @@ public class CharacterMovementController : MonoBehaviour
 
     public bool beingKnockedBack;
 
+    public bool movementEnabled = true;
+
+    public float timeUntilMoveEnabled = 0;
+
     private float pickupCooldown;
 
     private int playerID;
@@ -83,8 +87,17 @@ public class CharacterMovementController : MonoBehaviour
         }*/
 
 
-
-        Move();
+        if(movementEnabled)
+            Move();
+        else
+        {
+            timeUntilMoveEnabled -= Time.deltaTime;
+            if(timeUntilMoveEnabled < 0)
+            {
+                timeUntilMoveEnabled = 0;
+                movementEnabled = true;
+            }
+        }
 
         Jump();
 
@@ -109,7 +122,7 @@ public class CharacterMovementController : MonoBehaviour
             //Handle moving and rotating the object that has been grabbed
             if (hasGrabbed)
             {
-                grabbedObject.transform.position = transform.position + (transform.forward * 1.6f) + (transform.up * 1.0f);
+                grabbedObject.transform.position = transform.position + (transform.forward * 1.3f) + (transform.up * 0.7f);
                 grabbedObject.transform.rotation = transform.rotation;
                 grabbedObject.transform.rotation *= Quaternion.Euler(0, 90, 0);
                 //grabbedObject.transform.LookAt(transform.position);
@@ -139,7 +152,7 @@ public class CharacterMovementController : MonoBehaviour
             knockBackCounter -= Time.deltaTime;
             if (hasGrabbed)
             {
-                grabbedObject.transform.position = transform.position + (transform.forward * 1.6f) + (transform.up * 1.0f); // Added transform.up because stroller is in the ground with new dad model.
+                grabbedObject.transform.position = transform.position + (transform.forward * 1.3f) + (transform.up * 0.7f); // Added transform.up because stroller is in the ground with new dad model.
                 grabbedObject.transform.rotation = transform.rotation;
                 grabbedObject.transform.rotation *= Quaternion.Euler(0, 90, 0);
             }
@@ -168,6 +181,8 @@ public class CharacterMovementController : MonoBehaviour
                     velocity.x = 0;
                     velocity.z = 0;
                     airborn = false;
+                    movementEnabled = false;
+                    timeUntilMoveEnabled = 1.5f;
                 }
             } else if(Physics.Raycast(ray, out hit, 0.1f))
             {
@@ -271,7 +286,6 @@ public class CharacterMovementController : MonoBehaviour
         if (context.ReadValueAsButton())
         {
             throwPressed = true;
-            animator.SetTrigger("Throw");
         }
         else
         {
@@ -298,10 +312,12 @@ public class CharacterMovementController : MonoBehaviour
     public void KnockBack(Vector3 direction, bool drop)
     {
         //Debug.Log("KBCalled with: " + direction.ToString());
-        beingKnockedBack = true;
         knockBackCounter = knockBackTime;
-        if(drop)
+        if (drop)
+        {
             DropGrabbedItem();
+            beingKnockedBack = true;
+        }
         velocity = direction;
         
     }
@@ -310,6 +326,7 @@ public class CharacterMovementController : MonoBehaviour
     {
         if (grabbedObject)
         {
+            animator.SetBool("isHoldingSomething", false);
             grabbedObject.GetComponent<Rigidbody>().isKinematic = false;
             grabbedObject.GetComponent<Rigidbody>().useGravity = true;
             grabbedObject = null;
@@ -325,6 +342,8 @@ public class CharacterMovementController : MonoBehaviour
         forward.y = 1.5f;
         Vector3 throwingForce = forward * throwForce; //transform.rotation.normalized * new Vector3(0, throwForce*2000, throwForce*300);
         Debug.Log("Threw with Vector force: " + throwingForce);
+        animator.ResetTrigger("Land");
+        animator.SetTrigger("Throw");
         grabbedObject.GetComponent<Rigidbody>().isKinematic = false;
         grabbedObject.GetComponent<Rigidbody>().useGravity = true;
         grabbedObject.GetComponent<Rigidbody>().AddForce(throwingForce);
