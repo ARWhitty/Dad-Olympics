@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Sandboxes/Marcelo_Scene.unity
+- path: Assets/Scenes/Sandboxes/TheBlock_Scott.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

@@ -19,7 +19,6 @@ public class CharacterMovementController : MonoBehaviour
     public float gravity;
     public float jumpHeight;
     Vector3 velocity;
-    Vector3 externalVelocity;
 
     private Vector2 direction;
 
@@ -49,7 +48,7 @@ public class CharacterMovementController : MonoBehaviour
 
     private float knockBackCounter;
 
-    private bool isJumping;
+    public bool isJumping;
 
     private bool pickupPressed;
 
@@ -81,12 +80,6 @@ public class CharacterMovementController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*if (IsGrounded() && velocity.y < 0)
-        {
-            velocity.y = -2f;
-        }*/
-
-
         if(movementEnabled)
             Move();
         else
@@ -137,7 +130,7 @@ public class CharacterMovementController : MonoBehaviour
                 }
                 else if (throwPressed)
                 {
-                    performThrow();
+                    StartCoroutine(performThrow());
                     animator.SetBool("isHoldingSomething", false);
                 }
             }
@@ -199,13 +192,21 @@ public class CharacterMovementController : MonoBehaviour
             if (Physics.Raycast(ray, out hit, 0.1f) == false || hit.transform.tag != "Ground")
             {
                 airborn = true;
-            } //else if 
+            } else if (Physics.Raycast(ray, out hit, 0.1f) && beingKnockedBack)
+            {
+                animator.ResetTrigger("Jump");
+                animator.ResetTrigger("Land");
+                animator.SetTrigger("FallDown");
+                beingKnockedBack = false;
+                movementEnabled = false;
+                timeUntilMoveEnabled = 1.5f;
+            }
         }
     }
 
     private void Jump()
     {
-        if (IsGrounded() && isJumping)
+        if (airborn == false && isJumping)
         {
             if (hasGrabbed)
             {
@@ -302,13 +303,6 @@ public class CharacterMovementController : MonoBehaviour
         }
     }
 
-
-    //Simple method that checks if the player is grounded using raycast
-    private bool IsGrounded()
-    {
-        return Physics.Raycast(transform.position, Vector3.down, 0.1f);
-    }
-
     public void KnockBack(Vector3 direction, bool drop)
     {
         //Debug.Log("KBCalled with: " + direction.ToString());
@@ -335,21 +329,26 @@ public class CharacterMovementController : MonoBehaviour
         }
     }
 
-    private void performThrow()
+    private IEnumerator performThrow()
     {
-        Vector3 forward = transform.forward;
-        grabbedObject.transform.forward = forward;
-        forward.y = 1.5f;
-        Vector3 throwingForce = forward * throwForce; //transform.rotation.normalized * new Vector3(0, throwForce*2000, throwForce*300);
-        Debug.Log("Threw with Vector force: " + throwingForce);
         animator.ResetTrigger("Land");
         animator.SetTrigger("Throw");
+        yield return new WaitForSeconds(1.5f);
+        Vector3 forward = transform.forward;
+        grabbedObject.transform.forward = forward;
+        Vector3 throwingForce = forward * throwForce * 1.5f; //transform.rotation.normalized * new Vector3(0, throwForce*2000, throwForce*300);
+        Vector3 movementAdjust = forward * direction.magnitude * moveSpeedGrab * 40;
+        throwingForce += movementAdjust;
+        throwingForce.y = 300f;
+        Debug.Log("Threw with Vector force: " + throwingForce);
         grabbedObject.GetComponent<Rigidbody>().isKinematic = false;
         grabbedObject.GetComponent<Rigidbody>().useGravity = true;
+        Debug.Log("Velocity: " + direction.magnitude);
         grabbedObject.GetComponent<Rigidbody>().AddForce(throwingForce);
         hasGrabbed = false;
         moveSpeed = moveSpeedNormal;
         grabbedObject = null;
+        animator.ResetTrigger("Throw");
     }
 
     private void HandleGrabObject()
