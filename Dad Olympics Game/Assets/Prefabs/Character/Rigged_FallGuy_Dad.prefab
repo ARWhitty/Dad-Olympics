@@ -322,6 +322,10 @@ MonoBehaviour:
   grabSound: {fileID: 3450374692587079142}
   throwSound: {fileID: 3450374692743671805}
   knockBackTime: 1
+  airborn: 0
+  beingKnockedBack: 0
+  movementEnabled: 1
+  timeUntilMoveEnabled: 0
 --- !u!1 &941638315054393277
 GameObject:
   m_ObjectHideFlags: 0

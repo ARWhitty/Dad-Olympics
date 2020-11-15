@@ -1,5 +1,11 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":false,"pivot":{"x":-798.7205810546875,"y":43052.99609375,"z":29105.99609375},"rotation":{"x":-0.21397985517978669,"y":0.10414119064807892,"z":-0.02298125810921192,"w":-0.9710392355918884},"size":0.8703359961509705,"orthographic":false}
 =======
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":false,"pivot":{"x":0.49728700518608096,"y":2.1195080280303957,"z":-2.312764883041382},"rotation":{"x":0.156731516122818,"y":-0.17383332550525666,"z":0.02803473174571991,"w":0.9718287587165833},"size":1.1942561864852906,"orthographic":false}
+=======
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":false,"pivot":{"x":50.999908447265628,"y":-1.4580421447753907,"z":-33.480411529541019},"rotation":{"x":0.19703473150730134,"y":-0.0734528973698616,"z":0.014804902486503125,"w":0.9775328040122986},"size":22.264877319335939,"orthographic":false}
+=======
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":false,"pivot":{"x":0.3353046774864197,"y":2.322446584701538,"z":-8.629424095153809},"rotation":{"x":-0.06477253884077072,"y":-0.006254968233406544,"z":0.00043881009332835674,"w":-0.9979679584503174},"size":0.8134264945983887,"orthographic":false}
+>>>>>>> Stashed changes
 >>>>>>> Stashed changes
