@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Other/PlayerLoad.unity
+- path: Assets/Scenes/Sandboxes/hannahsteal.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
