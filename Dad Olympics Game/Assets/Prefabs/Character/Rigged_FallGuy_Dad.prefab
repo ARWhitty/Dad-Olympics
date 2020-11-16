@@ -322,6 +322,7 @@ MonoBehaviour:
   grabSound: {fileID: 3450374692587079142}
   throwSound: {fileID: 3450374692743671805}
   knockBackTime: 1
+  isJumping: 0
   airborn: 0
   beingKnockedBack: 0
   movementEnabled: 1
