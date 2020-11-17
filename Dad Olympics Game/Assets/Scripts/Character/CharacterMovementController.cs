@@ -115,9 +115,9 @@ public class CharacterMovementController : MonoBehaviour
             //Handle moving and rotating the object that has been grabbed
             if (hasGrabbed)
             {
-                grabbedObject.transform.position = transform.position + (transform.forward * 1.3f) + (transform.up * 0.7f);
-                grabbedObject.transform.rotation = transform.rotation;
-                grabbedObject.transform.rotation *= Quaternion.Euler(0, 90, 0);
+               grabbedObject.transform.position = transform.position + (transform.forward * 1.3f) + (transform.up * 0.7f);
+               grabbedObject.transform.rotation = transform.rotation;
+               grabbedObject.transform.rotation *= Quaternion.Euler(0, 90, 0);
                 //grabbedObject.transform.LookAt(transform.position);
 
                 //If player released "e" then let go

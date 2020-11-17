@@ -4926,6 +4926,6 @@ MonoBehaviour:
   Spraying: 0
   delay: 5
   length: 5
-  force: 15
+  force: 7
   waterKB: {fileID: 681637373272561812}
   WaterEffect: {fileID: 4649751030743062608}
