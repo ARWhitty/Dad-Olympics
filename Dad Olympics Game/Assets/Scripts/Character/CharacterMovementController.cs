@@ -412,4 +412,14 @@ public class CharacterMovementController : MonoBehaviour
     {
         return completedCheckpoints;
     }
+
+    public void setMoveSpeed(float newSpeed)
+    {
+        moveSpeed = newSpeed;
+    }
+
+    public float getMoveSpeed()
+    {
+        return moveSpeed;
+    }
 }
