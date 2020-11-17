@@ -105,47 +105,47 @@ ScriptsOnlyBuild:
     - Class: 109
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 14716}
+      Script: {instanceID: 11188}
     - Class: 114
-      Script: {instanceID: 14952}
+      Script: {instanceID: 11424}
     - Class: 114
-      Script: {instanceID: 15014}
+      Script: {instanceID: 11486}
     - Class: 114
-      Script: {instanceID: 15148}
+      Script: {instanceID: 11620}
     - Class: 114
-      Script: {instanceID: 15462}
+      Script: {instanceID: 11934}
     - Class: 114
-      Script: {instanceID: 15490}
+      Script: {instanceID: 11962}
     - Class: 114
-      Script: {instanceID: 15594}
+      Script: {instanceID: 12066}
     - Class: 114
-      Script: {instanceID: 15634}
+      Script: {instanceID: 12106}
     - Class: 114
-      Script: {instanceID: 15718}
+      Script: {instanceID: 12190}
     - Class: 114
-      Script: {instanceID: 16178}
+      Script: {instanceID: 12650}
     - Class: 114
-      Script: {instanceID: 16230}
+      Script: {instanceID: 12702}
     - Class: 114
-      Script: {instanceID: 16390}
+      Script: {instanceID: 12864}
     - Class: 114
-      Script: {instanceID: 16422}
+      Script: {instanceID: 12896}
     - Class: 114
-      Script: {instanceID: 16510}
+      Script: {instanceID: 12984}
     - Class: 114
-      Script: {instanceID: 16566}
+      Script: {instanceID: 13040}
     - Class: 114
-      Script: {instanceID: 16584}
+      Script: {instanceID: 13058}
     - Class: 114
-      Script: {instanceID: 16828}
+      Script: {instanceID: 13304}
     - Class: 114
-      Script: {instanceID: 16872}
+      Script: {instanceID: 13348}
     - Class: 114
-      Script: {instanceID: 16960}
+      Script: {instanceID: 13438}
     - Class: 114
-      Script: {instanceID: 17178}
+      Script: {instanceID: 13660}
     - Class: 114
-      Script: {instanceID: 17410}
+      Script: {instanceID: 13894}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -214,79 +214,79 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 14688}
+      Script: {instanceID: 11188}
     - Class: 114
-      Script: {instanceID: 14692}
+      Script: {instanceID: 11424}
     - Class: 114
-      Script: {instanceID: 14696}
+      Script: {instanceID: 11428}
     - Class: 114
-      Script: {instanceID: 14716}
+      Script: {instanceID: 11486}
     - Class: 114
-      Script: {instanceID: 14952}
+      Script: {instanceID: 11506}
     - Class: 114
-      Script: {instanceID: 14956}
+      Script: {instanceID: 11574}
     - Class: 114
-      Script: {instanceID: 15014}
+      Script: {instanceID: 11620}
     - Class: 114
-      Script: {instanceID: 15034}
+      Script: {instanceID: 11686}
     - Class: 114
-      Script: {instanceID: 15102}
+      Script: {instanceID: 11698}
     - Class: 114
-      Script: {instanceID: 15148}
+      Script: {instanceID: 11934}
     - Class: 114
-      Script: {instanceID: 15214}
+      Script: {instanceID: 11962}
     - Class: 114
-      Script: {instanceID: 15226}
+      Script: {instanceID: 12060}
     - Class: 114
-      Script: {instanceID: 15462}
+      Script: {instanceID: 12066}
     - Class: 114
-      Script: {instanceID: 15490}
+      Script: {instanceID: 12138}
     - Class: 114
-      Script: {instanceID: 15588}
+      Script: {instanceID: 12190}
     - Class: 114
-      Script: {instanceID: 15594}
+      Script: {instanceID: 12398}
     - Class: 114
-      Script: {instanceID: 15666}
+      Script: {instanceID: 12702}
     - Class: 114
-      Script: {instanceID: 15718}
+      Script: {instanceID: 12864}
     - Class: 114
-      Script: {instanceID: 15926}
+      Script: {instanceID: 12896}
     - Class: 114
-      Script: {instanceID: 16230}
+      Script: {instanceID: 12962}
     - Class: 114
-      Script: {instanceID: 16390}
+      Script: {instanceID: 12974}
     - Class: 114
-      Script: {instanceID: 16422}
+      Script: {instanceID: 13040}
     - Class: 114
-      Script: {instanceID: 16488}
+      Script: {instanceID: 13168}
     - Class: 114
-      Script: {instanceID: 16500}
+      Script: {instanceID: 13304}
     - Class: 114
-      Script: {instanceID: 16566}
+      Script: {instanceID: 13340}
     - Class: 114
-      Script: {instanceID: 16694}
+      Script: {instanceID: 13366}
     - Class: 114
-      Script: {instanceID: 16828}
+      Script: {instanceID: 13380}
     - Class: 114
-      Script: {instanceID: 16864}
+      Script: {instanceID: 13438}
     - Class: 114
-      Script: {instanceID: 16902}
+      Script: {instanceID: 13454}
     - Class: 114
-      Script: {instanceID: 16960}
+      Script: {instanceID: 13482}
     - Class: 114
-      Script: {instanceID: 17002}
+      Script: {instanceID: 13556}
     - Class: 114
-      Script: {instanceID: 17076}
+      Script: {instanceID: 13592}
     - Class: 114
-      Script: {instanceID: 17304}
+      Script: {instanceID: 13692}
     - Class: 114
-      Script: {instanceID: 17308}
+      Script: {instanceID: 13788}
     - Class: 114
-      Script: {instanceID: 17410}
+      Script: {instanceID: 13792}
     - Class: 114
-      Script: {instanceID: 17440}
+      Script: {instanceID: 13894}
     - Class: 114
-      Script: {instanceID: 907798}
+      Script: {instanceID: 13924}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -322,24 +322,6 @@ ScriptsOnlyBuild:
     - Class: 224
       Script: {instanceID: 0}
   scriptHashData:
-  - hash:
-      serializedVersion: 2
-      Hash: ad184fa2fd47a3ca3528bae6bae27ea0
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: PlayerAI
-  - hash:
-      serializedVersion: 2
-      Hash: eb5994997dc0a7e8303159429b09c37b
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: RaceStartedDetection
-  - hash:
-      serializedVersion: 2
-      Hash: afc178e6e5b28b7003dc546a4bdcafdc
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Path_AI
   - hash:
       serializedVersion: 2
       Hash: 4bc4346a71a8df53a6b106f68ef3a190
@@ -1170,6 +1152,12 @@ ScriptsOnlyBuild:
     className: CinemachineVolumeSettings
   - hash:
       serializedVersion: 2
+      Hash: ad184fa2fd47a3ca3528bae6bae27ea0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerAI
+  - hash:
+      serializedVersion: 2
       Hash: 955e04d09731182081aa216eee578107
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -1186,6 +1174,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: GraphicRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: eb5994997dc0a7e8303159429b09c37b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: RaceStartedDetection
   - hash:
       serializedVersion: 2
       Hash: 88cc9df3c6fc697bfbeacd24c0d6f2d7
@@ -1224,6 +1218,12 @@ ScriptsOnlyBuild:
     className: SpeedUpSlowDown
   - hash:
       serializedVersion: 2
+      Hash: afc178e6e5b28b7003dc546a4bdcafdc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Path_AI
+  - hash:
+      serializedVersion: 2
       Hash: ffd3ed4fcd23b3e7745287c99a637247
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
@@ -1258,6 +1258,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.InputSystem.dll
     namespaceName: UnityEngine.InputSystem.Editor
     className: AdvancedDropdownWindow
+  - hash:
+      serializedVersion: 2
+      Hash: b8a025422a11c1de812bac762766499a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: OffsetScrolling
   - hash:
       serializedVersion: 2
       Hash: 852fa5efd13d5456eb08b998c8f72161
@@ -1426,15 +1432,9 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: b8a025422a11c1de812bac762766499a
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: OffsetScrolling
   platform: 19
   scenePathNames:
   - Assets/Scenes/Other/TitleScreen-Scott.unity
   - Assets/Scenes/Sandboxes/TheBlock_Scott.unity
-  playerPath: D:/University/Fall2020/Senior Project I/Dad Olympics/Builds/STUDS_Nov17_002/Dad
+  playerPath: D:/University/Fall2020/Senior Project I/Dad Olympics/Builds/STUDS_Nov17_003/Dad
     Olympics Game.exe
