@@ -204,7 +204,7 @@ public class CharacterMovementController : MonoBehaviour
         }
     }
 
-    private void Jump()
+    public void Jump()
     {
         if (airborn == false && isJumping)
         {
@@ -242,6 +242,22 @@ public class CharacterMovementController : MonoBehaviour
             velocity.x = 0;
             velocity.z = 0;
         }
+    }
+
+    public void Move(Vector3 dirVector)
+    {
+        if (dirVector.magnitude >= 0.1f && movementEnabled)
+        {
+            animator.SetBool("isRunning", true);
+            controller.Move((dirVector.normalized * moveSpeed) * Time.deltaTime);
+        }
+        else
+        {
+            animator.SetBool("isRunning", false);
+            velocity.x = 0;
+            velocity.z = 0;
+        }
+
     }
 
     public void OnMove(CallbackContext context)
@@ -421,5 +437,16 @@ public class CharacterMovementController : MonoBehaviour
     public float getMoveSpeed()
     {
         return moveSpeed;
+    }
+
+    public void SetGrabbedObject(GameObject obj)
+    {
+        animator.SetBool("isHoldingSomething", true);
+        grabbedObject = obj;
+        grabbedObject.GetComponent<Rigidbody>().isKinematic = true;
+        grabbedObject.GetComponent<Rigidbody>().useGravity = false;
+        moveSpeed = moveSpeedGrab;
+        hasGrabbed = true;
+        pickupPressed = false;
     }
 }

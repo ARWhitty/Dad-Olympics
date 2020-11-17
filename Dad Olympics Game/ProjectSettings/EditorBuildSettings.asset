@@ -20,12 +20,15 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Levels/Stroller_Race/Segments/TheBlock.unity
     guid: 8c7c2fadfbaaee549a3a937017ffbc7a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Other/TitleScreen-Scott.unity
     guid: 68aef164ddc163343bc8f12e89c1067b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Sandboxes/TheBlock_Scott.unity
     guid: 3d8b5641a003f1e4caf3728ec562c174
+  - enabled: 1
+    path: Assets/Scenes/Sandboxes/hannahsteal.unity
+    guid: ff1f27bbb63bfd744a4675cbc4803e9e
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 4de97d674fb6a3f4287d14a2d1e492c5,
       type: 2}

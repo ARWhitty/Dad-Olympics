@@ -10,10 +10,12 @@ ScriptsOnlyBuild:
     - LevelStart
     - ManageGame
     - ManholeGeiser
+    - Orbit
+    - Path_AI
     - Pause01
+    - PlayerAI
     - PopUpCutout
-    - SceneSwitcher
-    - Start01
+    - RaceStartedDetection
     - StrollerController
     - TrikeCircle
     - WaypointMarker
@@ -48,7 +50,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Shadow
     - UnityEngine.UI.Text
   sceneClasses:
-    Assets/Scenes/Other/TitleScreen-Scott.unity:
+    Assets/Scenes/Sandboxes/hannahsteal.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -96,43 +98,77 @@ ScriptsOnlyBuild:
     - Class: 109
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 16348}
+      Script: {instanceID: 11188}
     - Class: 114
-      Script: {instanceID: 16356}
+      Script: {instanceID: 11424}
     - Class: 114
-      Script: {instanceID: 16376}
+      Script: {instanceID: 11428}
     - Class: 114
-      Script: {instanceID: 16612}
+      Script: {instanceID: 11486}
     - Class: 114
-      Script: {instanceID: 16674}
+      Script: {instanceID: 11506}
     - Class: 114
-      Script: {instanceID: 16808}
+      Script: {instanceID: 11574}
     - Class: 114
-      Script: {instanceID: 17120}
+      Script: {instanceID: 11620}
     - Class: 114
-      Script: {instanceID: 17148}
+      Script: {instanceID: 11698}
     - Class: 114
-      Script: {instanceID: 17252}
+      Script: {instanceID: 11934}
     - Class: 114
-      Script: {instanceID: 17292}
+      Script: {instanceID: 11962}
     - Class: 114
-      Script: {instanceID: 17376}
+      Script: {instanceID: 12060}
     - Class: 114
-      Script: {instanceID: 17886}
+      Script: {instanceID: 12066}
     - Class: 114
-      Script: {instanceID: 18076}
+      Script: {instanceID: 12106}
     - Class: 114
-      Script: {instanceID: 18162}
+      Script: {instanceID: 12138}
     - Class: 114
-      Script: {instanceID: 18218}
+      Script: {instanceID: 12190}
     - Class: 114
-      Script: {instanceID: 18236}
+      Script: {instanceID: 12398}
     - Class: 114
-      Script: {instanceID: 18480}
+      Script: {instanceID: 12702}
     - Class: 114
-      Script: {instanceID: 18612}
+      Script: {instanceID: 12864}
     - Class: 114
-      Script: {instanceID: 18826}
+      Script: {instanceID: 12896}
+    - Class: 114
+      Script: {instanceID: 12962}
+    - Class: 114
+      Script: {instanceID: 12974}
+    - Class: 114
+      Script: {instanceID: 13040}
+    - Class: 114
+      Script: {instanceID: 13058}
+    - Class: 114
+      Script: {instanceID: 13168}
+    - Class: 114
+      Script: {instanceID: 13304}
+    - Class: 114
+      Script: {instanceID: 13340}
+    - Class: 114
+      Script: {instanceID: 13366}
+    - Class: 114
+      Script: {instanceID: 13380}
+    - Class: 114
+      Script: {instanceID: 13438}
+    - Class: 114
+      Script: {instanceID: 13454}
+    - Class: 114
+      Script: {instanceID: 13592}
+    - Class: 114
+      Script: {instanceID: 13660}
+    - Class: 114
+      Script: {instanceID: 13786}
+    - Class: 114
+      Script: {instanceID: 13790}
+    - Class: 114
+      Script: {instanceID: 13892}
+    - Class: 114
+      Script: {instanceID: 13922}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -145,130 +181,9 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 143
       Script: {instanceID: 0}
-    - Class: 157
+    - Class: 154
       Script: {instanceID: 0}
-    - Class: 196
-      Script: {instanceID: 0}
-    - Class: 213
-      Script: {instanceID: 0}
-    - Class: 222
-      Script: {instanceID: 0}
-    - Class: 223
-      Script: {instanceID: 0}
-    - Class: 224
-      Script: {instanceID: 0}
-    Assets/Scenes/Sandboxes/TheBlock_Scott.unity:
-    - Class: 1
-      Script: {instanceID: 0}
-    - Class: 4
-      Script: {instanceID: 0}
-    - Class: 20
-      Script: {instanceID: 0}
-    - Class: 21
-      Script: {instanceID: 0}
-    - Class: 23
-      Script: {instanceID: 0}
-    - Class: 28
-      Script: {instanceID: 0}
-    - Class: 33
-      Script: {instanceID: 0}
-    - Class: 43
-      Script: {instanceID: 0}
-    - Class: 48
-      Script: {instanceID: 0}
-    - Class: 54
-      Script: {instanceID: 0}
-    - Class: 64
-      Script: {instanceID: 0}
-    - Class: 65
-      Script: {instanceID: 0}
-    - Class: 74
-      Script: {instanceID: 0}
-    - Class: 81
-      Script: {instanceID: 0}
-    - Class: 82
-      Script: {instanceID: 0}
-    - Class: 83
-      Script: {instanceID: 0}
-    - Class: 90
-      Script: {instanceID: 0}
-    - Class: 91
-      Script: {instanceID: 0}
-    - Class: 95
-      Script: {instanceID: 0}
-    - Class: 104
-      Script: {instanceID: 0}
-    - Class: 108
-      Script: {instanceID: 0}
-    - Class: 114
-      Script: {instanceID: 16348}
-    - Class: 114
-      Script: {instanceID: 16352}
-    - Class: 114
-      Script: {instanceID: 16376}
-    - Class: 114
-      Script: {instanceID: 16612}
-    - Class: 114
-      Script: {instanceID: 16616}
-    - Class: 114
-      Script: {instanceID: 16674}
-    - Class: 114
-      Script: {instanceID: 16694}
-    - Class: 114
-      Script: {instanceID: 16762}
-    - Class: 114
-      Script: {instanceID: 16808}
-    - Class: 114
-      Script: {instanceID: 16884}
-    - Class: 114
-      Script: {instanceID: 17120}
-    - Class: 114
-      Script: {instanceID: 17148}
-    - Class: 114
-      Script: {instanceID: 17246}
-    - Class: 114
-      Script: {instanceID: 17252}
-    - Class: 114
-      Script: {instanceID: 17324}
-    - Class: 114
-      Script: {instanceID: 17376}
-    - Class: 114
-      Script: {instanceID: 17584}
-    - Class: 114
-      Script: {instanceID: 17886}
-    - Class: 114
-      Script: {instanceID: 18076}
-    - Class: 114
-      Script: {instanceID: 18142}
-    - Class: 114
-      Script: {instanceID: 18218}
-    - Class: 114
-      Script: {instanceID: 18346}
-    - Class: 114
-      Script: {instanceID: 18480}
-    - Class: 114
-      Script: {instanceID: 18516}
-    - Class: 114
-      Script: {instanceID: 18554}
-    - Class: 114
-      Script: {instanceID: 18612}
-    - Class: 114
-      Script: {instanceID: 18952}
-    - Class: 114
-      Script: {instanceID: 18956}
-    - Class: 114
-      Script: {instanceID: 19086}
-    - Class: 115
-      Script: {instanceID: 0}
-    - Class: 128
-      Script: {instanceID: 0}
-    - Class: 135
-      Script: {instanceID: 0}
-    - Class: 136
-      Script: {instanceID: 0}
-    - Class: 137
-      Script: {instanceID: 0}
-    - Class: 143
+    - Class: 156
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -280,6 +195,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
+    - Class: 218
+      Script: {instanceID: 0}
     - Class: 222
       Script: {instanceID: 0}
     - Class: 223
@@ -287,24 +204,6 @@ ScriptsOnlyBuild:
     - Class: 224
       Script: {instanceID: 0}
   scriptHashData:
-  - hash:
-      serializedVersion: 2
-      Hash: 5aeceb945405d0f77f7c2581413a308e
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: CharacterMovementController
-  - hash:
-      serializedVersion: 2
-      Hash: 83e769eee07fc231384c812eedbb8224
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: StrollerController
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: SceneSwitcher
   - hash:
       serializedVersion: 2
       Hash: 4bc4346a71a8df53a6b106f68ef3a190
@@ -539,6 +438,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.InputSystem.dll
     namespaceName: UnityEngine.InputSystem.Editor
     className: InputActionEditorWindow
+  - hash:
+      serializedVersion: 2
+      Hash: 2014806508aa780408bcfcf95a28a989
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: VolumeTrigger
   - hash:
       serializedVersion: 2
       Hash: ec082dbf18884ec5e88683fc40c3880a
@@ -841,6 +746,12 @@ ScriptsOnlyBuild:
     className: CinemachinePath
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SceneSwitcher
+  - hash:
+      serializedVersion: 2
       Hash: c1f5356fcd27668ddc25078e27f9828d
     assemblyName: Unity.InputSystem.dll
     namespaceName: UnityEngine.InputSystem.UI
@@ -907,6 +818,12 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
+      Hash: 29a02e0895c500bc703b9a3804439b59
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CharacterMovementController
+  - hash:
+      serializedVersion: 2
       Hash: 7c792393fb82488bd20139dcc5ba26d8
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
@@ -953,6 +870,12 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: CinemachineBlendListCamera
+  - hash:
+      serializedVersion: 2
+      Hash: 002020d0363e1d2fc6726436c90292ce
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Orbit
   - hash:
       serializedVersion: 2
       Hash: 495a46d6ca0f5ee7f29c5fe2763adc54
@@ -1111,6 +1034,12 @@ ScriptsOnlyBuild:
     className: CinemachineVolumeSettings
   - hash:
       serializedVersion: 2
+      Hash: ad184fa2fd47a3ca3528bae6bae27ea0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerAI
+  - hash:
+      serializedVersion: 2
       Hash: 955e04d09731182081aa216eee578107
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -1129,10 +1058,22 @@ ScriptsOnlyBuild:
     className: GraphicRaycaster
   - hash:
       serializedVersion: 2
+      Hash: eb5994997dc0a7e8303159429b09c37b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: RaceStartedDetection
+  - hash:
+      serializedVersion: 2
       Hash: 88cc9df3c6fc697bfbeacd24c0d6f2d7
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools
     className: BeforeAfterTestCommandState
+  - hash:
+      serializedVersion: 2
+      Hash: e8b38b45d1a5d590e61bf959ed0a5e91
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TimerEvents
   - hash:
       serializedVersion: 2
       Hash: 6ff1c52123c50b3d73f35cd0e2e65dfd
@@ -1151,6 +1092,18 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: CinemachineInputProvider
+  - hash:
+      serializedVersion: 2
+      Hash: 5a9b6455a1ad679adc12e401828ba3e4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SpeedUpSlowDown
+  - hash:
+      serializedVersion: 2
+      Hash: afc178e6e5b28b7003dc546a4bdcafdc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Path_AI
   - hash:
       serializedVersion: 2
       Hash: ffd3ed4fcd23b3e7745287c99a637247
@@ -1249,6 +1202,12 @@ ScriptsOnlyBuild:
     className: TMP_SubMesh
   - hash:
       serializedVersion: 2
+      Hash: 83e769eee07fc231384c812eedbb8224
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: StrollerController
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestRunner.Utils
@@ -1309,6 +1268,12 @@ ScriptsOnlyBuild:
     className: SignalEmitter
   - hash:
       serializedVersion: 2
+      Hash: 29de21eb32837ae9e9772f5a6b70ca77
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TreeFallAndRoll
+  - hash:
+      serializedVersion: 2
       Hash: 2792936179724025482dc04d68a47ca7
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
@@ -1345,7 +1310,5 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   platform: 19
   scenePathNames:
-  - Assets/Scenes/Other/TitleScreen-Scott.unity
-  - Assets/Scenes/Sandboxes/TheBlock_Scott.unity
-  playerPath: D:/University/Fall2020/Senior Project I/Dad Olympics/Builds/STUDS_Nov12_001/Dad
-    Olympics Game.exe
+  - Assets/Scenes/Sandboxes/hannahsteal.unity
+  playerPath: C:/Users/Kieran/Desktop/DadBuild/Dad Olympics Game.exe

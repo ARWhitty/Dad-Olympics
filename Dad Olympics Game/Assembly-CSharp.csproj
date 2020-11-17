@@ -83,6 +83,9 @@
      <Compile Include="Assets\Scripts\Obstacles\PopUpCutout.cs" />
      <Compile Include="Assets\Scripts\Obstacles\TrikeCircle.cs" />
      <Compile Include="Assets\Scripts\Oscillator.cs" />
+     <Compile Include="Assets\Scripts\Path_AI.cs" />
+     <Compile Include="Assets\Scripts\PlayerAI.cs" />
+     <Compile Include="Assets\Scripts\RaceStartedDetection.cs" />
      <Compile Include="Assets\Scripts\SceneSwitcher.cs" />
      <Compile Include="Assets\Scripts\SpawnAward.cs" />
      <Compile Include="Assets\Scripts\SpawnPlayerSetupMenu.cs" />
