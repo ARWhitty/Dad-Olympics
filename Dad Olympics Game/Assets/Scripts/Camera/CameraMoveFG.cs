@@ -41,11 +41,12 @@ public class CameraMoveFG : MonoBehaviour
         mouseY = Mathf.Clamp(mouseY, minY, maxY);
 
         transform.LookAt(target);
-
+        //Debug.Log("MouseX: " + mouseX + " MouseY: " + mouseY);
         target.rotation = Quaternion.Euler(mouseY, mouseX + horizontalInput, 0);
     }
     public void SetDirectionVector(Vector2 dir)
     {
+        //Debug.Log("Direction Vector set to" + dir.x + " " + dir.y);
         direction = dir;
     }
 }

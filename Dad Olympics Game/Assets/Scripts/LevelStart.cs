@@ -24,7 +24,11 @@ public class LevelStart : MonoBehaviour
             startText.text = "";
         }
         //Debug.Log("Player Joined: " + pi.playerIndex);
-        pi.gameObject.GetComponent<CharacterMovementController>().SetPlayerID(playerIDCount);
+        if(pi.gameObject.GetComponent<CharacterMovementController>())
+            pi.gameObject.GetComponent<CharacterMovementController>().SetPlayerID(playerIDCount);
+        else if(pi.gameObject.GetComponent<CM_CharacterMovementController>())
+            pi.gameObject.GetComponent<CM_CharacterMovementController>().SetPlayerID(playerIDCount);
+
         playerIDCount++;
         /**if (!PlayerConfigs.Any(p => p.PlayerIndex == pi.playerIndex))
         {
