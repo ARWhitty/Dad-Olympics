@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/Archive/AddisonCinemachine.unity
+=======
+- path: Assets/Scenes/Other/VictoryStands.unity
+>>>>>>> master
   isLoaded: 1
   isActive: 1
   isSubScene: 0
