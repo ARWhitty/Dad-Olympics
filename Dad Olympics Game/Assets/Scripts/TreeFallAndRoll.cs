@@ -10,6 +10,7 @@ public class TreeFallAndRoll : MonoBehaviour
     public float lifetime;
     public bool falling = false;
     private float rolltime;
+    private float StartWobble;
 
     private Transform StartPos;
 
@@ -26,6 +27,8 @@ public class TreeFallAndRoll : MonoBehaviour
     {
         StartPos = transform;
         rolltime = WobbleTime + lifetime;
+        StartWobble = WobbleTime;
+        RB = GetComponent<Rigidbody>();
         
     }
 
@@ -41,17 +44,27 @@ public class TreeFallAndRoll : MonoBehaviour
             {
                 SetPhase1();
                 falling = true;
+                
             }
         }
 
         if (AnimStage == 2) {
-            transform.Rotate(this.transform.up, Time.deltaTime * rollSpeed);
+            //transform.Rotate(Vector3.up * Time.deltaTime, Space.Self);
             //RB.AddForce(transform.forward * rollSpeed);
+            transform.Translate(Vector3.forward * (Time.deltaTime * rollSpeed), Space.World);
 
             if (rolltime < 0)
             {
+                print(rolltime);
+                RB.velocity = Vector3.zero;
+                RB.angularVelocity = Vector3.zero;
+                falling = false;
+                WobbleTime = StartWobble;
                 TreeAnim.enabled = true;
+                rolltime = StartWobble + lifetime;
                 TreeAnim.SetInteger("Phase", 0);
+                
+                
             }
         }
 
@@ -63,6 +76,8 @@ public class TreeFallAndRoll : MonoBehaviour
         AnimStage = 1;
         TreeAnim.SetInteger("Phase", AnimStage);
     }
+
+    //Is called through the animator
     public void SetPhase2()
     {
         AnimStage = 2;

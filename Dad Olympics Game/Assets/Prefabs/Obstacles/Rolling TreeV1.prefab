@@ -1,0 +1,227 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2765536670360633485
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2765536670360633483}
+  m_Layer: 0
+  m_Name: Rolling TreeV1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2765536670360633483
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2765536670360633485}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 115.74, y: 7.01, z: -229.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 362141332497380597}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &2765536670414298744
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1030555975407267407}
+  serializedVersion: 2
+  m_Mass: 4.4
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 80
+  m_CollisionDetection: 0
+--- !u!136 &2765536670414298748
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1030555975407267407}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.045426786
+  m_Height: 0.37743416
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: -0.00000007636845}
+--- !u!136 &2765536670414298742
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1030555975407267407}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.09
+  m_Height: 0.37743416
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: -0.00000007636845}
+--- !u!95 &2765536670414298749
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1030555975407267407}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 45e2a9d826eb5a747a532a04f77d5284, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2765536670414298747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1030555975407267407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b25b08fd6080414babd90afd84434f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WobbleTime: 6
+  rollSpeed: 20
+  AnimStage: 0
+  lifetime: 5
+  falling: 0
+  TreeAnim: {fileID: 2765536670414298749}
+  RB: {fileID: 2765536670414298744}
+--- !u!114 &2765536670414298743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1030555975407267407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e6c75dba9b09664d866479b179f9726, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  directionVector: {x: 0, y: 0, z: 0}
+  kBForce: 1
+  makePlayerDrop: 1
+--- !u!1001 &2765536670592213589
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2765536670360633483}
+    m_Modifications:
+    - target: {fileID: 2551215987731535520, guid: 8da12f4b0d010514f9d2d57c4f6f9d17,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2551215987731535520, guid: 8da12f4b0d010514f9d2d57c4f6f9d17,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 2551215987731535520, guid: 8da12f4b0d010514f9d2d57c4f6f9d17,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2551215987731535520, guid: 8da12f4b0d010514f9d2d57c4f6f9d17,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2551215987731535520, guid: 8da12f4b0d010514f9d2d57c4f6f9d17,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2551215987731535520, guid: 8da12f4b0d010514f9d2d57c4f6f9d17,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2551215987731535520, guid: 8da12f4b0d010514f9d2d57c4f6f9d17,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2551215987731535520, guid: 8da12f4b0d010514f9d2d57c4f6f9d17,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2551215987731535520, guid: 8da12f4b0d010514f9d2d57c4f6f9d17,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2551215987731535520, guid: 8da12f4b0d010514f9d2d57c4f6f9d17,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2551215987731535520, guid: 8da12f4b0d010514f9d2d57c4f6f9d17,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2551215987731535520, guid: 8da12f4b0d010514f9d2d57c4f6f9d17,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2551215987731535520, guid: 8da12f4b0d010514f9d2d57c4f6f9d17,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2551215987731535520, guid: 8da12f4b0d010514f9d2d57c4f6f9d17,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2894809332375440410, guid: 8da12f4b0d010514f9d2d57c4f6f9d17,
+        type: 3}
+      propertyPath: m_Name
+      value: SmallTree_01
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7654710607228019724, guid: 8da12f4b0d010514f9d2d57c4f6f9d17, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 8da12f4b0d010514f9d2d57c4f6f9d17, type: 3}
+--- !u!1 &1030555975407267407 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2894809332375440410, guid: 8da12f4b0d010514f9d2d57c4f6f9d17,
+    type: 3}
+  m_PrefabInstance: {fileID: 2765536670592213589}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &362141332497380597 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2551215987731535520, guid: 8da12f4b0d010514f9d2d57c4f6f9d17,
+    type: 3}
+  m_PrefabInstance: {fileID: 2765536670592213589}
+  m_PrefabAsset: {fileID: 0}
