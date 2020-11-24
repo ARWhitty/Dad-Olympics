@@ -40,13 +40,17 @@ public class Checkpoint : MonoBehaviour
     {
         if (collider.tag.Equals("Player"))
         {
-            Debug.Log("Collided with player");
-            if((collider.gameObject.GetComponent<CharacterMovementController>().getCheckpointCount() == checkPointNum - 1) && collider.gameObject.GetComponent<CharacterMovementController>().GetHasGrabbed())
+            CharacterMovementController player = collider.gameObject.GetComponent<CharacterMovementController>();
+            GameObject stroller = collider.gameObject.GetComponent<CharacterMovementController>().GetGrabbedObject();
+            if ((player.getCheckpointCount() == checkPointNum - 1) && stroller != null)
             {
-                Debug.Log("Time to display");
-                collider.gameObject.GetComponent<CharacterMovementController>().SetCheckpointCount(checkPointNum);
-                display = true;
-                playerID = collider.gameObject.GetComponent<CharacterMovementController>().getPlayerID() + 1;
+                if((stroller.GetComponent<StrollerController>().StrollerID == player.getPlayerID()) || player.isAI)
+                {
+                    player.SetCheckpointCount(checkPointNum);
+                    display = true;
+                    playerID = player.getPlayerID() + 1;
+                }
+
             }
 
         }

@@ -67,6 +67,10 @@ public class PlayerAI : MonoBehaviour
                 }
             }
         }
+        else
+        {
+            GetComponent<CharacterMovementController>().Move(new Vector3(0,0,0));
+        }
     }
 
     public void StartAI()

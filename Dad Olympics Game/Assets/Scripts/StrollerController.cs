@@ -6,6 +6,8 @@ using UnityEngine;
 public class StrollerController : MonoBehaviour
 {
     public GameObject player;
+
+    public int StrollerID;
     // Start is called before the first frame update
     void Start()
     {

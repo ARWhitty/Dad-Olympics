@@ -5,12 +5,11 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
-/*** currently not using this system
 public class PlayerConfigurationManager : MonoBehaviour
 {
     private List<PlayerConfiguration> PlayerConfigs;
 
-    public int MaxPlayers = 2;
+    public int MaxPlayers = 4;
 
     public static PlayerConfigurationManager Instance { get; private set; }
 
@@ -28,6 +27,11 @@ public class PlayerConfigurationManager : MonoBehaviour
         }
     }
 
+    public List<PlayerConfiguration> GetPlayerConfigs()
+    {
+        return PlayerConfigs;
+    }
+
     public void SetPlayerColor(int index, Material color)
     {
         PlayerConfigs[index].PlayerMaterial = color;
@@ -35,10 +39,11 @@ public class PlayerConfigurationManager : MonoBehaviour
 
     public void ReadyPlayer(int index)
     {
+        Debug.Log("Player " + index + " is now ready");
         PlayerConfigs[index].IsReady = true;
-        if(PlayerConfigs.Count == MaxPlayers && PlayerConfigs.All(p => p.IsReady == true))
+        if(PlayerConfigs.All(p => p.IsReady == true))
         {
-            SceneManager.LoadScene("KieranScene");
+            SceneManager.LoadScene("TheBlock_Scott");
         }
     }
 
@@ -69,4 +74,4 @@ public class PlayerConfiguration
     public bool IsReady { get; set; }
 
     public Material PlayerMaterial { get; set; }
-}**/
+}

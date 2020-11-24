@@ -68,6 +68,8 @@ public class CharacterMovementController : MonoBehaviour
 
     private int completedCheckpoints;
 
+    public bool isAI = false;
+
 
     // Start is called before the first frame update
     void Start()
@@ -80,7 +82,7 @@ public class CharacterMovementController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(movementEnabled)
+        if(movementEnabled && !isAI)
             Move();
         else
         {
@@ -448,5 +450,10 @@ public class CharacterMovementController : MonoBehaviour
         moveSpeed = moveSpeedGrab;
         hasGrabbed = true;
         pickupPressed = false;
+    }
+
+    public GameObject GetGrabbedObject()
+    {
+        return grabbedObject;
     }
 }
