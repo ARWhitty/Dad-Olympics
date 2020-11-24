@@ -1,9 +1,5 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/Archive/AddisonCinemachine.unity
-=======
-- path: Assets/Scenes/Other/VictoryStands.unity
->>>>>>> master
+- path: Assets/Scenes/Sandboxes/StevenTest.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
