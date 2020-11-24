@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ManageGame : MonoBehaviour
@@ -12,10 +13,14 @@ public class ManageGame : MonoBehaviour
 
     public Text FinishText;
 
+    public float endTimer;
+
     public float swapTime;
     private float timeCount;
     private bool display;
     private int playerID;
+    private float timer;
+    private bool playerFinish = false;
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +36,7 @@ public class ManageGame : MonoBehaviour
             Debug.Log("Text active");
             timeCount += Time.deltaTime;
             FinishText.text = "Player " + playerID + " has finished the race!";
+            playerFinish = true;
             if (timeCount >= swapTime)
             {
                 display = false;
@@ -40,6 +46,15 @@ public class ManageGame : MonoBehaviour
         else if (!display)
         {
             FinishText.text = "";
+        }
+
+        if (playerFinish)
+        {
+            timer += Time.deltaTime;
+            if(timer >= endTimer)
+            {
+                SceneManager.LoadScene("VictoryStands");
+            }
         }
     }
 

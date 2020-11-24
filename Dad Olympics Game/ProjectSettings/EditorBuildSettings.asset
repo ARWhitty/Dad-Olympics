@@ -29,6 +29,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Sandboxes/hannahsteal.unity
     guid: ff1f27bbb63bfd744a4675cbc4803e9e
+  - enabled: 1
+    path: Assets/Scenes/Other/VictoryStands.unity
+    guid: 5c17e41685c6b0a48be84cfc83d1fa1e
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 4de97d674fb6a3f4287d14a2d1e492c5,
       type: 2}

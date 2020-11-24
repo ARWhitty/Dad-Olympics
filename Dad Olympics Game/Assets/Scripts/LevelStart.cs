@@ -61,5 +61,10 @@ public class LevelStart : MonoBehaviour
         }**/
 
     }
+
+    public void DisableJoin()
+    {
+        PlayerInputManager.instance.DisableJoining();
+    }
 }
 
