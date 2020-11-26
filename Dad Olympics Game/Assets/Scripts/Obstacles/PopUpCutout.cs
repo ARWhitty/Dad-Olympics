@@ -35,7 +35,7 @@ public class PopUpCutout : MonoBehaviour
         {
             this.GetComponent<KnockBack>().kBForce = 0;
             this.GetComponent<BoxCollider>().enabled = false;
-            Quaternion wantedRotation = transform.rotation * Quaternion.AngleAxis(10, Vector3.left);
+            Quaternion wantedRotation = transform.rotation * Quaternion.AngleAxis(10, Vector3.right);
             transform.rotation = Quaternion.Slerp(transform.rotation, wantedRotation, Time.deltaTime*speed);
         }
         else
