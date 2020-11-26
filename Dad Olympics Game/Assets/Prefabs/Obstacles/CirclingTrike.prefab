@@ -62,6 +62,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   directionVector: {x: 0, y: 0, z: 0}
   kBForce: 5
+  makePlayerDrop: 0
 --- !u!1001 &9057592396241230148
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -230,6 +231,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Proto_Trike_01
       objectReference: {fileID: 0}
+    - target: {fileID: 1499961639157216982, guid: 5b440866b88b0fc4084139173a3a1113,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e78cf1cfab1f89b438b0ab0940826af6, type: 2}
+    - target: {fileID: 1499961639157216982, guid: 5b440866b88b0fc4084139173a3a1113,
+        type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 2100000, guid: e62cb4237d63f4e4982b78f10b9e5da6, type: 2}
+    - target: {fileID: 1499961639157216982, guid: 5b440866b88b0fc4084139173a3a1113,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: e78cf1cfab1f89b438b0ab0940826af6, type: 2}
+    - target: {fileID: 1499961639157216982, guid: 5b440866b88b0fc4084139173a3a1113,
+        type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ea6660712e06144cbbe710a8eb3abd2, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b440866b88b0fc4084139173a3a1113, type: 3}
 --- !u!4 &8730451897179882291 stripped

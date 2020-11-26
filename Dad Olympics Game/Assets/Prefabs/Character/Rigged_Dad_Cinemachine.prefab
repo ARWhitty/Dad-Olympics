@@ -1352,9 +1352,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3bbb10526d344af4aa1a538617c009a4, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 0d2d77d36fe68f245a542df9346e18a3, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1994,9 +1994,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 9b9e710eeba8ba343826ff8576b236b6, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f149a605ad3a72c418df517b69cd2ac3, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2609,7 +2609,7 @@ GameObject:
   - component: {fileID: 3703113743594525362}
   - component: {fileID: 2777368383732856400}
   m_Layer: 0
-  m_Name: Rigged_FallGuy_Dad_Cinemachine
+  m_Name: Rigged_Dad_Cinemachine
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2880,6 +2880,7 @@ MonoBehaviour:
   beingKnockedBack: 0
   movementEnabled: 1
   timeUntilMoveEnabled: 0
+  isAI: 0
   cinemachine: {fileID: 1268560128577509626, guid: 7a1d185408329f94b829dec70297ae39,
     type: 3}
   target: {fileID: 1326743671781331285}

@@ -79,7 +79,7 @@ GameObject:
   - component: {fileID: 7428982239099070671}
   - component: {fileID: 7703250766489200880}
   m_Layer: 0
-  m_Name: Rigged_FallGuy_Dad
+  m_Name: Rigged_Dad
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -292,6 +292,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 1cb4ff1b-8998-4c78-90a9-62207da28170
     m_ActionName: PlayerMovement/CameraMovement
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e80297b6-522d-4ebd-8ac8-75bceb619eab
+    m_ActionName: PlayerMovement/CameraZoom[/XInputControllerWindows/dpad/up,/XInputControllerWindows/dpad/down]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: PlayerScheme
   m_DefaultActionMap: PlayerMovement
@@ -327,6 +331,7 @@ MonoBehaviour:
   beingKnockedBack: 0
   movementEnabled: 1
   timeUntilMoveEnabled: 0
+  isAI: 0
 --- !u!1 &941638315054393277
 GameObject:
   m_ObjectHideFlags: 0
@@ -1274,6 +1279,26 @@ PrefabInstance:
         type: 3}
       propertyPath: minY
       value: -20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8649518085767054853, guid: 512bfa28f81729549b8fcd09a7483b98,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0d2d77d36fe68f245a542df9346e18a3, type: 3}
+    - target: {fileID: 8649518085767054853, guid: 512bfa28f81729549b8fcd09a7483b98,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8649518085946682398, guid: 512bfa28f81729549b8fcd09a7483b98,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: f149a605ad3a72c418df517b69cd2ac3, type: 3}
+    - target: {fileID: 8649518085946682398, guid: 512bfa28f81729549b8fcd09a7483b98,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 8649518086173551073, guid: 512bfa28f81729549b8fcd09a7483b98,
         type: 3}
