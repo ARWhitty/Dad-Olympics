@@ -267,10 +267,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 4417fff5665d9724e9e4a4fd3199f501,
+        type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 2100000, guid: e78cf1cfab1f89b438b0ab0940826af6, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 4417fff5665d9724e9e4a4fd3199f501,
+        type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: ad5e3f191d288094a9daed13f2c47901, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 4417fff5665d9724e9e4a4fd3199f501,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a1beb39c12cb0df46abc72d250de199c, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 4417fff5665d9724e9e4a4fd3199f501,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: a1beb39c12cb0df46abc72d250de199c, type: 2}
     - target: {fileID: 919132149155446097, guid: 4417fff5665d9724e9e4a4fd3199f501,
         type: 3}
       propertyPath: m_Name
-      value: Proto_StopSign_01
+      value: Proto_StopSign_01 Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4417fff5665d9724e9e4a4fd3199f501, type: 3}

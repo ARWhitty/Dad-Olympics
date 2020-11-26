@@ -119,7 +119,7 @@ public class CharacterMovementController : MonoBehaviour
             {
                grabbedObject.transform.position = transform.position + (transform.forward * 1.3f) + (transform.up * 0.7f);
                grabbedObject.transform.rotation = transform.rotation;
-               grabbedObject.transform.rotation *= Quaternion.Euler(0, 90, 0);
+               //grabbedObject.transform.rotation *= Quaternion.Euler(0, 90, 0);
                 //grabbedObject.transform.LookAt(transform.position);
 
                 //If player released "e" then let go
@@ -149,7 +149,7 @@ public class CharacterMovementController : MonoBehaviour
             {
                 grabbedObject.transform.position = transform.position + (transform.forward * 1.3f) + (transform.up * 0.7f); // Added transform.up because stroller is in the ground with new dad model.
                 grabbedObject.transform.rotation = transform.rotation;
-                grabbedObject.transform.rotation *= Quaternion.Euler(0, 90, 0);
+                //grabbedObject.transform.rotation *= Quaternion.Euler(0, 90, 0);
             }
         }
         if(pickupCooldown > 0)

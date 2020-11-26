@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 9183846739937949798}
   - component: {fileID: 5250150872485099459}
   - component: {fileID: 8014365745519428361}
+  - component: {fileID: 1321880223}
+  - component: {fileID: 1321880222}
   m_Layer: 0
   m_Name: Proto_RoadSign_01
   m_TagString: Untagged
@@ -59,9 +61,9 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9321af7796d7e2d4b9aafc0ab596db78, type: 2}
-  - {fileID: 2100000, guid: 68a5756c89777074abf5e2a6323121d3, type: 2}
-  - {fileID: 2100000, guid: ad5e3f191d288094a9daed13f2c47901, type: 2}
+  - {fileID: 2100000, guid: d821564deb779914696bb78f357bbd87, type: 2}
+  - {fileID: 2100000, guid: 2db3d9420dac53345bfd680abd579dda, type: 2}
+  - {fileID: 2100000, guid: a1beb39c12cb0df46abc72d250de199c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -82,6 +84,35 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!54 &1321880223
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8374517583320261340}
+  serializedVersion: 2
+  m_Mass: 3
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &1321880222
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8374517583320261340}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.7480803, y: 2.834566, z: 1.1259017}
+  m_Center: {x: -0.021666527, y: 0, z: 0.02832383}
 --- !u!1 &8717045345862690503
 GameObject:
   m_ObjectHideFlags: 0

@@ -218,6 +218,7 @@ GameObject:
   - component: {fileID: 2310294978216429168}
   - component: {fileID: 1702372339460245973}
   - component: {fileID: 3478183909461228831}
+  - component: {fileID: 8473293833053427338}
   m_Layer: 0
   m_Name: RoadClosed_02 (10)
   m_TagString: Untagged
@@ -232,14 +233,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3117618655937289418}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 9.781, y: -5.787, z: -5.4}
-  m_LocalScale: {x: 0.81172, y: 0.81172, z: 0.81172}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 82.67, y: -6.048, z: -130.49}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
   m_Children:
   - {fileID: 2847797203485313557}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1702372339460245973
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -266,12 +267,12 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 320ed85cfd5785a49a01200631e747da, type: 2}
-  - {fileID: 2100000, guid: 7cc74d42f49fdf44eb3543adf721a811, type: 2}
-  - {fileID: 2100000, guid: 3531fe39b534b3946bc7a7616ac6329c, type: 2}
+  - {fileID: 2100000, guid: 2db3d9420dac53345bfd680abd579dda, type: 2}
+  - {fileID: 2100000, guid: 0ea6660712e06144cbbe710a8eb3abd2, type: 2}
+  - {fileID: 2100000, guid: ad5e3f191d288094a9daed13f2c47901, type: 2}
   - {fileID: -1580535799172915004, guid: f51ee3bd350758643be7580f925545c5, type: 3}
-  - {fileID: 2100000, guid: 7b9eb297a0c08094cb38ec196d69d83d, type: 2}
-  - {fileID: 2100000, guid: 320ed85cfd5785a49a01200631e747da, type: 2}
+  - {fileID: 2100000, guid: 2db3d9420dac53345bfd680abd579dda, type: 2}
+  - {fileID: 2100000, guid: e26d37ac38ab32043b5e74cc8c5d0cac, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -292,3 +293,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &8473293833053427338
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3117618655937289418}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.10510221, y: 1.5404427, z: 1.7664629}
+  m_Center: {x: -0.0000014305115, y: 0.000002026558, z: 0.000002861023}
