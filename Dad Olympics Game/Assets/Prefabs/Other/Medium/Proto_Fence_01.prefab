@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4261793623241794}
   - component: {fileID: 33443156835417654}
   - component: {fileID: 23469216819914174}
-  - component: {fileID: 1760517856}
+  - component: {fileID: 1239225925107277087}
   m_Layer: 0
   m_Name: Proto_Fence_01
   m_TagString: Untagged
@@ -80,7 +80,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &1760517856
+--- !u!65 &1239225925107277087
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -91,5 +91,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.2702188, y: 0.8118118, z: 0.06560235}
+  m_Size: {x: 3.6323504, y: 1.2988989, z: 0.10496376}
   m_Center: {x: 0, y: 0, z: 0}
