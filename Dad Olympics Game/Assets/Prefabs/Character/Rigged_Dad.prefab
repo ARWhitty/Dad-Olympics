@@ -321,7 +321,7 @@ MonoBehaviour:
   moveSpeedGrab: 10
   moveSpeedNormal: 11
   turnTime: 0.1
-  jumpHeightGrab: 0.8
+  jumpHeightGrab: 0.85
   throwForce: 300
   grabSound: {fileID: 3450374692587079142}
   throwSound: {fileID: 3450374692743671805}
