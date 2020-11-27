@@ -317,11 +317,11 @@ MonoBehaviour:
   animator: {fileID: 406437671202242167}
   playerCamera: {fileID: 3450374694476005406}
   gravity: -16
-  jumpHeight: 1.5
+  jumpHeight: 1
   moveSpeedGrab: 11
   moveSpeedNormal: 12
   turnTime: 0.1
-  jumpHeightGrab: 1
+  jumpHeightGrab: 0.8
   throwForce: 300
   grabSound: {fileID: 3450374692587079142}
   throwSound: {fileID: 3450374692743671805}

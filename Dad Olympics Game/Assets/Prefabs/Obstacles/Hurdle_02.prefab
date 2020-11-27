@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7930513062184236955}
   - component: {fileID: 7238585809332515364}
   - component: {fileID: 4132109428160029182}
+  - component: {fileID: 9092147956467061888}
   m_Layer: 0
   m_Name: Hurdle_02
   m_TagString: Untagged
@@ -30,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 6996304411006942214}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: -0.7071068}
   m_LocalPosition: {x: -70.626015, y: 0.0769999, z: -9.560322}
-  m_LocalScale: {x: 0.009999997, y: 0.01, z: 0.009999997}
+  m_LocalScale: {x: 0.009999997, y: 0.008, z: 0.009}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -109,8 +110,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 18.811647, y: 143.78853, z: 185.92041}
-  m_Center: {x: 18.981337, y: 0, z: -0.00060344225}
+  m_Size: {x: 14.731249, y: 143.78853, z: 170.70999}
+  m_Center: {x: 21.021544, y: 0, z: -2.3553855}
 --- !u!65 &4132109428160029182
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -122,5 +123,18 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 56.775257, y: 3.4015894, z: 172.04712}
-  m_Center: {x: -0.0004884494, y: -70.19335, z: -1.295937}
+  m_Size: {x: 56.775257, y: 3.4015894, z: 14.071657}
+  m_Center: {x: -0.00048875826, y: -70.19335, z: 78.37546}
+--- !u!65 &9092147956467061888
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6996304411006942214}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 56.775257, y: 3.4015894, z: 14.071657}
+  m_Center: {x: -0.00048875826, y: -70.19335, z: -80}
