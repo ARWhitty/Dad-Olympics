@@ -318,8 +318,8 @@ MonoBehaviour:
   playerCamera: {fileID: 3450374694476005406}
   gravity: -16
   jumpHeight: 1
-  moveSpeedGrab: 11
-  moveSpeedNormal: 12
+  moveSpeedGrab: 10
+  moveSpeedNormal: 11
   turnTime: 0.1
   jumpHeightGrab: 0.8
   throwForce: 300
