@@ -22,6 +22,8 @@ public class ManageGame : MonoBehaviour
     private float timer;
     private bool playerFinish = false;
 
+    private int positions = 1;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -70,6 +72,8 @@ public class ManageGame : MonoBehaviour
                 Debug.Log("Finished!");
                 display = true;
                 playerID = collider.gameObject.GetComponent<CharacterMovementController>().getPlayerID() + 1;
+                collider.gameObject.GetComponent<CharacterMovementController>().SetFinishPosition(positions);
+                positions++;
             }
         }
     }

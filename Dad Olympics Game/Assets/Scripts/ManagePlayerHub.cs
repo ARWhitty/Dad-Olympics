@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class ManagePlayerHub : MonoBehaviour
 {
-    private List<GameObject> players;
+    public List<GameObject> players;
 
     private int playerIDCount = 0;
 
@@ -22,6 +22,11 @@ public class ManagePlayerHub : MonoBehaviour
     public static ManagePlayerHub Instance { get; private set; }
 
     private void Awake()
+    {
+
+    }
+
+    public void SaveState()
     {
         if (Instance != null)
         {
@@ -43,12 +48,13 @@ public class ManagePlayerHub : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void HandlePlayerJoin(PlayerInput pi)
     {
         players.Add(pi.gameObject);
+        DontDestroyOnLoad(pi.gameObject);
         if (pi.gameObject.GetComponent<CharacterMovementController>())
         {
             pi.gameObject.GetComponent<CharacterMovementController>().SetPlayerID(playerIDCount);

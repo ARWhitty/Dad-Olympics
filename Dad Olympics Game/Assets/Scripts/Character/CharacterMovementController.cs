@@ -80,12 +80,17 @@ public class CharacterMovementController : MonoBehaviour
 
     private String color;
 
+    private bool isReady;
+
+    private int finishPosition;
+
 
     // Start is called before the first frame update
     void Start()
     {
         moveSpeed = moveSpeedNormal;
         direction = new Vector2();
+        isReady = false;
         controller = GetComponent<CharacterController>();
     }
 
@@ -504,5 +509,25 @@ public class CharacterMovementController : MonoBehaviour
     public String GetColorName()
     {
         return color;
+    }
+
+    public void ReadyPlayer()
+    {
+        isReady = true;
+    }
+
+    public bool GetReadyPlayer()
+    {
+        return isReady;
+    }
+
+    public void SetFinishPosition(int pos)
+    {
+        finishPosition = pos;
+    }
+
+    public int GetFinishPosition()
+    {
+        return finishPosition;
     }
 }

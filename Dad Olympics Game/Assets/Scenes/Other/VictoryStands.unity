@@ -3709,6 +3709,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1578023658}
   - component: {fileID: 1578023659}
+  - component: {fileID: 1578023660}
   m_Layer: 0
   m_Name: polySurface14
   m_TagString: Untagged
@@ -3803,6 +3804,24 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.00012111571, y: 0.010049537, z: -0.00092226546}
     m_Extent: {x: 0.030384924, y: 0.031411722, z: 0.01423337}
   m_DirtyAABB: 0
+--- !u!114 &1578023660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1578023657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8526499d0271a9d4e9c5464228a8eb22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  posNumber: 2
+  color1: {fileID: 0}
+  color2: {fileID: 0}
+  color3: {fileID: 0}
+  color4: {fileID: 0}
+  color5: {fileID: 0}
 --- !u!1001 &1590843691
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4081,6 +4100,7 @@ GameObject:
   - component: {fileID: 1653006702}
   - component: {fileID: 1653006701}
   - component: {fileID: 1653006700}
+  - component: {fileID: 1653006708}
   m_Layer: 0
   m_Name: Rigged_FallGuy_Dad (3)
   m_TagString: Player
@@ -4112,11 +4132,14 @@ MonoBehaviour:
   throwForce: 300
   grabSound: {fileID: 0}
   throwSound: {fileID: 0}
+  runSound: {fileID: 0}
+  jumpSound: {fileID: 0}
   knockBackTime: 1
   isJumping: 0
   airborn: 0
   beingKnockedBack: 0
   movementEnabled: 1
+  isMoving: 0
   timeUntilMoveEnabled: 0
   isAI: 0
 --- !u!114 &1653006701
@@ -4228,6 +4251,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 1cb4ff1b-8998-4c78-90a9-62207da28170
     m_ActionName: PlayerMovement/CameraMovement
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e80297b6-522d-4ebd-8ac8-75bceb619eab
+    m_ActionName: PlayerMovement/CameraZoom[/XInputControllerWindows/dpad/up,/XInputControllerWindows/dpad/up,/XInputControllerWindows/dpad/down,/XInputControllerWindows/dpad/down]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: PlayerScheme
   m_DefaultActionMap: PlayerMovement
@@ -4330,6 +4357,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: -490.83502, z: 0}
+--- !u!114 &1653006708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653006699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8526499d0271a9d4e9c5464228a8eb22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  posNumber: 4
+  color1: {fileID: 2100000, guid: 2a137063db3863a4395d2d95ba1571dc, type: 2}
+  color2: {fileID: 2100000, guid: c73fa43aa9f23484080b0b3db09f939b, type: 2}
+  color3: {fileID: 2100000, guid: 9f628ab531bf09f44959f69ff01a9988, type: 2}
+  color4: {fileID: 2100000, guid: 72dc4ee0e7db61142afccfa939f83d69, type: 2}
+  color5: {fileID: 2100000, guid: 7f2c58452f119a748afc8f403a97ab28, type: 2}
 --- !u!1001 &1655408494
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4757,6 +4802,7 @@ GameObject:
   - component: {fileID: 1796655401}
   - component: {fileID: 1796655400}
   - component: {fileID: 1796655399}
+  - component: {fileID: 1796655407}
   m_Layer: 0
   m_Name: Rigged_FallGuy_Dad (1)
   m_TagString: Player
@@ -4788,11 +4834,14 @@ MonoBehaviour:
   throwForce: 300
   grabSound: {fileID: 0}
   throwSound: {fileID: 0}
+  runSound: {fileID: 0}
+  jumpSound: {fileID: 0}
   knockBackTime: 1
   isJumping: 0
   airborn: 0
   beingKnockedBack: 0
   movementEnabled: 1
+  isMoving: 0
   timeUntilMoveEnabled: 0
   isAI: 0
 --- !u!114 &1796655400
@@ -5010,6 +5059,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: -274.568, z: 0}
+--- !u!114 &1796655407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1796655398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8526499d0271a9d4e9c5464228a8eb22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  posNumber: 2
+  color1: {fileID: 2100000, guid: 2a137063db3863a4395d2d95ba1571dc, type: 2}
+  color2: {fileID: 2100000, guid: bd5dc8bcfacc2644cb4192d5de1a646f, type: 2}
+  color3: {fileID: 2100000, guid: 9f628ab531bf09f44959f69ff01a9988, type: 2}
+  color4: {fileID: 2100000, guid: 72dc4ee0e7db61142afccfa939f83d69, type: 2}
+  color5: {fileID: 2100000, guid: 7f2c58452f119a748afc8f403a97ab28, type: 2}
 --- !u!1 &1800478164
 GameObject:
   m_ObjectHideFlags: 0
@@ -5486,6 +5553,7 @@ GameObject:
   - component: {fileID: 1912172744}
   - component: {fileID: 1912172743}
   - component: {fileID: 1912172742}
+  - component: {fileID: 1912172750}
   m_Layer: 0
   m_Name: Rigged_FallGuy_Dad (2)
   m_TagString: Player
@@ -5517,11 +5585,14 @@ MonoBehaviour:
   throwForce: 300
   grabSound: {fileID: 0}
   throwSound: {fileID: 0}
+  runSound: {fileID: 0}
+  jumpSound: {fileID: 0}
   knockBackTime: 1
   isJumping: 0
   airborn: 0
   beingKnockedBack: 0
   movementEnabled: 1
+  isMoving: 0
   timeUntilMoveEnabled: 0
   isAI: 0
 --- !u!114 &1912172743
@@ -5739,6 +5810,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: -488.693, z: 0}
+--- !u!114 &1912172750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1912172741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8526499d0271a9d4e9c5464228a8eb22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  posNumber: 3
+  color1: {fileID: 2100000, guid: 2a137063db3863a4395d2d95ba1571dc, type: 2}
+  color2: {fileID: 2100000, guid: bd5dc8bcfacc2644cb4192d5de1a646f, type: 2}
+  color3: {fileID: 2100000, guid: 9f628ab531bf09f44959f69ff01a9988, type: 2}
+  color4: {fileID: 2100000, guid: 72dc4ee0e7db61142afccfa939f83d69, type: 2}
+  color5: {fileID: 2100000, guid: 7f2c58452f119a748afc8f403a97ab28, type: 2}
 --- !u!1 &1918614311
 GameObject:
   m_ObjectHideFlags: 0
@@ -6465,6 +6554,7 @@ GameObject:
   - component: {fileID: 1496233869433441232}
   - component: {fileID: 8536942332472860008}
   - component: {fileID: 8901142477449043287}
+  - component: {fileID: 2130715458830749121}
   m_Layer: 0
   m_Name: Rigged_FallGuy_Dad
   m_TagString: Player
@@ -6472,6 +6562,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &2130715458830749121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2130715458830749120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8526499d0271a9d4e9c5464228a8eb22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  posNumber: 1
+  color1: {fileID: 2100000, guid: 2a137063db3863a4395d2d95ba1571dc, type: 2}
+  color2: {fileID: 2100000, guid: bd5dc8bcfacc2644cb4192d5de1a646f, type: 2}
+  color3: {fileID: 2100000, guid: 9f628ab531bf09f44959f69ff01a9988, type: 2}
+  color4: {fileID: 2100000, guid: 72dc4ee0e7db61142afccfa939f83d69, type: 2}
+  color5: {fileID: 2100000, guid: 7f2c58452f119a748afc8f403a97ab28, type: 2}
 --- !u!1 &2185858969890434715
 GameObject:
   m_ObjectHideFlags: 0
@@ -8718,6 +8826,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 1cb4ff1b-8998-4c78-90a9-62207da28170
     m_ActionName: PlayerMovement/CameraMovement
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e80297b6-522d-4ebd-8ac8-75bceb619eab
+    m_ActionName: PlayerMovement/CameraZoom[/XInputControllerWindows/dpad/up,/XInputControllerWindows/dpad/up,/XInputControllerWindows/dpad/down,/XInputControllerWindows/dpad/down]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: PlayerScheme
   m_DefaultActionMap: PlayerMovement
@@ -9266,11 +9378,14 @@ MonoBehaviour:
   throwForce: 300
   grabSound: {fileID: 0}
   throwSound: {fileID: 0}
+  runSound: {fileID: 0}
+  jumpSound: {fileID: 0}
   knockBackTime: 1
   isJumping: 0
   airborn: 0
   beingKnockedBack: 0
   movementEnabled: 1
+  isMoving: 0
   timeUntilMoveEnabled: 0
   isAI: 0
 --- !u!1 &9080673537193156018
