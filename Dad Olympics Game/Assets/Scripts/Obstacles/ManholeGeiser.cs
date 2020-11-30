@@ -16,6 +16,7 @@ public class ManholeGeiser : MonoBehaviour
     public GameObject waterCol;
     public ParticleSystem water;
     public GameObject cover;
+    public VirtualAudioSource virtualAudioSource;
 
     public float size;
 
@@ -39,6 +40,13 @@ public class ManholeGeiser : MonoBehaviour
         delay -= Time.deltaTime;
         if (delay < 0)
         {
+            if(up)
+            {
+                virtualAudioSource.Pause();
+            } else
+            {
+                virtualAudioSource.Play();
+            }
             up = !up;
             delay = timer;
         }

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1306148429381282752}
   - component: {fileID: 5922963362001723039}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: WaterKB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4828,6 +4828,7 @@ GameObject:
   - component: {fileID: 8863348826126251885}
   - component: {fileID: 3168575839736280009}
   - component: {fileID: 8839682162022307907}
+  - component: {fileID: 3001941113062338731}
   m_Layer: 0
   m_Name: Fire_Hydrant 1
   m_TagString: Untagged
@@ -4929,3 +4930,21 @@ MonoBehaviour:
   force: 7
   waterKB: {fileID: 681637373272561812}
   WaterEffect: {fileID: 4649751030743062608}
+--- !u!114 &3001941113062338731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6917543029956859576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cf4fb30e6029458385de56cad17bcf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mySource: {fileID: 0}
+  playOnEnable: 1
+  loopCoroutine: 0
+  force3DSoundOnStartup: 1
+  lockPlayingClipToListener: 1
+  audioSourceName: HydrantSpurt

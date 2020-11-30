@@ -40,9 +40,9 @@ public class CharacterMovementController : MonoBehaviour
 
     //public Text GrabText;
 
-    public AudioSource grabSound;
+    public VirtualAudioSource grabSound;
 
-    public AudioSource throwSound;
+    public VirtualAudioSource throwSound;
 
     public float knockBackTime;
 

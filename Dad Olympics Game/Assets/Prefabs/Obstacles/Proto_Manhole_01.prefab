@@ -89,6 +89,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6569673618710039042}
   - component: {fileID: 2572884608287701178}
+  - component: {fileID: 7388650272601464935}
   m_Layer: 0
   m_Name: Proto_Manhole_01
   m_TagString: Untagged
@@ -133,10 +134,29 @@ MonoBehaviour:
   waterCol: {fileID: 6008981828926058344}
   water: {fileID: 138200523789864078}
   cover: {fileID: 1477872956237729039}
+  virtualAudioSource: {fileID: 7388650272601464935}
   size: 150
   coverBaseT: {x: 0, y: 0, z: 0}
   coverTargetOffset: {x: -0.00000006508827, y: 1.712, z: 0.00000006508827}
   angle: {x: 0, y: 0, z: 0}
+--- !u!114 &7388650272601464935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5793876478135881912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cf4fb30e6029458385de56cad17bcf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mySource: {fileID: 0}
+  playOnEnable: 0
+  loopCoroutine: 0
+  force3DSoundOnStartup: 1
+  lockPlayingClipToListener: 1
+  audioSourceName: Manhole
 --- !u!1 &6004441194501650208
 GameObject:
   m_ObjectHideFlags: 0

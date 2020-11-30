@@ -78,6 +78,7 @@ GameObject:
   - component: {fileID: 406437671202242167}
   - component: {fileID: 7428982239099070671}
   - component: {fileID: 7703250766489200880}
+  - component: {fileID: 1512158197606061540}
   m_Layer: 0
   m_Name: Rigged_Dad
   m_TagString: Player
@@ -323,8 +324,8 @@ MonoBehaviour:
   turnTime: 0.1
   jumpHeightGrab: 0.85
   throwForce: 300
-  grabSound: {fileID: 3450374692587079142}
-  throwSound: {fileID: 3450374692743671805}
+  grabSound: {fileID: 6002832575061448149}
+  throwSound: {fileID: 2318193617786232316}
   knockBackTime: 1
   isJumping: 0
   airborn: 0
@@ -332,6 +333,19 @@ MonoBehaviour:
   movementEnabled: 1
   timeUntilMoveEnabled: 0
   isAI: 0
+--- !u!114 &1512158197606061540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 932691824398563431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 278a243ff17e24541827bfa36e730d8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pan2DForListener: 0
 --- !u!1 &941638315054393277
 GameObject:
   m_ObjectHideFlags: 0
@@ -1265,6 +1279,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6865212666803360501}
     m_Modifications:
+    - target: {fileID: 334721247636356141, guid: 512bfa28f81729549b8fcd09a7483b98,
+        type: 3}
+      propertyPath: mySource
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 334721247636356141, guid: 512bfa28f81729549b8fcd09a7483b98,
+        type: 3}
+      propertyPath: audioSourceName
+      value: GrabSound
+      objectReference: {fileID: 0}
     - target: {fileID: 7173893783841286366, guid: 512bfa28f81729549b8fcd09a7483b98,
         type: 3}
       propertyPath: target
@@ -1280,6 +1304,21 @@ PrefabInstance:
       propertyPath: minY
       value: -20
       objectReference: {fileID: 0}
+    - target: {fileID: 8629059131085714436, guid: 512bfa28f81729549b8fcd09a7483b98,
+        type: 3}
+      propertyPath: mySource
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8629059131085714436, guid: 512bfa28f81729549b8fcd09a7483b98,
+        type: 3}
+      propertyPath: audioSourceName
+      value: ThrowSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 8649518085767054852, guid: 512bfa28f81729549b8fcd09a7483b98,
+        type: 3}
+      propertyPath: m_Name
+      value: VirtualThowSound
+      objectReference: {fileID: 0}
     - target: {fileID: 8649518085767054853, guid: 512bfa28f81729549b8fcd09a7483b98,
         type: 3}
       propertyPath: m_audioClip
@@ -1290,6 +1329,16 @@ PrefabInstance:
       propertyPath: m_Volume
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 8649518085767054853, guid: 512bfa28f81729549b8fcd09a7483b98,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8649518085946682396, guid: 512bfa28f81729549b8fcd09a7483b98,
+        type: 3}
+      propertyPath: m_Name
+      value: VirtualGrabSound
+      objectReference: {fileID: 0}
     - target: {fileID: 8649518085946682398, guid: 512bfa28f81729549b8fcd09a7483b98,
         type: 3}
       propertyPath: m_audioClip
@@ -1299,6 +1348,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Volume
       value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8649518085946682398, guid: 512bfa28f81729549b8fcd09a7483b98,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8649518086173551073, guid: 512bfa28f81729549b8fcd09a7483b98,
         type: 3}
@@ -1360,8 +1414,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Camera
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8649518086173551079, guid: 512bfa28f81729549b8fcd09a7483b98, type: 3}
+    - {fileID: 8649518085767054853, guid: 512bfa28f81729549b8fcd09a7483b98, type: 3}
+    - {fileID: 8649518085946682398, guid: 512bfa28f81729549b8fcd09a7483b98, type: 3}
+    - {fileID: 3213146898650728709, guid: 512bfa28f81729549b8fcd09a7483b98, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 512bfa28f81729549b8fcd09a7483b98, type: 3}
+--- !u!1 &3450374694476005406 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8649518086173551078, guid: 512bfa28f81729549b8fcd09a7483b98,
+    type: 3}
+  m_PrefabInstance: {fileID: 6335284155815668216}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3450374694476005401 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8649518086173551073, guid: 512bfa28f81729549b8fcd09a7483b98,
@@ -1374,21 +1438,27 @@ Camera:
     type: 3}
   m_PrefabInstance: {fileID: 6335284155815668216}
   m_PrefabAsset: {fileID: 0}
---- !u!82 &3450374692743671805 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 8649518085767054853, guid: 512bfa28f81729549b8fcd09a7483b98,
+--- !u!114 &2318193617786232316 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8629059131085714436, guid: 512bfa28f81729549b8fcd09a7483b98,
     type: 3}
   m_PrefabInstance: {fileID: 6335284155815668216}
   m_PrefabAsset: {fileID: 0}
---- !u!82 &3450374692587079142 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 8649518085946682398, guid: 512bfa28f81729549b8fcd09a7483b98,
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cf4fb30e6029458385de56cad17bcf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6002832575061448149 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 334721247636356141, guid: 512bfa28f81729549b8fcd09a7483b98,
     type: 3}
   m_PrefabInstance: {fileID: 6335284155815668216}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &3450374694476005406 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8649518086173551078, guid: 512bfa28f81729549b8fcd09a7483b98,
-    type: 3}
-  m_PrefabInstance: {fileID: 6335284155815668216}
-  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cf4fb30e6029458385de56cad17bcf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

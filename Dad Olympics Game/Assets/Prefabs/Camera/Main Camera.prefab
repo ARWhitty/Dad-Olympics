@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8649518085767054854}
   - component: {fileID: 8649518085767054853}
+  - component: {fileID: 8629059131085714436}
   m_Layer: 0
   m_Name: ThowSound
   m_TagString: Untagged
@@ -127,6 +128,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8629059131085714436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8649518085767054852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cf4fb30e6029458385de56cad17bcf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mySource: {fileID: 8649518085767054853}
+  playOnEnable: 0
+  loopCoroutine: 0
+  force3DSoundOnStartup: 1
+  lockPlayingClipToListener: 1
 --- !u!1 &8649518085946682396
 GameObject:
   m_ObjectHideFlags: 0
@@ -137,6 +155,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8649518085946682397}
   - component: {fileID: 8649518085946682398}
+  - component: {fileID: 334721247636356141}
   m_Layer: 0
   m_Name: GrabSound
   m_TagString: Untagged
@@ -254,6 +273,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &334721247636356141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8649518085946682396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cf4fb30e6029458385de56cad17bcf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mySource: {fileID: 8649518085946682398}
+  playOnEnable: 0
+  loopCoroutine: 0
+  force3DSoundOnStartup: 1
+  lockPlayingClipToListener: 1
 --- !u!1 &8649518086173551078
 GameObject:
   m_ObjectHideFlags: 0
@@ -264,8 +300,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8649518086173551073}
   - component: {fileID: 8649518086173551072}
-  - component: {fileID: 8649518086173551079}
   - component: {fileID: 7173893783841286366}
+  - component: {fileID: 3213146898650728709}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -332,14 +368,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &8649518086173551079
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8649518086173551078}
-  m_Enabled: 1
 --- !u!114 &7173893783841286366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -359,3 +387,16 @@ MonoBehaviour:
   minY: 0
   maxY: 65
   playerRotation: 0
+--- !u!114 &3213146898650728709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8649518086173551078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 278a243ff17e24541827bfa36e730d8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pan2DForListener: 0
