@@ -30,9 +30,9 @@ public class VirtualAudioSource_ClosestListenerOnly : VirtualAudioSource {
 
 	public string audioSourceName;
 
-	private void Start()
+	private void Awake()
 	{
-		if (!audioSourceName.Equals(null)) {
+		if (mySource == null) {
 			Debug.Log("Searching for : " + audioSourceName);
 			GameObject sfx = GameObject.Find("SFX");
 			Transform trans = sfx.transform;
@@ -53,7 +53,7 @@ public class VirtualAudioSource_ClosestListenerOnly : VirtualAudioSource {
 			}
 			else
 			{
-				Debug.LogWarning("No AudioSource assigned to this virtual source! An AudioSource must be assigned for in order to function properly!");
+				Debug.LogWarning("No AudioSource assigned to this virtual source! Object: " + name);
 			}
 		}
 		base.OnEnable();

@@ -44,6 +44,10 @@ public class CharacterMovementController : MonoBehaviour
 
     public VirtualAudioSource throwSound;
 
+    public VirtualAudioSource runSound;
+
+    public VirtualAudioSource jumpSound;
+
     public float knockBackTime;
 
     private float knockBackCounter;
@@ -60,9 +64,13 @@ public class CharacterMovementController : MonoBehaviour
 
     public bool movementEnabled = true;
 
+    public bool isMoving;
+
     public float timeUntilMoveEnabled = 0;
 
     private float pickupCooldown;
+
+    private float stepSoundCooldown;
 
     private int playerID;
 
@@ -95,6 +103,8 @@ public class CharacterMovementController : MonoBehaviour
                 movementEnabled = true;
             }
         }
+
+        PlaySteps();
 
         Jump();
 
@@ -212,6 +222,7 @@ public class CharacterMovementController : MonoBehaviour
     {
         if (airborn == false && isJumping)
         {
+            jumpSound.Play();
             if (hasGrabbed)
             {
                 velocity.y = Mathf.Sqrt(jumpHeightGrab * -2 * gravity);
@@ -233,6 +244,7 @@ public class CharacterMovementController : MonoBehaviour
         if (dirVector.magnitude >= 0.1f)
         {
             animator.SetBool("isRunning", true);
+            isMoving = true;
             float targetAngle = Mathf.Atan2(dirVector.x, dirVector.z) * Mathf.Rad2Deg + camPos.eulerAngles.y;
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnTime);
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
@@ -243,8 +255,23 @@ public class CharacterMovementController : MonoBehaviour
         else
         {
             animator.SetBool("isRunning", false);
+            isMoving = false;
             velocity.x = 0;
             velocity.z = 0;
+        }
+    }
+
+    private void PlaySteps()
+    {
+        float timeBetween = 0.25f;
+        if (isMoving && !airborn && stepSoundCooldown < 0)
+        {
+            runSound.Play();
+            stepSoundCooldown = timeBetween;
+        }
+        else
+        {
+            stepSoundCooldown -= Time.deltaTime;
         }
     }
 
@@ -253,11 +280,13 @@ public class CharacterMovementController : MonoBehaviour
         if (dirVector.magnitude >= 0.1f && movementEnabled)
         {
             animator.SetBool("isRunning", true);
+            runSound.Play();
             controller.Move((dirVector.normalized * moveSpeed) * Time.deltaTime);
         }
         else
         {
             animator.SetBool("isRunning", false);
+            runSound.Stop();
             velocity.x = 0;
             velocity.z = 0;
         }
@@ -354,22 +383,30 @@ public class CharacterMovementController : MonoBehaviour
         animator.ResetTrigger("Land");
         animator.SetTrigger("Throw");
         yield return new WaitForSeconds(1.5f);
+        throwSound.Play();
         Vector3 forward = transform.forward;
         grabbedObject.transform.forward = forward;
         Vector3 throwingForce = forward * throwForce * 1.5f; //transform.rotation.normalized * new Vector3(0, throwForce*2000, throwForce*300);
         Vector3 movementAdjust = forward * direction.magnitude * moveSpeedGrab * 40;
         throwingForce += movementAdjust;
         throwingForce.y = 300f;
-        Debug.Log("Threw with Vector force: " + throwingForce);
+        //Debug.Log("Threw with Vector force: " + throwingForce);
         grabbedObject.GetComponent<Rigidbody>().isKinematic = false;
         grabbedObject.GetComponent<Rigidbody>().useGravity = true;
-        Debug.Log("Velocity: " + direction.magnitude);
+        //Debug.Log("Velocity: " + direction.magnitude);
         grabbedObject.GetComponent<Rigidbody>().AddForce(throwingForce);
         hasGrabbed = false;
         moveSpeed = moveSpeedNormal;
         grabbedObject = null;
         animator.ResetTrigger("Throw");
     }
+
+    /*
+    private IEnumerator runSound()
+    {
+        runSound.Play();
+    }
+    */
 
     private void HandleGrabObject()
     {

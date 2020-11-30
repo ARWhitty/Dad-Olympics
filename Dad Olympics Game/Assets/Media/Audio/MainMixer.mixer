@@ -39,7 +39,7 @@ AudioMixerGroupController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Player1
+  m_Name: ExternalSFX
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: aeabb7e83611bc14da2ae317e5c1026e
   m_Children: []
@@ -58,7 +58,7 @@ AudioMixerGroupController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Player2
+  m_Name: CharacterSFX
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: e8f086482b7f7464788f119788a808d5
   m_Children: []
@@ -146,6 +146,7 @@ AudioMixerSnapshotController:
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: 32f9b0380657be748a469c5b4add4b75
   m_FloatValues:
+    da9da1d4980c3324b8daa0b196d8968c: -10.867776
     0a4f7b16c08e05143a7b438f53933d38: -11.535824
     3fd85bd6049799c419cfd374578993b3: -0.025776565
     b269b3383f84d464eb9854ccf7b93bd4: -0.025777064

@@ -42,10 +42,10 @@ public class ManholeGeiser : MonoBehaviour
         {
             if(up)
             {
-                virtualAudioSource.Pause();
+                virtualAudioSource.enabled = false;
             } else
             {
-                virtualAudioSource.Play();
+                virtualAudioSource.enabled = true;
             }
             up = !up;
             delay = timer;
