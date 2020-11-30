@@ -21,6 +21,11 @@ public class LevelStart : MonoBehaviour
     //public GameObject GameManager;
     private int playerIDCount = 0;
 
+    void awake()
+    {
+
+    }
+
     public void HandleGameStart(PlayerInput pi)
     {
         if(startCam != null)

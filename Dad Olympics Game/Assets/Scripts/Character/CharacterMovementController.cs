@@ -70,6 +70,8 @@ public class CharacterMovementController : MonoBehaviour
 
     public bool isAI = false;
 
+    private String color;
+
 
     // Start is called before the first frame update
     void Start()
@@ -455,5 +457,15 @@ public class CharacterMovementController : MonoBehaviour
     public GameObject GetGrabbedObject()
     {
         return grabbedObject;
+    }
+
+    public void SetColorName(String colorName)
+    {
+        color = colorName;
+    }
+
+    public String GetColorName()
+    {
+        return color;
     }
 }
