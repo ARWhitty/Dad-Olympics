@@ -30,8 +30,8 @@ public class VirtualAudioSource_ClosestListenerOnly : VirtualAudioSource {
 
 	public string audioSourceName;
 
-	private void Awake()
-	{
+    private void OnLevelWasLoaded(int level)
+    {
 		if (mySource == null) {
 			Debug.Log("Searching for : " + audioSourceName);
 			GameObject sfx = GameObject.Find("SFX");
@@ -90,7 +90,8 @@ public class VirtualAudioSource_ClosestListenerOnly : VirtualAudioSource {
 						//update audio source by keeping the relative positions / orientations between the closest virtual player and this virtual source the same as between the actual source and true listener
 						if(closestListener != null)
 						{
-							mySource.transform.position = Quaternion.Inverse(closestListener.transform.rotation)*(this.transform.position - closestListener.transform.position) + VirtualAudioListener.sceneAudioListener.transform.position;
+							if(VirtualAudioListener.sceneAudioListener)
+								mySource.transform.position = Quaternion.Inverse(closestListener.transform.rotation)*(this.transform.position - closestListener.transform.position) + VirtualAudioListener.sceneAudioListener.transform.position;
 						}
 						else
 						{
