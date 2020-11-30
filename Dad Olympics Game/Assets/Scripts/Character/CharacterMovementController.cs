@@ -91,6 +91,7 @@ public class CharacterMovementController : MonoBehaviour
         moveSpeed = moveSpeedNormal;
         direction = new Vector2();
         isReady = false;
+        finishPosition = -1;
         controller = GetComponent<CharacterController>();
     }
 

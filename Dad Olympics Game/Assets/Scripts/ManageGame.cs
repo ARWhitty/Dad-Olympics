@@ -68,12 +68,15 @@ public class ManageGame : MonoBehaviour
             Debug.Log("Player checkpoint: " + collider.gameObject.GetComponent<CharacterMovementController>().getCheckpointCount());
             if(collider.gameObject.GetComponent<CharacterMovementController>().getCheckpointCount() == checkpoints.Length && collider.gameObject.GetComponent<CharacterMovementController>().GetHasGrabbed())
             {
-                
-                Debug.Log("Finished!");
-                display = true;
-                playerID = collider.gameObject.GetComponent<CharacterMovementController>().getPlayerID() + 1;
-                collider.gameObject.GetComponent<CharacterMovementController>().SetFinishPosition(positions);
-                positions++;
+                if(collider.gameObject.GetComponent<CharacterMovementController>().GetFinishPosition() == -1)
+                {
+                    Debug.Log("Finished!");
+                    display = true;
+                    playerID = collider.gameObject.GetComponent<CharacterMovementController>().getPlayerID() + 1;
+                    collider.gameObject.GetComponent<CharacterMovementController>().SetFinishPosition(positions);
+                    positions++;
+                }
+
             }
         }
     }
