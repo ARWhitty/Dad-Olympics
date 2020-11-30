@@ -23,10 +23,10 @@ public class StrollerController : MonoBehaviour
 
     internal void KnockBack(Vector3 direction, bool dropStroller)
     {
-        Debug.Log("KBCalled");
+        /**Debug.Log("KBCalled");
         if (dropStroller)
             player.GetComponent<CharacterMovementController>().DropGrabbedItem();
-        GetComponent<Rigidbody>().AddForce(direction, ForceMode.Impulse);
+        GetComponent<Rigidbody>().AddForce(direction, ForceMode.Impulse);**/
     }
 
     public void SetID(int id)

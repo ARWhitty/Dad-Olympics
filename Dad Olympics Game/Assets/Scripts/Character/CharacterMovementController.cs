@@ -98,7 +98,8 @@ public class CharacterMovementController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(movementEnabled && !isAI)
+        Debug.Log("Player: " + playerID + " has object: " + hasGrabbed);
+        if (movementEnabled && !isAI)
             Move();
         else
         {
@@ -110,7 +111,11 @@ public class CharacterMovementController : MonoBehaviour
             }
         }
 
-        PlaySteps();
+        if (!isAI)
+        {
+            PlaySteps();
+        }
+
 
         Jump();
 
@@ -135,6 +140,7 @@ public class CharacterMovementController : MonoBehaviour
             //Handle moving and rotating the object that has been grabbed
             if (hasGrabbed)
             {
+
                grabbedObject.transform.position = transform.position + (transform.forward * 1.3f) + (transform.up * 0.7f);
                grabbedObject.transform.rotation = transform.rotation;
                //grabbedObject.transform.rotation *= Quaternion.Euler(0, 90, 0);
@@ -228,7 +234,10 @@ public class CharacterMovementController : MonoBehaviour
     {
         if (airborn == false && isJumping)
         {
-            jumpSound.Play();
+            if (!isAI)
+            {
+                jumpSound.Play();
+            }
             if (hasGrabbed)
             {
                 velocity.y = Mathf.Sqrt(jumpHeightGrab * -2 * gravity);
@@ -286,13 +295,13 @@ public class CharacterMovementController : MonoBehaviour
         if (dirVector.magnitude >= 0.1f && movementEnabled)
         {
             animator.SetBool("isRunning", true);
-            runSound.Play();
+            //runSound.Play();
             controller.Move((dirVector.normalized * moveSpeed) * Time.deltaTime);
         }
         else
         {
             animator.SetBool("isRunning", false);
-            runSound.Stop();
+            //runSound.Stop();
             velocity.x = 0;
             velocity.z = 0;
         }
