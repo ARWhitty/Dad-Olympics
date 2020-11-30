@@ -654,19 +654,6 @@ MonoBehaviour:
   directionVector: {x: 0, y: 1, z: 1}
   kBForce: 1
   makePlayerDrop: 1
---- !u!65 &2099399306238941469
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6249983013040072045}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.0811346, y: 0.5657778, z: 0.8868578}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2099399306252412180
 GameObject:
   m_ObjectHideFlags: 0
@@ -1025,6 +1012,19 @@ MonoBehaviour:
   directionVector: {x: 0, y: 1, z: 1}
   kBForce: 1
   makePlayerDrop: 1
+--- !u!65 &2099399306238941469
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6249983013040072045}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.0811346, y: 0.5657778, z: 0.8868578}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &2099399307027916020
 Animator:
   serializedVersion: 3
@@ -1214,7 +1214,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: 940d897b015eea349b1e3333093591eb, type: 2}
+      objectReference: {fileID: 2100000, guid: e26d37ac38ab32043b5e74cc8c5d0cac, type: 2}
     - target: {fileID: 6854197372217481349, guid: 156bea568fc4849479c5a723274e0400,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
