@@ -43,12 +43,21 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
+<<<<<<< HEAD
     width: 1536
     height: 731
   m_MinSize: {x: 677, y: 492}
   m_MaxSize: {x: 14001, y: 14042}
   vertical: 0
   controlID: 125
+=======
+    width: 1600
+    height: 807
+  m_MinSize: {x: 678, y: 492}
+  m_MaxSize: {x: 14001, y: 14042}
+  vertical: 0
+  controlID: 93
+>>>>>>> master
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -92,11 +101,19 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 345
     height: 455
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
+=======
+    width: 239
+    height: 531
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 15}
+>>>>>>> master
   m_Panes:
   - {fileID: 17}
   m_Selected: 0
@@ -149,9 +166,15 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 1536
     height: 781
   m_MinSize: {x: 875, y: 300}
+=======
+    width: 1600
+    height: 857
+  m_MinSize: {x: 875, y: 542}
+>>>>>>> master
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &7
 MonoBehaviour:
@@ -215,12 +238,21 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 1061
     height: 731
   m_MinSize: {x: 402, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
   controlID: 126
+=======
+    width: 1315
+    height: 807
+  m_MinSize: {x: 403, y: 492}
+  m_MaxSize: {x: 10001, y: 14042}
+  vertical: 1
+  controlID: 94
+>>>>>>> master
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -240,12 +272,21 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 1061
     height: 455
   m_MinSize: {x: 402, y: 221}
   m_MaxSize: {x: 8002, y: 4021}
   vertical: 0
   controlID: 36
+=======
+    width: 1315
+    height: 531
+  m_MinSize: {x: 403, y: 221}
+  m_MaxSize: {x: 8003, y: 4021}
+  vertical: 0
+  controlID: 95
+>>>>>>> master
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -522,20 +563,35 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
+<<<<<<< HEAD
     - Assets/Prefabs/Character
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
   - Assets/Prefabs/Character
+=======
+    - Assets/Scenes/Other
+  m_ViewMode: 1
+  m_StartGridSize: 64
+  m_LastFolders:
+  - Assets/Scenes/Other
+>>>>>>> master
   m_LastFoldersGridSize: -1
   m_LastProjectPath: E:\Fall2020\Dad-Olympics\Dad Olympics Game
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
+<<<<<<< HEAD
     scrollPos: {x: 0, y: 106}
     m_SelectedIDs: a0540000
     m_LastClickedID: 21664
     m_ExpandedIDs: 00000000025100007a51000006580000105a0000625a0000d65b0000845d0000045e000076600000866100001862000032620000b2620000a2630000a46300004e6600005c67000000ca9a3b
+=======
+    scrollPos: {x: 0, y: 85}
+    m_SelectedIDs: 26480000
+    m_LastClickedID: 18470
+    m_ExpandedIDs: 00000000163900008e3900002e400000464200000a440000144400004a460000c6480000d84900006c4a0000064b0000f84b0000aa4e0000b84f000000ca9a3b
+>>>>>>> master
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -563,7 +619,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000025100007a51000006580000105a0000d65b0000045e0000766000008661000018620000b2620000a26300004e6600005c670000
+=======
+    m_ExpandedIDs: 00000000163900008e3900002e40000046420000144400004a460000c6480000d84900006c4a0000064b0000f84b0000aa4e0000b84f0000
+>>>>>>> master
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -685,10 +745,17 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
+<<<<<<< HEAD
       scrollPos: {x: 0, y: 12062}
       m_SelectedIDs: 
       m_LastClickedID: 0
       m_ExpandedIDs: 1eacfdff22acfdffa8acfdffaa3efeffae3efeff343ffeff90f2ffff00780000f88c0000069d00009ca4000050b90000
+=======
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 3ccb0000
+      m_LastClickedID: 52028
+      m_ExpandedIDs: 4086ffff6afbffff
+>>>>>>> master
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -748,9 +815,15 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< HEAD
     m_Target: {x: 111.464516, y: -0.56593645, z: -235.19688}
     speed: 2
     m_Value: {x: 115.74, y: 3.121, z: -233.83199}
+=======
+    m_Target: {x: 3.4406567, y: -0.84781533, z: 10.4234}
+    speed: 2
+    m_Value: {x: 3.4406567, y: -0.84781533, z: 10.4234}
+>>>>>>> master
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -796,6 +869,7 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
+<<<<<<< HEAD
     m_Target: {x: 0.18996745, y: -0.62248296, z: 0.15927461, w: 0.74235815}
     speed: 2
     m_Value: {x: -0.3015429, y: -0.0011430929, z: 0.00037048827, w: -0.9534519}
@@ -803,6 +877,15 @@ MonoBehaviour:
     m_Target: 10
     speed: 2
     m_Value: 10
+=======
+    m_Target: {x: -0.07822535, y: 0.012559779, z: -0.000979585, w: -0.9968675}
+    speed: 2
+    m_Value: {x: -0.07971966, y: 0.012558153, z: -0.0009984131, w: -0.9967378}
+  m_Size:
+    m_Target: 10
+    speed: 2
+    m_Value: 9.999994
+>>>>>>> master
   m_Ortho:
     m_Target: 0
     speed: 2
