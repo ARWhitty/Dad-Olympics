@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2739938176738278073}
   - component: {fileID: 1272808765070718236}
   - component: {fileID: 3912814016390218198}
+  - component: {fileID: 3528616609602742044}
   m_Layer: 0
   m_Name: Paint_Can (2)
   m_TagString: Untagged
@@ -58,8 +59,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f8942ab67d380b142a0bbf8dff54e5a2, type: 2}
-  - {fileID: 2100000, guid: abfa0c07c20098949b4149011143047d, type: 2}
+  - {fileID: 2100000, guid: e62cb4237d63f4e4982b78f10b9e5da6, type: 2}
+  - {fileID: 2100000, guid: 28ffe6f63f9950c468d6fd9ad30d2f01, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -80,3 +81,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!136 &3528616609602742044
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3264520313659219971}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.010344041
+  m_Height: 0.020891936
+  m_Direction: 1
+  m_Center: {x: 9.271584e-10, y: 0.00027952113, z: -0.0000000018504265}
