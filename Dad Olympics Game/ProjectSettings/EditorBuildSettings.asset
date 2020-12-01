@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Other/TitleScreen-Scott.unity
     guid: 68aef164ddc163343bc8f12e89c1067b
   - enabled: 1
+    path: Assets/Scenes/Other/GarageScene.unity
+    guid: d57348c7e59e588429e2bc0245b072bb
+  - enabled: 1
     path: Assets/Scenes/Sandboxes/TheBlock_Scott.unity
     guid: 3d8b5641a003f1e4caf3728ec562c174
   - enabled: 0
@@ -32,9 +35,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Other/VictoryStands.unity
     guid: 5c17e41685c6b0a48be84cfc83d1fa1e
-  - enabled: 1
-    path: Assets/Scenes/Other/GarageScene.unity
-    guid: d57348c7e59e588429e2bc0245b072bb
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 4de97d674fb6a3f4287d14a2d1e492c5,
       type: 2}
