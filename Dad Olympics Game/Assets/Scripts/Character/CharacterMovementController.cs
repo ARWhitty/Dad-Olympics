@@ -332,7 +332,13 @@ public class CharacterMovementController : MonoBehaviour
         }
 
     }
-
+    public void OnQuit(CallbackContext context)
+    {
+        if (context.performed)
+        {
+            Application.Quit();
+        }
+    }
     public void OnPickup(CallbackContext context)
     {
         if (context.performed)

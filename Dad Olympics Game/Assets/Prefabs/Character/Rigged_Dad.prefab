@@ -297,6 +297,21 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: e80297b6-522d-4ebd-8ac8-75bceb619eab
     m_ActionName: PlayerMovement/CameraZoom[/XInputControllerWindows/dpad/up,/XInputControllerWindows/dpad/down]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7703250766489200880}
+        m_MethodName: OnQuit
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 563529da-24ca-4ac5-a6ab-7746d28b75c9
+    m_ActionName: PlayerMovement/QuitGame[/Keyboard/l,/DualShock4GamepadHID/select,/XInputControllerWindows/select]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: PlayerScheme
   m_DefaultActionMap: PlayerMovement
