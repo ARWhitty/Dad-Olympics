@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using static UnityEngine.InputSystem.InputAction;
+using UnityEngine.SceneManagement;
 
 public class CharacterMovementController : MonoBehaviour
 {
@@ -332,6 +333,7 @@ public class CharacterMovementController : MonoBehaviour
         }
 
     }
+
     public void OnQuit(CallbackContext context)
     {
         if (context.performed)
@@ -339,6 +341,17 @@ public class CharacterMovementController : MonoBehaviour
             Application.Quit();
         }
     }
+
+    public void OnRestart(CallbackContext context)
+    {
+        if(context.performed)
+        {
+            Destroy(gameObject);
+            Destroy(GameObject.Find("GameManager"));
+            SceneManager.LoadScene("GarageScene");
+        }
+    }
+
     public void OnPickup(CallbackContext context)
     {
         if (context.performed)
