@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class InitializeLevel : MonoBehaviour
@@ -9,7 +10,7 @@ public class InitializeLevel : MonoBehaviour
     public GameObject playerPrefab;
 
     private bool spawnedPlayers = false;
-    private float waitTime = 6f;
+    private float waitTime = 8f;
     private float currentTime = 0;
 
     public Material strollerColor1;
@@ -29,6 +30,7 @@ public class InitializeLevel : MonoBehaviour
     void Start()
     {
         players = ManagePlayerHub.Instance.getPlayers().ToArray();
+        PlayerInputManager.instance.DisableJoining();
     }
 
     // Update is called once per frame
@@ -42,14 +44,18 @@ public class InitializeLevel : MonoBehaviour
             Debug.Log("Loading in players");
             for (int i = 0; i < players.Length; i++)
             {
-                players[i].transform.position = playerSpawns[i].position;
                 GameObject stroller = Instantiate(strollerPrefab, playerSpawns[i].position + new Vector3(0, 0, 2f), Quaternion.identity);
                 DetermineColor(players[i].GetComponent<CharacterMovementController>().GetColorName(), stroller);
                 stroller.GetComponent<StrollerController>().SetID(players[i].GetComponent<CharacterMovementController>().getPlayerID());
-                if (players[i].transform.transform.position == playerSpawns[i].position)
-                {
-                    spawnedPlayers = true;
-                }
+                spawnedPlayers = true;
+            }
+        }
+        else if(!spawnedPlayers)
+        {
+            Debug.Log("Spawning player");
+            for (int i = 0; i < players.Length; i++)
+            {
+                players[i].transform.position = playerSpawns[i].position;
             }
         }
     }
