@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class ManagePlayerHub : MonoBehaviour
 {
@@ -18,6 +19,12 @@ public class ManagePlayerHub : MonoBehaviour
     public string colorName2;
     public string colorName3;
     public string colorName4;
+
+    public Text ReadyText;
+
+    public Text StartText;
+
+    private bool playerJoined;
 
     public static ManagePlayerHub Instance { get; private set; }
 
@@ -43,16 +50,31 @@ public class ManagePlayerHub : MonoBehaviour
     void Start()
     {
         players = new List<GameObject>();
+        playerJoined = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (playerJoined)
+        {
+            StartText.text = "";
+            int readyCount = 0;
+            foreach (GameObject player in players)
+            {
+                if (player.GetComponent<CharacterMovementController>().GetReadyPlayer())
+                {
+                    readyCount++;
+                }
+            }
+            ReadyText.text = "" + readyCount + "/" + players.Count + " players are ready! Stand on the start line to begin!";
+        }
 
     }
 
     public void HandlePlayerJoin(PlayerInput pi)
     {
+        playerJoined = true;
         players.Add(pi.gameObject);
         DontDestroyOnLoad(pi.gameObject);
         if (pi.gameObject.GetComponent<CharacterMovementController>())

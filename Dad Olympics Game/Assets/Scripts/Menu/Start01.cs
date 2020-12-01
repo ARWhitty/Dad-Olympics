@@ -138,7 +138,7 @@ public class Start01 : MonoBehaviour
             PauseMenuUI.SetActive(false);
             gameisPaused = false;
             Time.timeScale = 1f;
-            SceneManager.LoadScene("TheBlock_Scott");
+            SceneManager.LoadScene("GarageScene");
 
         }
         else if (menutracker == 1)

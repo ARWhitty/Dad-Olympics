@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InitializeLevel : MonoBehaviour
 {
@@ -8,7 +9,7 @@ public class InitializeLevel : MonoBehaviour
     public GameObject playerPrefab;
 
     private bool spawnedPlayers = false;
-    private float waitTime = 1.5f;
+    private float waitTime = 6f;
     private float currentTime = 0;
 
     public Material strollerColor1;
@@ -20,6 +21,10 @@ public class InitializeLevel : MonoBehaviour
     private GameObject[] players;
 
     public GameObject strollerPrefab;
+
+    public GameObject startCam;
+
+    public Text startText;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +37,8 @@ public class InitializeLevel : MonoBehaviour
         currentTime += Time.deltaTime;
         if (currentTime > waitTime && !spawnedPlayers)
         {
+            Destroy(startCam);
+            startText.text = "";
             Debug.Log("Loading in players");
             for (int i = 0; i < players.Length; i++)
             {

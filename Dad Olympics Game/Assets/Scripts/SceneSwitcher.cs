@@ -8,7 +8,7 @@ public class SceneSwitcher : MonoBehaviour
 {
     public void NextScene()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("GarageScene");
     }
 
     public void PreviousScene()
