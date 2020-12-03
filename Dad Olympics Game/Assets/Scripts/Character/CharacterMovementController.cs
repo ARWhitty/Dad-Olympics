@@ -346,8 +346,9 @@ public class CharacterMovementController : MonoBehaviour
     {
         if(context.performed)
         {
-            Destroy(gameObject);
-            Destroy(GameObject.Find("GameManager"));
+            GameObject gameManager = GameObject.Find("GameManager");
+            gameManager.GetComponent<ManagePlayerHub>().DeletePlayers();
+            Destroy(gameManager);
             SceneManager.LoadScene("GarageScene");
         }
     }

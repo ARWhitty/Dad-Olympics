@@ -112,4 +112,12 @@ public class ManagePlayerHub : MonoBehaviour
     {
         return players;
     }
+
+    public void DeletePlayers()
+    {
+        foreach(GameObject player in players)
+        {
+            Destroy(player);
+        }
+    }
 }
