@@ -4152,7 +4152,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &309397737
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5356,19 +5356,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4261793623241794, guid: 3cff793a4231e594686b8f0cb155af68, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.5563494
+      value: 0.55243856
       objectReference: {fileID: 0}
     - target: {fileID: 4261793623241794, guid: 3cff793a4231e594686b8f0cb155af68, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.4364353
+      value: 0.44137526
       objectReference: {fileID: 0}
     - target: {fileID: 4261793623241794, guid: 3cff793a4231e594686b8f0cb155af68, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.43643528
+      value: 0.4413752
       objectReference: {fileID: 0}
     - target: {fileID: 4261793623241794, guid: 3cff793a4231e594686b8f0cb155af68, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.5563487
+      value: 0.55243784
       objectReference: {fileID: 0}
     - target: {fileID: 4261793623241794, guid: 3cff793a4231e594686b8f0cb155af68, type: 3}
       propertyPath: m_RootOrder
@@ -5376,7 +5376,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4261793623241794, guid: 3cff793a4231e594686b8f0cb155af68, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 166.226
+      value: 167.247
       objectReference: {fileID: 0}
     - target: {fileID: 4261793623241794, guid: 3cff793a4231e594686b8f0cb155af68, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -6357,6 +6357,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BPaintCan
       objectReference: {fileID: 0}
+    - target: {fileID: 4673480011578945972, guid: b6c0d9aa65d10b04e9a8b6610c40363f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4673480011578945975, guid: b6c0d9aa65d10b04e9a8b6610c40363f,
         type: 3}
       propertyPath: m_Enabled
@@ -6492,6 +6497,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: WaypointMarker (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6665936137855232752, guid: a77ce94d334f37444972e17cfd0be3d1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a77ce94d334f37444972e17cfd0be3d1, type: 3}
@@ -8324,7 +8334,7 @@ PrefabInstance:
     - target: {fileID: 332074455829466553, guid: 5b440866b88b0fc4084139173a3a1113,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.24999994
+      value: 0.176
       objectReference: {fileID: 0}
     - target: {fileID: 332074455829466553, guid: 5b440866b88b0fc4084139173a3a1113,
         type: 3}
@@ -8334,7 +8344,7 @@ PrefabInstance:
     - target: {fileID: 332074455829466553, guid: 5b440866b88b0fc4084139173a3a1113,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.557
+      value: -4.535
       objectReference: {fileID: 0}
     - target: {fileID: 332074455829466553, guid: 5b440866b88b0fc4084139173a3a1113,
         type: 3}
@@ -10388,7 +10398,8 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[2]
       value: 
       objectReference: {fileID: 2100000, guid: d821564deb779914696bb78f357bbd87, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4840781508283347885, guid: 7706eb0c04a886b4980c72d060149c61, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7706eb0c04a886b4980c72d060149c61, type: 3}
 --- !u!1001 &791326083
 PrefabInstance:
@@ -13415,6 +13426,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: WaypointMarker (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6665936137855232752, guid: a77ce94d334f37444972e17cfd0be3d1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a77ce94d334f37444972e17cfd0be3d1, type: 3}
@@ -18509,6 +18525,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: WaypointMarker
       objectReference: {fileID: 0}
+    - target: {fileID: 6665936137855232752, guid: a77ce94d334f37444972e17cfd0be3d1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a77ce94d334f37444972e17cfd0be3d1, type: 3}
 --- !u!1001 &1432231499
@@ -19439,7 +19460,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1496975013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25029,6 +25050,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: WaypointMarker (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 6665936137855232752, guid: a77ce94d334f37444972e17cfd0be3d1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a77ce94d334f37444972e17cfd0be3d1, type: 3}
 --- !u!1001 &1872865716
@@ -25517,6 +25543,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BPaintCan (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4673480011578945972, guid: b6c0d9aa65d10b04e9a8b6610c40363f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4673480011578945975, guid: b6c0d9aa65d10b04e9a8b6610c40363f,
         type: 3}

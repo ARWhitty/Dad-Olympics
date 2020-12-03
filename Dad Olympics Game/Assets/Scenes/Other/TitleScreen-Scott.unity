@@ -763,8 +763,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: S.T.U.D.S
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4214caa71498eaa4cb3741b2b8955d4b, type: 2}
-  m_sharedMaterial: {fileID: 1686265398414052133, guid: 4214caa71498eaa4cb3741b2b8955d4b,
+  m_fontAsset: {fileID: 11400000, guid: 6ca6aa0df9aed754fb6ccf1c38d87b4c, type: 2}
+  m_sharedMaterial: {fileID: 1686265398414052133, guid: 6ca6aa0df9aed754fb6ccf1c38d87b4c,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1248,8 +1248,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Super Totally Ultimate Dad Showdown
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4214caa71498eaa4cb3741b2b8955d4b, type: 2}
-  m_sharedMaterial: {fileID: 1686265398414052133, guid: 4214caa71498eaa4cb3741b2b8955d4b,
+  m_fontAsset: {fileID: 11400000, guid: 6ca6aa0df9aed754fb6ccf1c38d87b4c, type: 2}
+  m_sharedMaterial: {fileID: 1686265398414052133, guid: 6ca6aa0df9aed754fb6ccf1c38d87b4c,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2641,8 +2641,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Super Totally Ultimate Dad Showdown
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4214caa71498eaa4cb3741b2b8955d4b, type: 2}
-  m_sharedMaterial: {fileID: 1686265398414052133, guid: 4214caa71498eaa4cb3741b2b8955d4b,
+  m_fontAsset: {fileID: 11400000, guid: 6ca6aa0df9aed754fb6ccf1c38d87b4c, type: 2}
+  m_sharedMaterial: {fileID: 1686265398414052133, guid: 6ca6aa0df9aed754fb6ccf1c38d87b4c,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -3579,8 +3579,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: S.T.U.D.S
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4214caa71498eaa4cb3741b2b8955d4b, type: 2}
-  m_sharedMaterial: {fileID: 1686265398414052133, guid: 4214caa71498eaa4cb3741b2b8955d4b,
+  m_fontAsset: {fileID: 11400000, guid: 6ca6aa0df9aed754fb6ccf1c38d87b4c, type: 2}
+  m_sharedMaterial: {fileID: 1686265398414052133, guid: 6ca6aa0df9aed754fb6ccf1c38d87b4c,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
