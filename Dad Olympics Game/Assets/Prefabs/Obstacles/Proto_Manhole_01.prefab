@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mySource: {fileID: 0}
-  playOnEnable: 0
+  playOnEnable: 1
   loopCoroutine: 0
   force3DSoundOnStartup: 1
   lockPlayingClipToListener: 1

@@ -16,6 +16,7 @@ MonoBehaviour:
   playOnEnable: 1
   loopCoroutine: 1
   force3DSoundOnStartup: 1
+  alwaysPlays: 1
   lockPlayingClipToListener: 1
   audioSourceName: Mower
 --- !u!114 &7679830172011971241

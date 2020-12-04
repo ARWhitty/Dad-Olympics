@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 23173300650609254}
   - component: {fileID: 1286646323}
   - component: {fileID: 5026268957598137158}
+  - component: {fileID: 4729047985350331924}
   m_Layer: 0
   m_Name: Proto_Car_01
   m_TagString: Untagged
@@ -116,3 +117,22 @@ MonoBehaviour:
   directionVector: {x: 0, y: 2, z: 0}
   kBForce: 8
   makePlayerDrop: 1
+--- !u!114 &4729047985350331924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1876198466292960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cf4fb30e6029458385de56cad17bcf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mySource: {fileID: 0}
+  playOnEnable: 1
+  loopCoroutine: 0
+  force3DSoundOnStartup: 1
+  alwaysPlays: 1
+  lockPlayingClipToListener: 1
+  audioSourceName: CarDriving

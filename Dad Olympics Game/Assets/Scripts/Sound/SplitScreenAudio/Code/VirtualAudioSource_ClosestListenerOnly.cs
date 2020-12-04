@@ -20,7 +20,9 @@ public class VirtualAudioSource_ClosestListenerOnly : VirtualAudioSource {
 	/// <summary>
 	/// If true, this overrides panLevel settings (sets to 1)
 	/// </summary>
-	public bool force3DSoundOnStartup = true; 
+	public bool force3DSoundOnStartup = true;
+
+	public bool alwaysPlays = false;
 	
 	/// <summary>
 	/// If set to true, the clip will only play for the listener it started playing for. 
@@ -29,6 +31,22 @@ public class VirtualAudioSource_ClosestListenerOnly : VirtualAudioSource {
 	public bool lockPlayingClipToListener = true;
 
 	public string audioSourceName;
+
+    private void Start()
+    {
+		if (mySource == null)
+		{
+			Debug.Log("Searching for : " + audioSourceName);
+			GameObject sfx = GameObject.Find("SFX");
+			Transform trans = sfx.transform;
+			Transform target = trans.Find(audioSourceName);
+			mySource = target.gameObject.GetComponent<AudioSource>();
+		}
+		if(alwaysPlays)
+        {
+			mySource.enabled = true;
+        }
+	}
 
     private void OnLevelWasLoaded(int level)
     {
@@ -89,9 +107,14 @@ public class VirtualAudioSource_ClosestListenerOnly : VirtualAudioSource {
 					{
 						//update audio source by keeping the relative positions / orientations between the closest virtual player and this virtual source the same as between the actual source and true listener
 						if(closestListener != null)
-						{
+                        {
 							if(VirtualAudioListener.sceneAudioListener)
 								mySource.transform.position = Quaternion.Inverse(closestListener.transform.rotation)*(this.transform.position - closestListener.transform.position) + VirtualAudioListener.sceneAudioListener.transform.position;
+                            else
+                            {
+								Debug.Log("Searching for new audio listener...");
+								VirtualAudioListener.sceneAudioListener = (AudioListener)GameObject.FindObjectOfType(typeof(AudioListener));
+							}
 						}
 						else
 						{
@@ -107,7 +130,14 @@ public class VirtualAudioSource_ClosestListenerOnly : VirtualAudioSource {
 						closestListener = GetClosestListener();
 						if(closestListener != null)
 						{
-							mySource.transform.position = Quaternion.Inverse(closestListener.transform.rotation)*(this.transform.position - closestListener.transform.position) + VirtualAudioListener.sceneAudioListener.transform.position;
+							if (VirtualAudioListener.sceneAudioListener)
+							{
+								mySource.transform.position = Quaternion.Inverse(closestListener.transform.rotation) * (this.transform.position - closestListener.transform.position) + VirtualAudioListener.sceneAudioListener.transform.position;
+							} else
+                            {
+								Debug.Log("Searching for new audio listener...");
+								VirtualAudioListener.sceneAudioListener = (AudioListener)GameObject.FindObjectOfType(typeof(AudioListener));
+							}
 						}
 						else
 						{
