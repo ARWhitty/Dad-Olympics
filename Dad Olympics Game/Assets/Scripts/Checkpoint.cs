@@ -21,7 +21,7 @@ public class Checkpoint : MonoBehaviour
     void Start()
     {
         display = false;
-        //Debug.Log("Searching for : " + KBSound);
+        //Debug.Log("Searching for : " + soundName);
         GameObject sfx = GameObject.Find("SFX");
         Transform trans = sfx.transform;
         Transform target = trans.Find(soundName);
