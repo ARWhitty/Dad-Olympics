@@ -146,6 +146,7 @@ AudioMixerSnapshotController:
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: 32f9b0380657be748a469c5b4add4b75
   m_FloatValues:
+    bf0870913bf3f8e4f8aa1ad3d3b7d50d: -20.610779
     da9da1d4980c3324b8daa0b196d8968c: -6.133707
     0a4f7b16c08e05143a7b438f53933d38: -6.238344
     3fd85bd6049799c419cfd374578993b3: -0.025776565
@@ -232,7 +233,7 @@ AudioMixerGroupController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Player3
+  m_Name: Jingles
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 0860c042ab8997f4fa70a53138906107
   m_Children: []

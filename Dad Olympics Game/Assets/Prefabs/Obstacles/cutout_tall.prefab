@@ -116,6 +116,8 @@ MonoBehaviour:
   directionVector: {x: 1, y: 1, z: -3}
   kBForce: 3
   makePlayerDrop: 0
+  KBSound: CardboardUp
+  mySource: {fileID: 0}
 --- !u!65 &7782946017757333214
 BoxCollider:
   m_ObjectHideFlags: 0

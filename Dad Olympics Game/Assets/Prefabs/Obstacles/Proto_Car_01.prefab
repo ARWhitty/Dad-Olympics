@@ -131,7 +131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mySource: {fileID: 0}
   playOnEnable: 1
-  loopCoroutine: 0
+  loopCoroutine: 1
   force3DSoundOnStartup: 1
   alwaysPlays: 1
   lockPlayingClipToListener: 1

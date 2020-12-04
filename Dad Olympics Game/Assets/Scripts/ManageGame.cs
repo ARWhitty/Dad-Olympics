@@ -16,6 +16,11 @@ public class ManageGame : MonoBehaviour
     public float endTimer;
 
     public float swapTime;
+
+    public string soundName;
+
+    public AudioSource mySource;
+
     private float timeCount;
     private bool display;
     private int playerID;
@@ -27,7 +32,11 @@ public class ManageGame : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        //Debug.Log("Searching for : " + soundName);
+        GameObject sfx = GameObject.Find("SFX");
+        Transform trans = sfx.transform;
+        Transform target = trans.Find(soundName);
+        mySource = target.gameObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -75,6 +84,10 @@ public class ManageGame : MonoBehaviour
                     playerID = collider.gameObject.GetComponent<CharacterMovementController>().getPlayerID() + 1;
                     collider.gameObject.GetComponent<CharacterMovementController>().SetFinishPosition(positions);
                     positions++;
+                    if (collider.gameObject.GetComponent<CharacterMovementController>().isAI == false)
+                    {
+                        mySource.Play();
+                    }
                 }
 
             }

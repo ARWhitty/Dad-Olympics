@@ -10,6 +10,10 @@ public class Checkpoint : MonoBehaviour
     public Text checkPointText;
 
     public float swapTime;
+
+    public string soundName;
+
+    public AudioSource mySource;
     private float timeCount;
     private bool display;
     private int playerID;
@@ -17,6 +21,11 @@ public class Checkpoint : MonoBehaviour
     void Start()
     {
         display = false;
+        //Debug.Log("Searching for : " + KBSound);
+        GameObject sfx = GameObject.Find("SFX");
+        Transform trans = sfx.transform;
+        Transform target = trans.Find(soundName);
+        mySource = target.gameObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -49,6 +58,10 @@ public class Checkpoint : MonoBehaviour
                     player.SetCheckpointCount(checkPointNum);
                     display = true;
                     playerID = player.getPlayerID() + 1;
+                    if(player.isAI == false)
+                    {
+                        mySource.Play();
+                    }
                 }
 
             }

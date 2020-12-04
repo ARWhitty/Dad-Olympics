@@ -99,7 +99,7 @@ public class CharacterMovementController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("Player: " + playerID + " has object: " + hasGrabbed);
+        //Debug.Log("Player: " + playerID + " has object: " + hasGrabbed);
         if (movementEnabled && !isAI)
             Move();
         else
@@ -109,6 +109,8 @@ public class CharacterMovementController : MonoBehaviour
             {
                 timeUntilMoveEnabled = 0;
                 movementEnabled = true;
+                velocity.x = 0;
+                velocity.z = 0;
             }
         }
 
@@ -226,7 +228,7 @@ public class CharacterMovementController : MonoBehaviour
                 animator.SetTrigger("FallDown");
                 beingKnockedBack = false;
                 movementEnabled = false;
-                timeUntilMoveEnabled = 1.5f;
+                timeUntilMoveEnabled = 1.3f;
             }
         }
     }
