@@ -1,0 +1,377 @@
+{
+    "name": "PlayerControls 1",
+    "maps": [
+        {
+            "name": "PlayerMovement",
+            "id": "c316448c-e5cb-414c-8f7d-739ff73748e9",
+            "actions": [
+                {
+                    "name": "Movement",
+                    "type": "Button",
+                    "id": "31055e42-bffa-4e23-bf54-bb0a945d2d03",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Jump",
+                    "type": "Button",
+                    "id": "59f87efb-c033-428d-8a50-c605fc8f6548",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Throw",
+                    "type": "Button",
+                    "id": "0145c1f7-08db-4927-b986-a14ea05875e8",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Interact",
+                    "type": "Button",
+                    "id": "7b31deb2-9495-40cb-85e3-a6691f89d0a5",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Select",
+                    "type": "Button",
+                    "id": "ca4b8066-94bc-4e2f-b419-2014a6eebe5b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "CameraMovement",
+                    "type": "Value",
+                    "id": "1cb4ff1b-8998-4c78-90a9-62207da28170",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "CameraZoom",
+                    "type": "Value",
+                    "id": "e80297b6-522d-4ebd-8ac8-75bceb619eab",
+                    "expectedControlType": "Dpad",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "QuitGame",
+                    "type": "Button",
+                    "id": "563529da-24ca-4ac5-a6ab-7746d28b75c9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "RestartGame",
+                    "type": "Button",
+                    "id": "83523902-8819-4a87-8723-980a57831b22",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "4886598d-b97e-48df-b5fb-8d7b8bd949e8",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "PlayerScheme",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "WASD",
+                    "id": "34b8b89c-e87f-4edf-838e-a46ba2a45e6e",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "d2d59e59-239d-4beb-9148-93efbe473428",
+                    "path": "<Keyboard>/W",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "PlayerScheme",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "b9f402e0-5089-4200-968b-8141b971e492",
+                    "path": "<Keyboard>/S",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "PlayerScheme",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "b6af982f-ae94-4396-9bd5-ebe22533cfcb",
+                    "path": "<Keyboard>/A",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "PlayerScheme",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "b37a2378-6ff8-44ef-8f84-1f24893b448b",
+                    "path": "<Keyboard>/D",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "PlayerScheme",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "297d17e3-b003-4e48-b13e-d2b8d4e1b6bf",
+                    "path": "<GamePad>/rightStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "PlayerScheme",
+                    "action": "CameraMovement",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0fe8431e-2c52-40c1-8837-938723cf9c3e",
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "ScaleVector2(x=0.1,y=0.1)",
+                    "groups": "PlayerScheme",
+                    "action": "CameraMovement",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4cab644f-a828-49dc-937b-e69d3587e9a9",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "PlayerScheme",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a98108d5-e98d-4320-9be3-0a71e9b3e758",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "PlayerScheme",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "31d9ca1d-7a01-4e31-bde3-df844f37dcde",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "PlayerScheme",
+                    "action": "Throw",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "272dbf58-4b76-40e8-bc3d-4e1b9e9e32e2",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "PlayerScheme",
+                    "action": "Throw",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9470d98a-1438-497f-bcdd-5b8438cd1197",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "PlayerScheme",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0c1601f5-0630-4a71-8e85-fad86f8c5a17",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "PlayerScheme",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b0f6f8b6-9686-479c-8be3-d4e4aba0a9ed",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "PlayerScheme",
+                    "action": "Select",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "58e4b152-93ac-4e32-b3ec-7a003525b567",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CameraZoom",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "def85a8c-5f52-4cc6-ad65-d89fc76605ce",
+                    "path": "<Gamepad>/dpad/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "PlayerScheme",
+                    "action": "CameraZoom",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "b652961c-d804-4aa6-94b8-c391fad2a270",
+                    "path": "<Gamepad>/dpad/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "PlayerScheme",
+                    "action": "CameraZoom",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "a3ed1fac-221b-4de7-b2f2-1b796de91ec6",
+                    "path": "<Keyboard>/l",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "PlayerScheme",
+                    "action": "QuitGame",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7e5d0652-5e99-4f21-832a-3a21643efed7",
+                    "path": "<Gamepad>/select",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "PlayerScheme",
+                    "action": "QuitGame",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f3e266ee-0094-4750-bb72-53e2cdf8e246",
+                    "path": "<Gamepad>/leftShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "PlayerScheme",
+                    "action": "RestartGame",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "912bc8e1-f2c9-498d-a1e1-027325469d21",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "PlayerScheme",
+                    "action": "RestartGame",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "CameraMovement",
+            "id": "06eb803a-40c5-407e-b850-c183000faa27",
+            "actions": [
+                {
+                    "name": "CameraMove",
+                    "type": "Value",
+                    "id": "d16dc3d0-f9b7-4bb3-9d99-f2d19f8f1529",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "9a5876e1-952d-455d-a5f6-77b87c26980f",
+                    "path": "<GamePad>/rightStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CameraMove",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "PlayerScheme",
+            "bindingGroup": "PlayerScheme",
+            "devices": [
+                {
+                    "devicePath": "<Gamepad>",
+                    "isOptional": false,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": true,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<Mouse>",
+                    "isOptional": true,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}

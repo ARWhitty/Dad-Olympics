@@ -73,6 +73,7 @@
      <Compile Include="Assets\Scripts\Checkpoint.cs" />
      <Compile Include="Assets\Scripts\HubColorChange.cs" />
      <Compile Include="Assets\Scripts\InitializeLevel.cs" />
+     <Compile Include="Assets\Scripts\Interaction.cs" />
      <Compile Include="Assets\Scripts\KnockBack.cs" />
      <Compile Include="Assets\Scripts\LevelStart.cs" />
      <Compile Include="Assets\Scripts\ManageGame.cs" />
