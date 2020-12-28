@@ -67,6 +67,7 @@
      <Compile Include="Assets\Scripts\Character\CharacterMovementController.cs" />
      <Compile Include="Assets\Scripts\Character\CubeController.cs" />
      <Compile Include="Assets\Scripts\Character\PlayerConfigurationManager.cs" />
+     <Compile Include="Assets\Scripts\Character\PlayerControls 1.cs" />
      <Compile Include="Assets\Scripts\Character\PlayerControls.cs" />
      <Compile Include="Assets\Scripts\Character\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\Character\PlayerMovement2.cs" />
