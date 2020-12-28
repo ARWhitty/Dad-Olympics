@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Other/GarageScene.unity
+- path: Assets/Scenes/Sandboxes/Downtown_prototype.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
