@@ -7,6 +7,7 @@ TagManager:
   - Grabbable
   - Ground
   - JumpTime
+  - Electronics
   layers:
   - Default
   - TransparentFX

@@ -430,7 +430,6 @@ Transform:
   - {fileID: 1901045756}
   - {fileID: 210895286}
   - {fileID: 745628668}
-  - {fileID: 2059447373}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -555,7 +554,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1901045751}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a29a07b6da943d24596006f59c6a88fb, type: 3}
   m_Name: 
@@ -632,7 +631,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.095, y: -0.55, z: 0.15799999}
   m_LocalScale: {x: 1.3508, y: 1.093, z: 1.0386596}
-  m_Children: []
+  m_Children:
+  - {fileID: 2059447373}
   m_Father: {fileID: 1442715782}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -651,7 +651,7 @@ GameObject:
   - component: {fileID: 2059447374}
   m_Layer: 0
   m_Name: Trigger_interact
-  m_TagString: Untagged
+  m_TagString: Electronics
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -663,12 +663,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2059447372}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.08, y: -0.88, z: -1.707}
-  m_LocalScale: {x: 3.3680236, y: 3.3680236, z: 3.3680236}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.011104532, y: -0.3019213, z: -1.7955832}
+  m_LocalScale: {x: 2.493355, y: 3.0814488, z: 3.2426636}
   m_Children: []
-  m_Father: {fileID: 1442715782}
-  m_RootOrder: 3
+  m_Father: {fileID: 1901045756}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2059447374
 MonoBehaviour:
@@ -686,32 +686,10 @@ MonoBehaviour:
   GizmoColor: {r: 1, g: 1, b: 1, a: 1}
   EnterEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1901045752}
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+      m_Calls: []
   ExitEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1901045752}
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   StayEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -941,5 +919,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -944628639613478452, guid: 3d350e62509588e439cabf9d81fb2d23,
         type: 3}
+    - target: {fileID: 7428982239099070671, guid: 753e681864132214fb0d23e1a26532b0,
+        type: 3}
+      propertyPath: m_NeverAutoSwitchControlSchemes
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7428982239099070671, guid: 753e681864132214fb0d23e1a26532b0,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnInteract
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 753e681864132214fb0d23e1a26532b0, type: 3}

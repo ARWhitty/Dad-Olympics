@@ -85,6 +85,8 @@ public class CharacterMovementController : MonoBehaviour
 
     private int finishPosition;
 
+    private GameObject electronicObject;
+
 
     // Start is called before the first frame update
     void Start()
@@ -380,12 +382,45 @@ public class CharacterMovementController : MonoBehaviour
         }
     }
 
+    public void OnInteract(CallbackContext context)
+    {
+        if (context.performed)
+        {
+            if (electronicObject != null)
+            {
+                electronicObject.GetComponent<Interaction>().ToggleVisual();
+            }
+        }
+        else
+        {
+            throwPressed = false;
+        }
+    }
+
     void OnCollisionEnter(Collision obj)
     {
         if (obj.gameObject.tag == "Ground")
          {
             velocity.x = 0;
             velocity.z = 0;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag.Equals("Electronics"))
+        {
+            electronicObject = other.transform.parent.gameObject;
+            //Debug.Log("Assign to variable");
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag.Equals("Electronics"))
+        {
+            electronicObject = null;
+            //Debug.Log("Assign to variable");
         }
     }
 

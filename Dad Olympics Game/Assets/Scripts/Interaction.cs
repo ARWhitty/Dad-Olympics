@@ -20,20 +20,13 @@ public class Interaction : MonoBehaviour
     {
         if (interactPressed)
         {
-            Object_active.SetActive(false);
-            Object_inactive.SetActive(true);
+            
         }
     }
 
-    public void OnInteract(CallbackContext context)
+    public void ToggleVisual()
     {
-        if (context.performed)
-        {
-            interactPressed = true;
-        }
-        else
-        {
-            interactPressed = false;
-        }
+        Object_active.SetActive(false);
+        Object_inactive.SetActive(true);
     }
 }
