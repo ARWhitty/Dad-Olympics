@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/Levels/PowerBill/Prototype/PowerBill_prototype.unity
+=======
+- path: Assets/Scenes/Sandboxes/TheBlock_Scott.unity
+>>>>>>> master
   isLoaded: 1
   isActive: 1
   isSubScene: 0
