@@ -96,6 +96,7 @@
      <Compile Include="Assets\Scripts\PlayerAI.cs" />
      <Compile Include="Assets\Scripts\PlayerInputHandler.cs" />
      <Compile Include="Assets\Scripts\PlayersReady.cs" />
+     <Compile Include="Assets\Scripts\PowerBillCash.cs" />
      <Compile Include="Assets\Scripts\RaceStartedDetection.cs" />
      <Compile Include="Assets\Scripts\SceneSwitcher.cs" />
      <Compile Include="Assets\Scripts\Sound\AnimationSound.cs" />

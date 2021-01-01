@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Levels/Shopping_Spree/Shopping_Spree.unity
+- path: Assets/Scenes/Levels/PowerBill/Prototype/PowerBill_prototype.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
