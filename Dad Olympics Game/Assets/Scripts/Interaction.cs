@@ -11,10 +11,15 @@ using UnityEngine.SceneManagement;
 public class Interaction : MonoBehaviour
 
 {
+    public PWRBill_Manager GameMaster;
+
+    public int PowerCharge = 1;
+
+
     public GameObject Object_active;
     public GameObject Object_inactive;
 
-    public int BillTotal = 0;
+    
     public int TimerDelayAmount = 1;
 
     public Text BillTotalText;
@@ -22,6 +27,11 @@ public class Interaction : MonoBehaviour
     protected float CashTimer;
 
     private bool interactPressed = false;
+
+    private void Start()
+    {
+        GameMaster = GameObject.Find("Game Manager").GetComponent<PWRBill_Manager>();
+    }
 
     public void Update()
     {
@@ -37,8 +47,7 @@ public class Interaction : MonoBehaviour
             if (CashTimer >= TimerDelayAmount)
             {
                 CashTimer = 0f;
-                BillTotal++;
-                BillTotalText.text = "Power Bill: $" + BillTotal;
+                GameMaster.AddScore(PowerCharge);
 
             }
         }
