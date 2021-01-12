@@ -31,7 +31,7 @@ public class PWRBill_Manager : MonoBehaviour
 
         for(int j = 0; j < randomPicks.Length; j++)
         {
-            Interactives[randomPicks[j]] 
+            //Interactives[randomPicks[j]] 
         }
     }
 
