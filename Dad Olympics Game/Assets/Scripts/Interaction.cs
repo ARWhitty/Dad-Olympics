@@ -57,6 +57,10 @@ public class Interaction : MonoBehaviour
     {
         Object_active.SetActive(false);
         Object_inactive.SetActive(true);
+        if (interactPressed == false)
+        {
+            GameMaster.NumItemsOn -= 1;
+        }
         interactPressed = true;
     }
 }

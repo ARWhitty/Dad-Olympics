@@ -8,28 +8,31 @@ public class PWRBill_Manager : MonoBehaviour
     //Electricity variables
     public int Score;
     public Text PowerTXT;
+    public int NumItemsOn;
+    public Text ItemsOnTXT;
 
     //List of objects to interact with
     public List<Interaction> Interactives = new List<Interaction>();
-    public int MaxObjects;
-    private int[] randomPicks;
+    public int MaxObjectsOff;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        foreach (GameObject Electronic in GameObject.FindGameObjectsWithTag("Electronics"))
+
+        foreach (GameObject Electronic in GameObject.FindGameObjectsWithTag("RandomPick"))
         {
             Interactives.Add(Electronic.GetComponent<Interaction>());
+            
         }
+        NumItemsOn = Interactives.Count;
 
-        for(int i = 0; i < MaxObjects; i++)
-        { 
-            randomPicks[i] =  Random.Range(0, Interactives.Count);            
-        }
-
-        for(int j = 0; j < randomPicks.Length; j++)
+        for (int i = 0; i < MaxObjectsOff; i++)
         {
-            Interactives[randomPicks[j]].ToggleVisual();
+            int tmp = Random.Range(0, Interactives.Count);
+            Interactives[tmp].ToggleVisual();
+            //RandomPicks.Add(Interactives[tmp]);
+
         }
     }
 
@@ -37,6 +40,8 @@ public class PWRBill_Manager : MonoBehaviour
     void Update()
     {
         PowerTXT.text = "Power Bill: $" + Score;
+        ItemsOnTXT.text = "Electronics: " + NumItemsOn;
+
 
     }
 

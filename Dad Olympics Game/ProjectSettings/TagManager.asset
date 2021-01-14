@@ -8,6 +8,7 @@ TagManager:
   - Ground
   - JumpTime
   - Electronics
+  - RandomPick
   layers:
   - Default
   - TransparentFX
