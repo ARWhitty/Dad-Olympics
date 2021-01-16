@@ -28,27 +28,33 @@ public class KnockBack : MonoBehaviour
         {
             Vector3 direction = other.transform.position - transform.position;
             direction = direction.normalized + directionVector;
-            //Debug.Log("direction: " + direction.ToString() + " Force " + kBForce + " MakePlayerDrop " + makePlayerDrop);
+            Debug.Log("direction: " + direction.ToString() + " Force " + kBForce + " MakePlayerDrop " + makePlayerDrop);
             other.gameObject.GetComponent<CharacterMovementController>().KnockBack(direction * kBForce, makePlayerDrop);
             if(!KBSound.Equals("") && other.gameObject.GetComponent<CharacterMovementController>().isAI == false)
             {
                 mySource.Play();
             }
-        } else if (other.tag == "Grabbable")
+        } 
+        // This would be used if we were to make the stroller as reactive to knockback as the player, which we don't need to.
+        /* else if (other.tag == "Grabbable")
         {
             Vector3 direction = other.transform.position - transform.position;
             direction = direction.normalized + directionVector;
             other.gameObject.GetComponent<StrollerController>().KnockBack(direction * (kBForce), makePlayerDrop);
-        }
+        } */  
     }
 
     public void OnCollisionEnter(Collision other)
     {
+        // This would be used if we were to make the stroller as reactive to knockback as the player, which we don't need to.
+        /*
         if(other.gameObject.tag == "Grabbable")
         {
             Vector3 direction = other.transform.position - transform.position;
             direction = direction.normalized + directionVector;
             other.gameObject.GetComponent<StrollerController>().KnockBack(direction * (kBForce), makePlayerDrop);
         }
+        */
     }
 }
+ 

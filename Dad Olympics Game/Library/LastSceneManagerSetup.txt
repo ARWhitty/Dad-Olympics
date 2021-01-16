@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Levels/PowerBill/Prototype/PowerBill_prototype.unity
+- path: Assets/Scenes/Archive/AddisonCinemachine.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

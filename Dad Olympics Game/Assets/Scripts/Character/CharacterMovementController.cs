@@ -426,7 +426,7 @@ public class CharacterMovementController : MonoBehaviour
 
     public void KnockBack(Vector3 direction, bool drop)
     {
-        //Debug.Log("KBCalled with: " + direction.ToString());
+        Debug.Log("KBCalled with: " + direction.ToString());
         knockBackCounter = knockBackTime;
         if (drop)
         {
@@ -467,6 +467,10 @@ public class CharacterMovementController : MonoBehaviour
         grabbedObject.GetComponent<Rigidbody>().useGravity = true;
         //Debug.Log("Velocity: " + direction.magnitude);
         grabbedObject.GetComponent<Rigidbody>().AddForce(throwingForce);
+        if(grabbedObject.GetComponent<StrollerController>())
+        {
+            grabbedObject.GetComponent<StrollerController>().EnableKnockBack();
+        }
         hasGrabbed = false;
         moveSpeed = moveSpeedNormal;
         grabbedObject = null;
