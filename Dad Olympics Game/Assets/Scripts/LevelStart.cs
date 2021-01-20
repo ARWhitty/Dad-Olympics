@@ -18,7 +18,6 @@ public class LevelStart : MonoBehaviour
     public Material playerColor3;
     public Material playerColor4;
 
-    //public GameObject GameManager;
     private int playerIDCount = 0;
 
     void awake()
